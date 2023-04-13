@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task-1</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url(images/images.jfif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        th,
+        td {
+            width: 33.3%;
+        }
+
+        @media only screen and (max-width:950px) {
+            body {
+                height: 100vh;
+            }
+        }
+    </style>
+    <div class="cntainer mt-4 text-center">
+        <button class="btn btn-outline-primary" onclick="reloadBtn()">Reload</button>
+    </div>
+    <div class="container mt-3">
+        <table id="table" class="table table-responsive table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col"><button onclick="addBtn()" class="btn btn-outline-success">Add</button></th>
+                    <th>
+                        <Name scope="col">Name
+                    </th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody id="my_body">
+                <tr class="first first_row">
+                    <td scope="row" class="pt-3 td1">1</td>
+                    <td class="td2"><input type="text" placeholder="Enter Your Name"
+                            class="w-50 mt-1 p-1 input_filed rounded-2 first_input"></td>
+                    <td class="td3"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        var chance = 1;
+        var max_fildes = 5;
+        function addBtn() {
+            chance++;
+            const my_body = document.getElementById("my_body");
+            if (document.getElementsByTagName("tr").length <= max_fildes) {
+
+                let tr = document.createElement("tr");
+                tr.classList.add("first");
+                my_body.appendChild(tr);
+
+                let td1 = document.createElement("td");
+                td1.classList.add("td1");
+                td1.classList.add("pt-3");
+                td1.innerHTML = `${chance}`;
+
+                let td2 = document.createElement("td");
+                let input = document.createElement("input");
+                input.classList.add("input_filed");
+                input.classList.add("pt-1");
+                input.classList.add("mt-1");
+                input.classList.add("w-50");
+                input.classList.add("rounded-2");
+                input.setAttribute("placeholder", "Enter Your Name");
+                td2.appendChild(input);
+
+                let td3 = document.createElement("td")
+                let buttton = document.createElement("buttton");
+                buttton.classList.add("btn");
+                buttton.classList.add("btn-outline-danger");
+                buttton.setAttribute("onclick", "removeBtn(this)");
+                buttton.innerHTML = 'Remove';
+                td3.appendChild(buttton);
+
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+            }
+            else {
+                alert("You reached your limits");
+            }
+        }
+        function removeBtn(e) {
+            e.parentElement.parentElement.remove();
+            chance--
+        }
+
+        function reloadBtn() {
+            let allRow = document.getElementById("my_body");
+            while (allRow.hasChildNodes()) {
+                if (!allRow.lastChild.classList.contains('first_row')) {
+                    allRow.removeChild(allRow.lastChild);
+                }
+                document.getElementsByClassName("first_input")[0].value = "";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

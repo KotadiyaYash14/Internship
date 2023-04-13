@@ -1,0 +1,34 @@
+th,
+td {
+    width: 17%;
+}
+
+#timer {
+    font-size: 25px !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    counter-reset: Serial;
+}
+
+table {
+    border-collapse: separate;
+}
+
+tr td:first-child:before {
+    counter-increment: Serial;
+    content: counter(Serial);
+}
+
+
+@media screen and (max-width : 991px) {
+    .th {
+        display: none;
+    }
+
+    td {
+        display: block;
+        width: 100%;
+    }
+}

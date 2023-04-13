@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task-2</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    th,
+    td {
+        width: 17%;
+    }
+
+    .thead {
+        font-weight: bold;
+    }
+
+    .select {
+        color: #0d6efd;
+        border-color: #0d6efd;
+        border-radius: 5px;
+        padding: 6px;
+        margin-bottom: 10px;
+    }
+
+    .select:hover {
+        background-color: #0d6efd;
+        color: white;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 991px) {
+        .btn-outline-success {
+            margin-left: 8px;
+        }
+
+        .btn-outline-danger {
+            margin-top: 8px;
+        }
+    }
+</style>
+
+<body>
+    <form name="myform" method="get" id="myform" class="table-responsive p-2">
+        <h1 class="text-center mt-2 text-decoration-underline text-uppercase">Student Details</h1>
+        <div class="container mt-4 col-lg-12 col-md-12 col-sm-12">
+            <div class="container text-start">
+                <button type="button" class="btn btn-outline-primary" onclick="addBtn()">Add Row</button>
+            </div>
+            <table class="table table-bordered table-light table-hover text-center mt-3">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Sr-No.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Marks</th>
+                        <th scope="col">Result</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="body">
+                    <tr class="tr">
+                        <td scope="row" class="pt-3 first_td">1</td>
+                        <td class="second_td"><input type="text" placeholder="Name" name="name" value="Tom"
+                                class="rounded-2 w-75 mt-1 p-1 first_input"></td>
+                        <td class="third_td"><input type="text" placeholder="Subject" name="subject" value="Maths"
+                                class="rounded-2 w-75 mt-1 p-1 second_input"></td>
+                        <td class="fourth_td"><input type="text" placeholder="Mark" name="mark" value="50"
+                                class="rounded-2 w-75 mt-1 p-1 third_input"></td>
+                        <td scope="col" class="fifth_td"><button type="button"
+                                class="btn btn-outline-success">Pass</button>&nbsp;&nbsp;<button type="button"
+                                class="btn btn-outline-danger">Fail</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td scope="row" class="pt-3 first_td">2</td>
+                        <td class="second_td"><input type="text" placeholder="Name" name="name" value="Jerry"
+                                class="rounded-2 w-75 mt-1 p-1 first_input"></td>
+                        <td class="third_td"><input type="text" placeholder="Subject" name="subject" value="Science"
+                                class="rounded-2 w-75 mt-1 p-1 second_input"></td>
+                        <td class="fourth_td"><input type="text" placeholder="Mark" name="mark" value="50"
+                                class="rounded-2 w-75 mt-1 p-1 third_input"></td>
+                        <td scope="col" class="fifth_td"><button type="button"
+                                class="btn btn-outline-success">Pass</button>&nbsp;&nbsp;<button type="button"
+                                class="btn btn-outline-danger">Fail</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td scope="row" class="pt-3 first_td">3</td>
+                        <td class="second_td"><input type="text" placeholder="Name" name="name" value="Tom"
+                                class="rounded-2 w-75 mt-1 p-1 first_input"></td>
+                        <td class="third_td"><input type="text" placeholder="Subject" name="subject" value="Maths"
+                                class="rounded-2 w-75 mt-1 p-1 second_input"></td>
+                        <td class="fourth_td"><input type="text" placeholder="Mark" name="mark" value="50"
+                                class="rounded-2 w-75 mt-1 p-1 third_input"></td>
+                        <td scope="col" class="fifth_td"><button type="button"
+                                class="btn btn-outline-success">Pass</button>&nbsp;&nbsp;<button type="button"
+                                class="btn btn-outline-danger">Fail</button>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td scope="row" class="pt-3 first_td">4</td>
+                        <td class="second_td"><input type="text" placeholder="Name" name="name" value="Jerry"
+                                class="rounded-2 w-75 mt-1 p-1 first_input"></td>
+                        <td class="third_td"><input type="text" placeholder="Subject" name="subject" value="Science"
+                                class="rounded-2 w-75 mt-1 p-1 second_input"></td>
+                        <td class="fourth_td"><input type="text" placeholder="Mark" name="mark" value="50"
+                                class="rounded-2 w-75 mt-1 p-1 third_input"></td>
+                        <td scope="col" class="fifth_td"><button type="button"
+                                class="btn btn-outline-success">Pass</button>&nbsp;&nbsp;<button type="button"
+                                class="btn btn-outline-danger">Fail</button>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td scope="row" class="pt-3 first_td">5</td>
+                        <td class="second_td"><input type="text" placeholder="Name" name="name" value="Tom"
+                                class="rounded-2 w-75 mt-1 p-1 first_input"></td>
+                        <td class="third_td"><input type="text" placeholder="Subject" name="subject" value="Maths"
+                                class="rounded-2 w-75 mt-1 p-1 second_input"></td>
+                        <td class="fourth_td"><input type="text" placeholder="Mark" name="mark" value="50"
+                                class="rounded-2 w-75 mt-1 p-1 third_input"></td>
+                        <td scope="col" class="fifth_td"><button type="button"
+                                class="btn btn-outline-success">Pass</button>&nbsp;&nbsp;<button type="button"
+                                class="btn btn-outline-danger">Fail</button>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container mt-2 text-center">
+            <button class="btn btn-outline-primary mt-3">Submit</button>
+        </div>
+    </form>
+    <div id="report" class="table-responsive">
+
+    </div>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

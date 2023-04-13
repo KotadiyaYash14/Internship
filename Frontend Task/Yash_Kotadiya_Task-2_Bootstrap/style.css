@@ -1,0 +1,115 @@
+.navbar {
+    background: #2F80ED;
+}
+
+.logo {
+    font-family: 'Arbutus Slab', serif;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    color: #F2F2F2;
+}
+
+.hero-main-para {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: #2F80ED;
+}
+
+.hero-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 46px;
+    color: #1D1D1F;
+}
+
+.hero-para {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    color: #4F4F4F;
+}
+
+.cat-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #1D1D1F;
+}
+
+.contact-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000054;
+}
+
+.form-control {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(131, 131, 131, 0.8);
+    background: #F8F8F8 !important;
+    border-radius: 8px;
+}
+
+.big-heading {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    color: #252B42;
+}
+
+.big-para {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+
+.footer-icon {
+    padding: 3px;
+}
+
+.small-heading {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+    color: #252B42;
+}
+
+.small-para {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+/* 
+.col-lg-4 img{
+    margin-top: 100px;
+}
+@media only screen and (max-width: 990px) {
+    .col-lg-4 img{
+      margin-top: 20px;
+    }
+  } */
+
+  /* .row1{
+    padding-left: 32px !important;
+  } */

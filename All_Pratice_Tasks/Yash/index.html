@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1_JavaScript</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <table id="table" class="table table-responsive">
+            <thead>
+                <tr>
+                    <th scope="col"><button onclick="addBtn()" class=" btn btn-outline-success">Add</button></th>
+                    <th scope="col">Enter Your Name</th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody id="my_body">
+                <tr class="row1">
+                    <td scope="row" class="pt-3 td1 remain_sr_no">0</td>
+                    <td class="td2"><input type="text" placeholder="Name" class="w-50 mt-1 p-1 input_filed"></td>
+                    <td class="td3"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        // var chance = 1;
+        // function addBtn() {
+        //     chance++;
+        //     var max_fildes = 5;
+        //     const my_body = document.getElementById("my_body");
+        //     if (document.getElementsByTagName("tr").length <= max_fildes) {
+        //         my_body.innerHTML += `<th scope="row" class="pt-3">${chance}</th>
+        //         <td><input type="text" placeholder="name" class="w-50 mt-1 p-1"></td>
+        //         <td><button onclick="removeBtn(this)" class="btn btn-outline-danger">Remove</button></td>`
+        //     } else {
+        //         alert("You reached your limits");
+        //     }
+        // }
+        // function removeBtn(e) {
+        //     e.parentElement.parentElement.remove();
+        //     chance--;
+        //    }
+
+
+        // var chance = 1;
+        // function addBtn() {
+        //     chance++;
+        //     let table = document.getElementById('table');
+        //     var max_fildes = 5;
+        //     if (document.getElementsByTagName("tr").length <= max_fildes) {
+        //         let row = table.insertRow();
+        //         let first_cell = row.insertCell();
+        //         let second_cell = row.insertCell();
+        //         let third_cell = row.insertCell();
+
+        //         first_cell.innerHTML = `<th scope="row" class="pt-3">${chance}</th>`
+        //         second_cell.innerHTML = `<td><input type="text" placeholder="Name" class="w-50 mt-1 p-1"></td>`
+        //         third_cell.innerHTML = `<td><button onclick="removeBtn(this)" class="btn btn-outline-danger">Remove</button></td>`
+        //     }
+        //     else {
+        //         alert("You reached your limits");
+        //     }
+        // }
+
+        // function removeBtn(e) {
+        //     e.parentElement.parentElement.remove();
+        //     chance--;
+        // }
+
+
+        var max_fildes = 5;
+        function addBtn() {
+
+            const my_body = document.getElementById("my_body");
+            if (document.getElementsByTagName("tr").length <= max_fildes) {
+
+                let tr = document.createElement("tr");
+                tr.classList.add("row1");
+                my_body.appendChild(tr);
+
+                let td1 = document.createElement("td");
+                td1.classList.add("td1");
+                td1.classList.add("pt-3");
+                td1.classList.add(".remain_sr_no");
+                td1.classList.add("reverse_sr_no");
+                td1.innerHTML = remainNumber();
+
+                let td2 = document.createElement("td");
+                let input = document.createElement("input");
+                input.classList.add("input_filed");
+                input.classList.add("pt-1");
+                input.classList.add("mt-1");
+                input.classList.add("w-50");
+                input.setAttribute("placeholder", "Name");
+                td2.appendChild(input);
+
+                let td3 = document.createElement("td")
+                let buttton = document.createElement("buttton");
+                buttton.setAttribute("onclick", "removeBtn(this)");
+                buttton.innerHTML = 'Remove';
+                buttton.classList.add("btn");
+                buttton.classList.add("btn-outline-danger");
+                td3.appendChild(buttton);
+
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+
+            }
+            else {
+                alert("You reached your limits");
+            }
+        }
+
+        function removeBtn(e) {
+            e.parentElement.parentElement.remove();
+            deleteNumber()
+        }
+
+        function remainNumber() {
+            let remain_sr_no = document.querySelectorAll(".remain_sr_no");
+            return remain_sr_no.length;
+        }
+
+        function deleteNumber() {
+            let a = document.querySelectorAll(".reverse_sr_no");
+            for (let i = 0; i < a.length; i++) {
+                a[i].innerHTML = i + 1;
+            }
+        }
+    </script>
+</body>
+
+</html>

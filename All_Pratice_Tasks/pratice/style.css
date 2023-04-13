@@ -1,0 +1,28 @@
+th,
+td {
+    width: 17%;
+}
+ 
+ body {
+    counter-reset: Serial;
+}
+
+table {
+    border-collapse: separate;
+}
+
+tr td:first-child:before {
+    counter-increment: Serial;
+    content: counter(Serial);
+} 
+
+@media screen and (max-width : 991px) {
+    .th {
+        display: none;
+    }
+
+    td {
+        display: block;
+        width: 100%;
+    }
+}

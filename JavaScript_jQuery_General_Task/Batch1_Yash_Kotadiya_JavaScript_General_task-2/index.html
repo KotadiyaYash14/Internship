@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Task-2</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
+    <script src="jQuery/jquery-3.6.3.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container mt-3">
+        <div class="container mt-3 text-center">
+            <button class="btn btn-outline-secondary" id="addData" onclick="addRow()">Add Data</button>
+        </div>
+        <hr>
+        <table
+            class="table table-bordered table-light table-striped table-hover table-responsive-lg table-responsive-md table-responsive-sm text-center mt-3 shadow"
+            id="myTable">
+            <thead>
+                <tr>
+                    <th class="p-2" scope="col">Name</th>
+                    <th class="p-2" scope="col">Age</th>
+                    <th class="p-2" scope="col">Designation</th>
+                </tr>
+            </thead>
+            <tbody id="myBody"></tbody>
+        </table>
+    </div>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

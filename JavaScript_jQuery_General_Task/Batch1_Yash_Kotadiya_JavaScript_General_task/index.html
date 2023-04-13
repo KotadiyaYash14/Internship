@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Task</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px auto 0px auto;
+            width: 30%;
+            font-size: 16px;
+            border-radius: 15px;
+        }
+
+        input[type=text]:hover {
+            border: 2px solid rgb(76, 172, 250);
+        }
+
+        input[type=button] {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+
+        input[type=button]:hover {
+            background-color: white;
+            color: black;
+        }
+
+        #resultDiv {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="Enter Your Value">
+    <input type="text" placeholder="Enter Your Value">
+    <input type="text" placeholder="Enter Your Value">
+    <input type="text" placeholder="Enter Your Value">
+    <input type="text" placeholder="Enter Your Value">
+    <input type="text" placeholder="Enter Your Value">
+    <input type="text" placeholder="Enter Your Value">
+    <input type="text" placeholder="Enter Your Value">
+    <input type="text" placeholder="Enter Your Value">
+    <input type="text" placeholder="Enter Your Value">
+    <input type="text" placeholder="Enter Your Value">
+    <input type="text" placeholder="Enter Your Value">
+    <input type="text" placeholder="Enter Your Value">
+    <input type="text" placeholder="Enter Your Value">
+    <input type="text" placeholder="Enter Your Value">
+    <input type="button" value="Submit" onclick="Result()">
+    <div id="resultDiv"></div>
+</body>
+<script>
+    function Result() {
+        let myInput = document.querySelectorAll("input[type=text]")
+        myResult = " ";
+        for (let index = 0; index < myInput.length; index++) {
+            myResult += "<hr/>" + myInput[index].value;
+        }
+        document.getElementById("resultDiv").innerHTML = myResult;
+    }
+</script>
+</html>

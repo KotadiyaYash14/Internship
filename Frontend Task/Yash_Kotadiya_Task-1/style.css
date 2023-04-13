@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.header {
+    display: flex;
+    margin: 0 300px; 
+}
+
+.logo {
+    width: 225px;
+    height: 65px;
+    margin-top: 38px;
+    margin-bottom: 38px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin-left: 405px;
+    margin-top: 53px;
+
+}
+
+.navbar ul li {
+    font-size: 25px;
+    margin: 20px;
+}
+
+.navbar ul li:hover {
+    text-decoration: underline;
+    color: #3ba0ff;
+    cursor: pointer;
+}
+
+.btn {
+    width: 148px;
+    height: 59px;
+    margin-top: 54px;
+    margin-left: 9px;
+    background: #05427B;
+    border-radius: 9px;
+    color: white;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.btn:hover {
+    background: #3ba0ff;
+    color: black;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    margin-left: 300px;
+}
+
+.left {
+    background-color: #FFCCCC;
+    Width: 432px;
+    Height: 768px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 364px;
+    padding-bottom: 356px;
+}
+
+.right {
+    width: 876px;
+    height: 403px;
+    margin-left: 12px;
+    Height: 768px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #000000;
+}
+
+.up {
+    width: 876px;
+    height: 403px;
+    background-color: #BEBEBE;
+    box-sizing: border-box;
+    padding-top: 177px;
+    padding-bottom: 178px;
+}
+
+.down {
+    display: flex;
+}
+
+.one {
+    width: 543px;
+    height: 353px;
+    background-color: #BEBEBE;
+    margin-top: 12px;
+    box-sizing: border-box;
+    padding-top: 159px;
+    padding-bottom: 146px;
+}
+
+.two {
+    width: 321px;
+    height: 353px;
+    margin-left: 12px;
+    background-color: #BEBEBE;
+    margin-top: 12px;
+    box-sizing: border-box;
+    padding-top: 159px;
+    padding-bottom: 146px;
+}
+
+.footer {
+    background-color: #735A43;
+    width: 1920px;
+    height: 102px;
+    margin-top: 112px;
+    width: 100%;
+    display: flex;
+}
+
+.para {
+    color: white;
+    padding-left: 299px;
+    padding-top: 32px;
+    padding-bottom: 31px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    width: 50%;
+}
+
+.icons {
+    width: 50%;
+    color: white;
+    padding-top: 34px;
+    padding-bottom: 24px;
+    box-sizing: border-box;
+    padding-left: 375px;
+}
+
+.fa-brands {
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+.facebook:hover {
+    color: #0084ff;
+    cursor: pointer;
+}
+
+.twitter:hover{
+    color: #0084ff;
+    cursor: pointer;
+}
+
+.instagram:hover{
+    color: rgb(211, 23, 23);
+    cursor: pointer;
+}
+
+.whatsapp:hover{
+    color: rgb(21, 192, 21);
+    cursor: pointer;
+}
