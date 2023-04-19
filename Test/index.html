@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Test</title>
+    <style>
+        .displaynone{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-3 text-center text-decoration-underline">Details</h1>
+        <div class="float-end mb-4 mt-3">
+            <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                data-bs-target="#add_patient_modal">Add Patient</button>
+        </div>
+        <div class="modal fade" id="add_patient_modal" data-bs-backdrop="static">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="text-decoration-underline">Patient Info From</h4>
+                        <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="">Name</label>
+                                <input type="text" name="" id="patient_name" class="form-control">
+                                <span id="name"></span>
+                            </div>
+                            <div class="col-4">
+                                <label for="">DOB</label>
+                                <input type="date" name="" id="patient_dob" class="form-control">
+                                <span id="dob"></span>
+                            </div>
+
+                            <div class="col-4">
+                                <label for="">Email</label>
+                                <input type="email" name="" id="patient_email" class="form-control">
+                                <span id="mail"></span>
+                            </div>
+                            <div class="col-4">
+                                <label for="">Contact Number</label>
+                                <input type="number" name="" id="patient_number" class="form-control">
+                                <span id="phone"></span>
+                            </div>
+                            <div class="col-4">
+                                <label for="">Country</label>
+                                <select class="form-select" name="" id="patient_country">
+                                    <option selected>Select one</option>
+                                    <option value="India">India</option>
+                                    <option value="USA">USA</option>
+                                    <option value="China">China</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <label for="">State</label>
+                                <select class="form-select" name="" id="patient_state">
+                                    <option selected>Select one</option>
+                                    <option class="stateguj" value="Gujarat">Gujarat</option>
+                                    <option class="stateparis" value="Florida">Florida</option>
+                                    <option class="statechinatown" value="Sanghai">Sanghai</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <label for="">City</label>
+                                <select class="form-select" name="" id="patient_city">
+                                    <option selected>Select one</option>
+                                    <option class='citysid' value="Ahmedabad">Ahmedabad</option>
+                                    <option class="cityparis" value="Las Vegas">Las Vegas</option>
+                                    <option class="chinatown" value="Bangkok">Bangkok</option>
+                                </select>
+                            </div>
+                            <!-- <div class="col-4 p-4">
+                                <h5>Gender</h5>
+                                <input type="radio" name="gender" class="gender" value="male">
+                                <label for="">Male</label>
+                                <input type="radio" name="gender" class="gender" value="Female">
+                                <label for="">Female</label>
+                                <input type="radio" name="gender" class="gender" value="Other">
+                                <label for="">Other</label>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-outline-primary" id="update_data" data-bs-dismiss="modal">Update</button>
+                        <button class="btn btn-outline-primary" id="save_patient_data" >Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal2" id="add_treatment_modal" data-bs-backdrop="static">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="text-decoration-underline">Treatment From</h4>
+                        <button class="btn btn-close a" data-bs-dismiss="#add_treatment_modal" data-bs-dismiss="modal" area-label="close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="modal2_body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="">Disease</label>
+                                    <input type="text" name="" class="desease_name form-control" id="dis">
+                                    <span id="desease"></span>
+                                </div>
+                                <div class="col-3">
+                                    <label for="">Doctor</label>
+                                    <input type="text" name="" class="doctor_name form-control" id="doc">
+                                    <span id="doctor"></span>
+                                </div>
+
+                                <div class="col-3">
+                                    <label for="">Medicine</label>
+                                    <input type="text" name="" class="Medicine_name form-control" id="med">
+                                    <span id="medicine"></span>
+                                </div>
+                                <div class="col-3">
+                                    <label for="">Follow up date</label>
+                                    <input type="date" name="" class="follow_up_date form-control" id="fud">
+                                    <span id="fud_1"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-secondary" id="modal2_close">Close</button>
+                        <button class="btn btn-outline-primary" id="save_treatment">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <table class="table table-responsive table-light table-hover" id="data_table"></table>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
