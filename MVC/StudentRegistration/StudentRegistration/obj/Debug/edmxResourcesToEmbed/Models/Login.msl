@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CP356ChiragPatelModelStoreContainer" CdmEntityContainer="CP356ChiragPatelEntities">
+    <EntitySetMapping Name="SchoolUserLogin">
+      <EntityTypeMapping TypeName="CP356ChiragPatelModel.SchoolUserLogin">
+        <MappingFragment StoreEntitySet="SchoolUserLogin">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="City">
+      <EntityTypeMapping TypeName="CP356ChiragPatelModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country">
+      <EntityTypeMapping TypeName="CP356ChiragPatelModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="State">
+      <EntityTypeMapping TypeName="CP356ChiragPatelModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchoolStudentInfo">
+      <EntityTypeMapping TypeName="CP356ChiragPatelModel.SchoolStudentInfo">
+        <MappingFragment StoreEntitySet="SchoolStudentInfo">
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_View_School_Student_Info" FunctionName="CP356ChiragPatelModel.Store.sp_View_School_Student_Info">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CP356ChiragPatelModel.sp_View_School_Student_Info_Result1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Add_Edit_School_Student_Info" FunctionName="CP356ChiragPatelModel.Store.sp_Add_Edit_School_Student_Info" />
+    <FunctionImportMapping FunctionImportName="sp_Delete_School_Student_Info" FunctionName="CP356ChiragPatelModel.Store.sp_Delete_School_Student_Info" />
+    <FunctionImportMapping FunctionImportName="sp_Add_Edit_School_Country" FunctionName="CP356ChiragPatelModel.Store.sp_Add_Edit_School_Country" />
+    <EntitySetMapping Name="v_Show_School_Country">
+      <EntityTypeMapping TypeName="CP356ChiragPatelModel.v_Show_School_Country">
+        <MappingFragment StoreEntitySet="v_Show_School_Country">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Delete_School_Country" FunctionName="CP356ChiragPatelModel.Store.sp_Delete_School_Country" />
+    <FunctionImportMapping FunctionImportName="sp_Add_Edit_School_State" FunctionName="CP356ChiragPatelModel.Store.sp_Add_Edit_School_State" />
+    <EntitySetMapping Name="v_Show_School_State">
+      <EntityTypeMapping TypeName="CP356ChiragPatelModel.v_Show_School_State">
+        <MappingFragment StoreEntitySet="v_Show_School_State">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Delete_School_State" FunctionName="CP356ChiragPatelModel.Store.sp_Delete_School_State" />
+    <EntitySetMapping Name="v_Show_School_City">
+      <EntityTypeMapping TypeName="CP356ChiragPatelModel.v_Show_School_City">
+        <MappingFragment StoreEntitySet="v_Show_School_City">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Add_Edit_School_City" FunctionName="CP356ChiragPatelModel.Store.sp_Add_Edit_School_City" />
+    <FunctionImportMapping FunctionImportName="sp_Delete_School_City" FunctionName="CP356ChiragPatelModel.Store.sp_Delete_School_City" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,41 @@
+﻿@using MyApplication.Models
+@model List<MyApplication.Models.User>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserDetails</title>
+</head>
+<body>
+    <div class="container mt-3">
+        <table class="table table-responsive table-light table-striped table-hover text-center shadow-sm mt-4">
+            <thead>
+                <tr>
+                    <th scope="col">UserID</th>
+                    <th scope="col">UserName</th>
+                    <th scope="col">UserEmail</th>
+                    <th scope="col">UserAddress</th>
+                    <th scope="col">UserCity</th>
+                    <th scope="col">UserPinCode</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@item.UserId</th>
+                        <td>@item.UserName</td>
+                        <td>@item.UserEmail</td>
+                        <td>@item.UserAddress</td>
+                        <td>@item.UserCity</td>
+                        <td>@item.UserPinCode</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

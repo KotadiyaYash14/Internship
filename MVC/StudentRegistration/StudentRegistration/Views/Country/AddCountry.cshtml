@@ -1,0 +1,22 @@
+﻿@model StudentRegistration.Models.Country
+@{
+    ViewBag.Title = "AddCountry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <h1 class="text-center">Add New Country</h1>
+    </div>
+    <div>
+        @using (Html.BeginForm("AddCountry", "Country", FormMethod.Post))
+        {
+            <div class="d-flex justify-content-between">
+                @Html.HiddenFor(x => x.CountryId, new { @class = "form-control" })
+                @Html.TextBoxFor(x => x.CountryName, new { @class = "form-control" })
+                <button type="submit" class="btn btn-primary px-5 mx-5">Save</button>
+            </div>
+        }
+    </div>
+</div>
+

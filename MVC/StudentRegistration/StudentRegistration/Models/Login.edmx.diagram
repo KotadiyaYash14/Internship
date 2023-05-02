@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1f86511941ae44368181ab63524513bb" Name="Diagram1">
+        <EntityTypeShape EntityType="CP356ChiragPatelModel.SchoolUserLogin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CP356ChiragPatelModel.City" Width="1.5" PointX="7.875" PointY="1" />
+        <EntityTypeShape EntityType="CP356ChiragPatelModel.Country" Width="1.5" PointX="3.375" PointY="1.125" />
+        <EntityTypeShape EntityType="CP356ChiragPatelModel.State" Width="1.5" PointX="5.625" PointY="0.875" />
+        <AssociationConnector Association="CP356ChiragPatelModel.FK__City__StateId__1332DBDC" />
+        <AssociationConnector Association="CP356ChiragPatelModel.FK__State__CountryId__123EB7A3" />
+        <EntityTypeShape EntityType="CP356ChiragPatelModel.SchoolStudentInfo" Width="1.5" PointX="10.125" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="CP356ChiragPatelModel.FK__SchoolStud__City__17F790F9" />
+        <AssociationConnector Association="CP356ChiragPatelModel.FK__SchoolStu__Count__160F4887" />
+        <AssociationConnector Association="CP356ChiragPatelModel.FK__SchoolStu__State__17036CC0" />
+        <EntityTypeShape EntityType="CP356ChiragPatelModel.v_Show_School_Country" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CP356ChiragPatelModel.v_Show_School_State" Width="1.5" PointX="3.375" PointY="4.75" />
+        <EntityTypeShape EntityType="CP356ChiragPatelModel.v_Show_School_City" Width="1.5" PointX="5.375" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

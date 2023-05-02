@@ -1,0 +1,114 @@
+﻿@model StudentRegistration.Models.SchoolStudentInfo
+@{
+    ViewBag.Title = "Home Page";
+}
+<link href="~/Content/student_from.css" rel="stylesheet" />
+<div class="form_container pt-4">
+    <div class="form_bg">
+        @using (Html.BeginForm("AddStudentInfo","Home",FormMethod.Post)) {    
+            <div>
+                <h1 class="text-center">Student Registration</h1>
+            </div>
+            <div>
+                <div class="row">
+               
+                        @Html.HiddenFor(x => x.Id, new { @class = "form-control" })
+                        @*<input type="text" class="form-control" />*@
+                    
+                    <div class="col-6">
+                        <label>First Name</label>
+                        @Html.TextBoxFor(x => x.FName, new { @class = "form-control" })
+                        @*<input type="text" class="form-control" />*@
+                    </div>
+                    <div class="col-6">
+                        <label>Last Name</label>
+                        @Html.TextBoxFor(x => x.LName, new { @class = "form-control" })
+                        @*<input type="text" class="form-control" />*@
+                    </div>
+                    <div class="col-6">
+                        <label>Phone Number</label>
+                        @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+                        @*<input type="number" class="form-control" />*@
+                    </div>
+                    <div class="col-6">
+                        <label>Email Address</label>
+                        @Html.TextBoxFor(x => x.EmailId, new { @class = "form-control" })
+                        @*<input type="email" class="form-control" />*@
+                    </div>
+                    <div class="col-6">
+                        <label>Birth Date</label>
+                        @Html.TextBoxFor(x => x.BirthDate, new { @class = "form-control", @type = "date" })
+                        @*<input type="date" class="form-control" />*@
+                    </div>
+                    <div class="col-6">
+                        <label>Gender</label><br />
+                        @Html.RadioButtonFor(x => x.Gender, "Male", new { @class = "", @name = "gender", @type = "radio" })
+                        <span class="gender_label">Male</span>
+                        @Html.RadioButtonFor(x => x.Gender, "Female", new { @class = "", @name = "gender", @type = "radio" })
+                        <span class="gender_label">Female</span>
+                    </div>
+                    <div class="col-6">
+                        <label>Address</label>
+                        @Html.TextAreaFor(x => x.Address, new { @class = "form-control" })
+                    </div>
+                    <div class="col-6">
+                        <label>Country</label>
+                        @Html.DropDownListFor(x => x.Country, (IEnumerable<SelectListItem>)ViewBag.CountryName, " -- Select Country -- ", new { id = "Country", @class = "form-control" })
+                    </div>
+                    <div class="col-6">
+                        <label>State</label>
+                        <select class="form-select form-control" aria-label="Default select example" name="State" id="State">
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label>City</label>
+                        <select class="form-select form-control" aria-label="Default select example" name="City" id="City">
+                        </select>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center pt-3">
+                        <button class="btn btn-primary px-5" type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    $("#Country").off().change(function () {
+        $("#State").html("");
+        $("#City").html("");
+        var id = $("#Country").val();
+        $("#State").html("<option value='-1'> -- Select Country -- </option>");
+        $("#City").html("<option value='-1'> -- Select Country -- </option>");
+        $.ajax({
+            url: `/Home/GetStates/${id}`,
+            method: 'GET',
+            success: function (res) {
+                var data = JSON.parse(res);
+                data.forEach(ele => {
+                    console.log(ele);
+                    $('#State').append(`<option value=${ele.StateId}>${ele.StateName}</option>`);
+                });
+            }
+        });
+
+        
+    });
+    $("#State").off().change(function () {
+        $("#City").html("");
+        var id = $("#State").val();
+        //console.log(id)
+        $("#City").html("<option value='-1'> -- Select Country -- </option>");
+        $.ajax({
+            url: `/Home/GetCites/${id}`,
+            method: 'GET',
+            success: function (res) {
+                var data = JSON.parse(res);
+                data.forEach(ele => {
+                    $('#City').append(`<option value=${ele.CityId}>${ele.CityName}</option>`);
+                });
+            }
+        })
+    });
+</script>

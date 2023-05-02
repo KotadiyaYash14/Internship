@@ -1,0 +1,17 @@
+﻿.CustomTableHeader{
+    padding: 20px 50px 0px 50px;
+}
+    .CustomTableHeader .CustomTableDesign {
+        padding: 30px 40px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    }
+
+    .CustomTableHeader .Customheadbackground {
+        padding:20px;
+        border-radius:50px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        margin-bottom: 30px;
+    }
+    .CustomTableHeader .Customheadbackground .Customhead{
+        font-size:40px !important;
+    }

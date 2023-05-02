@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "ShowCity";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<StudentRegistration.Models.v_Show_School_City>
+
+@{
+    ViewBag.Title = "ShowState";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="p-4">
+        <h1 class="text-center">Show City Data</h1>
+    </div>
+</div>
+<div class="p-3">
+    <div class="table-responsive">
+        <table id="DataTable">
+            <thead>
+                <tr>
+                    <th> City Id </th>
+                    <th> City Name </th>
+                    <th> State Name </th>
+                    <th> Country Name </th>
+                    <th> Action </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var data in Model)
+                    {
+                                <tr>
+                                    <td>@data.CityId</td>
+                                    <td>@data.CityName</td>
+                                    <td>@data.StateName</td>
+                                    <td>@data.CountryName</td>
+                                    <td><a href="/City/EditCityName/@data.CityId" class="btn btn-outline-info">Edit</a><a href="/City/DeleteCityName/@data.CityId" class="btn btn-outline-danger">Delete</a></td>
+                                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

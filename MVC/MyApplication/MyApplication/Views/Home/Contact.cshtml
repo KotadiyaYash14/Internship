@@ -1,0 +1,58 @@
+﻿@model MyApplication.Models.User
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <h1 class="text-center text-decoration-underline mt-3">Order Now</h1>
+        <form class="row g-3" action="/Home/Contact" method="post" id="Contact_Form">
+            <div class="col-md-6">
+                @*<label for="inputEmail4" class="form-label">UserId</label>*@
+                @Html.LabelFor(x => x.UserId, new { @class = "form-label"})
+                @Html.TextBoxFor(x => x.UserId, new { @class = "form-control", id = "UserId", placeholder = "UserId" })
+                @*<div id="idValidate"></div>*@
+                <div>@Html.ValidationMessageFor(x => x.UserId, null, new { @class = "text-danger" })</div>
+            </div>
+            <div class="col-md-6">
+                @*<label for="inputEmail4" class="form-label">Name</label>*@
+                @Html.LabelFor(x => x.UserName, new { @class = "form-label" })
+                @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", id = "UserName", placeholder = "Enter Your Name" })
+                @*<div id="UserNameValidate"></div>*@
+                <div>@Html.ValidationMessageFor(x => x.UserName, null, new { @class = "text-danger" })</div>
+            </div>
+            <div class="col-md-6">
+                @*<label for="inputPassword4" class="form-label">Email</label>*@
+                @Html.LabelFor(x => x.UserEmail, new { @class = "form-label" })
+                @Html.TextBoxFor(x => x.UserEmail, new { @class = "form-control", id = "UserEmail", placeholder = "Enter Your Email" })
+                <div id="UseremailValidate"></div>
+                <div>@Html.ValidationMessageFor(x => x.UserEmail, null, new { @class = "text-danger" })</div>
+            </div>
+            <div class="col-md-6">
+                @*<label for="inputAddress" class="form-label">Address</label>*@
+                @Html.LabelFor(x => x.UserAddress, new { @class = "form-label" })
+                @Html.TextBoxFor(x => x.UserAddress, new { @class = "form-control", id = "UserAddress", placeholder = "Enter Your Address" })
+                @*<div id="UseraddressValidate"></div>*@
+                <div>@Html.ValidationMessageFor(x => x.UserAddress, null, new { @class = "text-danger" })</div>
+            </div>
+            <div class="col-md-6">
+                @*<label for="inputAddress" class="form-label">PinCode</label>*@
+                @Html.LabelFor(x => x.UserPinCode, new { @class = "form-label" })
+                @Html.TextBoxFor(x => x.UserPinCode, new { @class = "form-control", id = "UserPinCode", placeholder = "Enter Your PinCode" })
+                @*<div id="UserPinCodeValidate"></div>*@
+                <div>@Html.ValidationMessageFor(x => x.UserPinCode, null, new { @class = "text-danger" })</div>
+            </div>
+            <div class="col-md-6">
+                @*<label for="inputCity" class="form-label">City</label>*@
+                @Html.LabelFor(x => x.UserCity, new { @class = "form-label" })
+                @Html.TextBoxFor(x => x.UserCity, new { @class = "form-control", id = "UserCity", placeholder = "Enter Your City" })
+                @*<div id="UserCityValidate"></div>*@
+                <div>@Html.ValidationMessageFor(x => x.UserCity, null, new { @class = "text-danger" })</div>
+            </div>
+            <div class="col-12 mt-3">
+                <button type="submit" class="btn btn-outline-primary" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

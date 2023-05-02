@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CP356ChiragPatelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SchoolUserLogin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="CP356ChiragPatelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SchoolUserLogin" EntityType="Self.SchoolUserLogin" />
+    <EntitySet Name="City" EntityType="CP356ChiragPatelModel.City" />
+    <EntitySet Name="Country" EntityType="CP356ChiragPatelModel.Country" />
+    <EntitySet Name="State" EntityType="CP356ChiragPatelModel.State" />
+    <AssociationSet Name="FK__City__StateId__1332DBDC" Association="CP356ChiragPatelModel.FK__City__StateId__1332DBDC">
+      <End Role="State" EntitySet="State" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK__State__CountryId__123EB7A3" Association="CP356ChiragPatelModel.FK__State__CountryId__123EB7A3">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="State" EntitySet="State" />
+    </AssociationSet>
+    <EntitySet Name="SchoolStudentInfo" EntityType="CP356ChiragPatelModel.SchoolStudentInfo" />
+    <AssociationSet Name="FK__SchoolStud__City__17F790F9" Association="CP356ChiragPatelModel.FK__SchoolStud__City__17F790F9">
+      <End Role="City" EntitySet="City" />
+      <End Role="SchoolStudentInfo" EntitySet="SchoolStudentInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SchoolStu__Count__160F4887" Association="CP356ChiragPatelModel.FK__SchoolStu__Count__160F4887">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="SchoolStudentInfo" EntitySet="SchoolStudentInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SchoolStu__State__17036CC0" Association="CP356ChiragPatelModel.FK__SchoolStu__State__17036CC0">
+      <End Role="State" EntitySet="State" />
+      <End Role="SchoolStudentInfo" EntitySet="SchoolStudentInfo" />
+    </AssociationSet>
+    <FunctionImport Name="sp_View_School_Student_Info" ReturnType="Collection(CP356ChiragPatelModel.sp_View_School_Student_Info_Result1)" />
+    <FunctionImport Name="sp_Add_Edit_School_Student_Info">
+      <Parameter Name="Id" Mode="In" Type="Int64" />
+      <Parameter Name="FName" Mode="In" Type="String" />
+      <Parameter Name="LName" Mode="In" Type="String" />
+      <Parameter Name="PhoneNumber" Mode="In" Type="String" />
+      <Parameter Name="EmailId" Mode="In" Type="String" />
+      <Parameter Name="BirthDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Gender" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="Country" Mode="In" Type="Int32" />
+      <Parameter Name="State" Mode="In" Type="Int32" />
+      <Parameter Name="City" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Delete_School_Student_Info">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Add_Edit_School_Country">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="CountryName" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="v_Show_School_Country" EntityType="CP356ChiragPatelModel.v_Show_School_Country" />
+    <FunctionImport Name="sp_Delete_School_Country">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Add_Edit_School_State">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="StateName" Mode="In" Type="String" />
+      <Parameter Name="CountryId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="v_Show_School_State" EntityType="CP356ChiragPatelModel.v_Show_School_State" />
+    <FunctionImport Name="sp_Delete_School_State">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="v_Show_School_City" EntityType="CP356ChiragPatelModel.v_Show_School_City" />
+    <FunctionImport Name="sp_Add_Edit_School_City">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="CityName" Mode="In" Type="String" />
+      <Parameter Name="StateId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Delete_School_City">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StateId" Type="Int32" />
+    <NavigationProperty Name="State" Relationship="CP356ChiragPatelModel.FK__City__StateId__1332DBDC" FromRole="City" ToRole="State" />
+    <NavigationProperty Name="SchoolStudentInfo" Relationship="CP356ChiragPatelModel.FK__SchoolStud__City__17F790F9" FromRole="City" ToRole="SchoolStudentInfo" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="State" Relationship="CP356ChiragPatelModel.FK__State__CountryId__123EB7A3" FromRole="Country" ToRole="State" />
+    <NavigationProperty Name="SchoolStudentInfo" Relationship="CP356ChiragPatelModel.FK__SchoolStu__Count__160F4887" FromRole="Country" ToRole="SchoolStudentInfo" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CountryId" Type="Int32" />
+    <NavigationProperty Name="City" Relationship="CP356ChiragPatelModel.FK__City__StateId__1332DBDC" FromRole="State" ToRole="City" />
+    <NavigationProperty Name="Country" Relationship="CP356ChiragPatelModel.FK__State__CountryId__123EB7A3" FromRole="State" ToRole="Country" />
+    <NavigationProperty Name="SchoolStudentInfo" Relationship="CP356ChiragPatelModel.FK__SchoolStu__State__17036CC0" FromRole="State" ToRole="SchoolStudentInfo" />
+  </EntityType>
+  <Association Name="FK__City__StateId__1332DBDC">
+    <End Type="CP356ChiragPatelModel.State" Role="State" Multiplicity="0..1" />
+    <End Type="CP356ChiragPatelModel.City" Role="City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__State__CountryId__123EB7A3">
+    <End Type="CP356ChiragPatelModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="CP356ChiragPatelModel.State" Role="State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SchoolStudentInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="LName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EmailId" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="Int32" Nullable="false" />
+    <Property Name="State" Type="Int32" Nullable="false" />
+    <Property Name="City" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="City1" Relationship="CP356ChiragPatelModel.FK__SchoolStud__City__17F790F9" FromRole="SchoolStudentInfo" ToRole="City" />
+    <NavigationProperty Name="Country1" Relationship="CP356ChiragPatelModel.FK__SchoolStu__Count__160F4887" FromRole="SchoolStudentInfo" ToRole="Country" />
+    <NavigationProperty Name="State1" Relationship="CP356ChiragPatelModel.FK__SchoolStu__State__17036CC0" FromRole="SchoolStudentInfo" ToRole="State" />
+  </EntityType>
+  <Association Name="FK__SchoolStud__City__17F790F9">
+    <End Type="CP356ChiragPatelModel.City" Role="City" Multiplicity="1" />
+    <End Type="CP356ChiragPatelModel.SchoolStudentInfo" Role="SchoolStudentInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="SchoolStudentInfo">
+        <PropertyRef Name="City" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SchoolStu__Count__160F4887">
+    <End Type="CP356ChiragPatelModel.Country" Role="Country" Multiplicity="1" />
+    <End Type="CP356ChiragPatelModel.SchoolStudentInfo" Role="SchoolStudentInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="SchoolStudentInfo">
+        <PropertyRef Name="Country" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SchoolStu__State__17036CC0">
+    <End Type="CP356ChiragPatelModel.State" Role="State" Multiplicity="1" />
+    <End Type="CP356ChiragPatelModel.SchoolStudentInfo" Role="SchoolStudentInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="SchoolStudentInfo">
+        <PropertyRef Name="State" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_View_School_Student_Info_Result">
+    <Property Type="String" Name="Column1" Nullable="true" MaxLength="4000" />
+  </ComplexType>
+  <ComplexType Name="sp_View_School_Student_Info_Result1">
+    <Property Type="Int64" Name="Id" Nullable="false" />
+    <Property Type="String" Name="FName" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="LName" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="PhoneNumber" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="EmailId" Nullable="false" MaxLength="255" />
+    <Property Type="DateTime" Name="BirthDate" Nullable="false" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Address" Nullable="false" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="StateName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="CityName" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <EntityType Name="v_Show_School_Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="v_Show_School_State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="Int32" Nullable="false" />
+    <Property Name="StateName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CountryName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="v_Show_School_City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="Int32" Nullable="false" />
+    <Property Name="CityName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StateName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CountryName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
