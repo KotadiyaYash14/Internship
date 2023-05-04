@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyTask</title>
+    <script src="jQuery/jquery-3.6.3.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/select2/3.4.5/select2.min.js"></script>
+    <link href="https://cdn.bootcss.com/select2/3.4.5/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <style>
+        .display {
+            display: none;
+        }
+        .add2{
+            margin-left: -7px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center text-decoration-underline">Student Details</h1>
+        <button class="btn btn-outline-primary float-end mb-3" data-bs-target="#myModal"
+            data-bs-toggle="modal" id="Add">Add</button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Your Detalis</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="Name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="Name" placeholder="Your Name">
+                            <span id="NameValidation" class="error"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="Email" placeholder="Your Email">
+                            <span id="EmailValidation" class="error"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Number" class="form-label">Contact Number</label>
+                            <input type="number" class="form-control" id="Number" placeholder="Your Contact Number">
+                            <span id="NumberValidation" class="error"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Date of Birth</label>
+                            <input type="date" class="form-control" id="Date" max="12-31-3000">
+                            <span id="DateValidation" class="error"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Country" class="form-label">Select Country</label>
+                            <input type="text" id="Country"/> 
+                        </div>
+                        <div class="mb-3">
+                            <label for="State" class="form-label">Select State</label>
+                            <input type="text" id="State"/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="City" class="form-label">Select City</label>
+                            <input type="text" id="City"/>
+                        </div>
+                        <!-- <div class="mb-3">
+                            <label for="date" class="form-label">Select DegreeType</label>
+                            <select class="form-select" aria-label="Default select example" id="DegreeType">
+                                 <option selected>Select One</option>
+                            </select>
+                        </div> -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-outline-primary" id="Submit">Submit</button>
+                        <button type="button" class="btn btn-outline-secondary Update" data-bs-dismiss="modal">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>     
+        <!-- Second modal -->
+        <div class="modal fade modal2" id="mySecondModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Subject Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="Subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="Subject" placeholder="Your Subject">
+                            <span id="SubjectValidation" class="error"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Department" class="form-label">Department</label>
+                            <input type="text" class="form-control" id="Department" placeholder="Your Department">
+                            <span id="DepartmentValidation" class="error"></span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-outline-primary" id="Save">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>     
+        <table class="table table-responsive table-striped table-hover table-bordered" id="myTable"></table>
+    </div>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
