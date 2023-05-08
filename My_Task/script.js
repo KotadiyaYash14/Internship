@@ -74,7 +74,7 @@ $(document).ready(function () {
                 <button class="btn btn-outline-secondary mt-2 add2" data-bs-target="#mySecondModal" data-bs-toggle="modal">Add Subjects</button>`,
             }
         ]
-    });
+    })
 
     $(document.body).on('click', '#Add', function () {
         $(".modal-body input").val("");
@@ -138,9 +138,24 @@ $(document).ready(function () {
             $("#DateValidation").css("color", "red");
             isValid = false;
         }
-   
         else {
             $("#DateValidation").html("");
+        }
+
+        if (Country.find(x => x.id == $("#Country").val()) == undefined) {
+            $("#CountryValidation").html("Select Your Country");
+            $("#CountryValidation").css("color", "red");
+            isValid = false;
+        }
+        else if (NewState.find(x => x.id == $("#State").val()) == undefined) {
+            $("#StateValidation").html("Select Your State");
+            $("#StateValidation").css("color", "red");
+            isValid = false;
+        }
+        else if (NewCity.find(x => x.id == $("#City").val()) == undefined) {
+            $("#CityValidation").html("Select Your City");
+            $("#CityValidation").css("color", "red");
+            isValid = false;
         }
 
         if (isValid) {
@@ -243,9 +258,26 @@ $(document).on('click', '.Update', function () {
     data[EditIndex].email = $("#Email").val();
     data[EditIndex].contactnumber = $("#Number").val();
     data[EditIndex].dob = $("#Date").val();
-    var CountryName = Country.find(x => x.id == $("#Country").val()).text;
-    var StateName = NewState.find(x => x.id == $("#State").val()).text;
-    var CityName = NewCity.find(x => x.id == $("#City").val()).text;
+    var CountryName, StateName, CityName;
+    var MyAddress = data[EditIndex].address.split(",");
+    if (Country.find(x => x.id == $("#Country").val()) == undefined) {
+        CountryName = MyAddress[0]
+    }
+    else {
+        CountryName = Country.find(x => x.id == $("#Country").val()).text;
+    }
+    if (NewState.find(x => x.id == $("#State").val()) == undefined) {
+        StateName = MyAddress[1]
+    }
+    else {
+        StateName = NewState.find(x => x.id == $("#State").val()).text;
+    }
+    if (NewCity.find(x => x.id == $("#City").val()) == undefined) {
+        CityName = MyAddress[2];
+    }
+    else {
+        CityName = NewCity.find(x => x.id == $("#City").val()).text;
+    }
     data[EditIndex].address = CountryName + "," + StateName + "," + CityName;
     dt.clear().draw();
     dt.rows.add(data).draw();
@@ -309,6 +341,6 @@ function LowerTable() {
 
     $(".add2").off().click(function () {
         $(".error").html("");
-        $(".modal-body input").val("");  
+        $(".modal-body input").val("");
     });
 }
