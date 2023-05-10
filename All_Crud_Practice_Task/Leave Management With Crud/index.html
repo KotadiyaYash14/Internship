@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Task</title>
+    <script src="jQuery/jquery-3.6.3.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        .display {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="container mt-3">
+        <div class="float-end">
+            <button class="btn btn-outline-primary mb-3" data-bs-toggle="modal" data-bs-target="#MyModal"
+                id="Add">Add</button>
+        </div>
+        <div class="modal fade" id="MyModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="Name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="Name" placeholder="Name">
+                            <span id="NameValidation" class="Error"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="Email" placeholder="Email">
+                            <span id="EmailValidation" class="Error"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="DOB" class="form-label">Date of Birth</label>
+                            <input type="date" class="form-control" id="DOB">
+                            <span id="DOBValidation" class="Error"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Leave" class="form-label">Leave Date</label>
+                            <input type="date" class="form-control" id="Leave">
+                            <span id="LeaveValidation" class="Error"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label>Select LeaveType</label>
+                            <select class="form-select mt-2" id="Day">
+                                <option value="Select One">Select One</option>
+                                <option value="Full Day">Full Day</option>
+                                <option value="Half Day">Half Day</option>
+                            </select>
+                            <span id="DayValidation" class="Error"></span>
+                        </div>
+                        <div class="mb-3" id="SelectHalfDiv">
+                            <label>Select LeaveHalf</label>
+                            <select class="form-select mt-2"  id="Half">
+                                <option value="Select One">Select One</option>
+                                <option value="First Half">First Half</option>
+                                <option value="Second Half">Second Half</option>
+                            </select>
+                            <span id="HalfValidation" class="Error"></span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-outline-primary" id="Submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="table table-responsive table-striped table-bordered" id="MyTable"></table>
+    </div>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
