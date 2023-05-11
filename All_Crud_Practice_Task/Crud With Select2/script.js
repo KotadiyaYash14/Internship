@@ -96,7 +96,7 @@ $(document).ready(function () {
             isValid = false;
         }
         else if (!/^[A-Za-z]+$/.test(Name)) {
-            $("#NameValidation").html("Name can't Contains Digits");
+            $("#NameValidation").html("Name can't Contains Digits and Spaces");
             $("#NameValidation").css("color", "red");
             isValid = false;
         }
@@ -193,19 +193,19 @@ $(document).ready(function () {
         data: Country,
         placeholder: "Select Country",
         width: 460
-    })
+    });
 
     $('#State').select2({
         data: ``,
         placeholder: "Select State",
         width: 460
-    })
+    });
 
     $('#City').select2({
         data: ``,
         placeholder: "Select City",
         width: 460,
-    })
+    });
 });
 
 $(document).on("change", "#Country", function () {

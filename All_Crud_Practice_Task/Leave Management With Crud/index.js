@@ -98,7 +98,6 @@ $(document).ready(function () {
             }
             else if(data.some(x => x.email== Email && x.leave == Leave && x.leavehalf == 'Second Half'))
             {
-
                 $("#Half").html("")
                 $("#Half").html(`<option value="Select One">Select One</option><option value="First Half">First Half</option>`)
             }
@@ -170,7 +169,7 @@ $(document).ready(function () {
         }
 
         if (Leave == "") {
-            $("#LeaveValidation").html("Plese Ener a Leave Date");
+            $("#LeaveValidation").html("Plese Enter a Leave Date");
             $("#LeaveValidation").css("color", "red");
             isValid = false;
         }
@@ -184,8 +183,9 @@ $(document).ready(function () {
             isValid = false;
         }
         else if (data.some(x => x.email == Email &&  x.leavehalf ==  LeaveHalf && x.leavetype == LeaveType)){
-            $("#DayValidation").html("Already Leave Taken");
+            $("#DayValidation").html("Leave is Already Taken");
             $("#DayValidation").css("color", "red");
+            isValid = false;
         }
         else {
             $("#DayValidation").html("");

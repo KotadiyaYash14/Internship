@@ -290,45 +290,117 @@ select * from dbo.getmedition('fever,cold')
 
 ---------- Fourth Question ----------
 
-create or alter procedure allInfo
+--create or alter procedure allInfo
+--(
+--@FirstName varchar(255),
+--@LastName varchar(255),
+--@Email varchar(255),
+--@Password varchar(255),
+--@UserType varchar(255),
+--@Address varchar(255),
+--@mobileNo varchar(30),
+--@CityName varchar(255),
+--@DoctorName varchar(255),
+--@NurseName varchar(255),
+--@DiagnosisName varchar(255),
+--@TreatmentFee decimal(10,2),
+--@DOT date,
+--@Instructions varchar(max)
+--)
+--as
+--begin
+--declare @utid int,@ctid int,@said int,@coid int
+--set @utid = (select UT.ID from MyUserType UT where UT.UserTypeName = @UserType);
+--set @ctid = (select CI.ID from MyCity CI  where CI.CityName = @CityName );
+--set @said = (select S.ID from MyState S inner join MyCity CI on S.ID = CI.StateId where CI.ID= @ctid);
+--set @coid = (select CO.ID from MyCountry CO inner join  MyState S  on CO.ID = S.CountryId where S.ID = @said);
+--exec MyUserInfo @FirstName,@LastName,@Email,@Password,@utid,@Address,@mobileNo,@ctid,@said,@coid;
+
+--declare @ptid int,@dtid int,@ntid int,@digid int,@preid int
+--declare @id int, @patientName varchar(255)
+--set @id = (select max(U.ID) FROM MyUser U)
+--set @patientName = (SELECT U.FirstName FROM MyUser U WHERE U.ID = @id)
+--set @ptid = (select U.ID from MyUserType UT inner join MyUser U on UT.ID = U.UserTypeId where U.FirstName = @Patientname);
+--set @dtid = (select U.ID from MyUserType UT inner join MyUser U on UT.ID = U.UserTypeId where U.FirstName = @Doctorname);
+--set @ntid = (select U.ID from MyUserType UT inner join MyUser U on UT.ID = U.UserTypeId where U.FirstName = @Nursename);
+--set @digid = (select D.ID from MyDiagnosis D where D.DiagnosisDetails = @Diagnosisname);
+--set @preid = (select M.ID from MyMedicine M inner join MyDiagnosis D on D.ID = M.DiagosisId where M.DiagosisId = @digid);
+--exec MyTreatmentDetailsInfo @ptid,@dtid,@ntid,@digid,@preid,@TreatmentFee,@DOT,@Instructions
+
+--end
+--exec allInfo 'Vivek1','Varde','vivek1@gmail.com','vivek123','Patient',null,'1234567890','Perth','Chirag','Vivek','Fever',500,'2022-12-12',null
+ 
+--select * from MyUser
+--select * from MyTreatmentDetails
+
+create or Alter proc addpatitent (
+	@FName VARCHAR(255),
+	@LName VARCHAR(255),
+	@Email VARCHAR(255),
+	@Password VARCHAR(255),
+	@Address varchar(max),
+	@MobileNo varchar(30),
+	@city VARCHAR(255),
+	@DoctorName varchar(255),
+	@NurseName varchar(255),
+	@Diagnosis varchar(255),
+	@TreatmentFee int,
+	@DOT date,
+	@Instruction VARCHAR(255)
+)
+AS
+BEGIN
+	BEGIN TRY
+		DECLARE @UTID INT,@CityID int,@StateId INT,@CountryId INT,@MaxId int
+		SET @UTID = (SELECT [ID] FROM [MyUserType] WHERE [UserTypeName] = 'Patient')
+		Set @cityID = (select id from MyCity where CityName = @city)
+		SET @StateId = (SELECT [StateId] FROM [MyCity] WHERE [id] = @CityID)
+		SET @CountryId = (SELECT [CountryId] FROM [MyCity] WHERE [ID] = @CityID)
+
+		INSERT INTO [MyUser]([FirstName],[LastName],[Email],[Password],[UserTypeId],[Address],[MobileNo],[CountryId],[StateId],[CityId]) VALUES (@FName,@LName,@Email,@Password,@UTID,@Address,@MobileNo,@CountryId,@StateId,@CityID)
+		
+		declare @PatientId int
+		set @PatientId = @@IDENTITY
+
+		declare @DoctorId int, @NurseId int,@dig int,@pre int
+		set @DoctorId = (select id from MyUser where UserTypeId = 1 and FirstName =@DoctorName);
+		set @NurseId = (select id from MyUser where UserTypeId = 2 and FirstName = @NurseName);
+		set @dig = (select id from MyDiagnosis where DiagnosisDetails = @Diagnosis);
+		set @pre = (select id from MyMedicine where DiagosisId = @dig)
+
+		insert into MyTreatmentDetails (PatientId,DoctorId,NurseId,Diagnosis,Prescription,TreatmentFee,DOT,Instructions) values (@PatientId,@DoctorId,@NurseId,@dig,@pre,@TreatmentFee,@DOT,@Instruction)
+
+	END TRY
+	BEGIN CATCH
+		PRINT ERROR_MESSAGE();
+	END CATCH
+END
+
+
+EXEC addpatitent 'krishna','bakri','bakri12@gmail.com','bakripur','bakri vas , bakri pur','25896374','Ahemedabad','Chirag','Vivek','Cold',500,'2023-03-01',null
+
+------------
+
+create or alter procedure ABC
 (
-@FirstName varchar(255),
-@LastName varchar(255),
-@Email varchar(255),
-@Password varchar(255),
-@UserType varchar(255),
-@Address varchar(255),
-@mobileNo varchar(30),
-@CityName varchar(255),
-@DoctorName varchar(255),
-@NurseName varchar(255),
-@DiagnosisName varchar(255),
-@TreatmentFee decimal(10,2),
-@DOT date,
-@Instructions varchar(max)
+@DName varchar(255),
+@MName varchar(255)
 )
 as
 begin
-declare @utid int,@ctid int,@said int,@coid int
-set @utid = (select UT.ID from MyUserType UT where UT.UserTypeName = @UserType);
-set @ctid = (select CI.ID from MyCity CI  where CI.CityName = @CityName );
-set @said = (select S.ID from MyState S inner join MyCity CI on S.ID = CI.StateId where CI.ID= @ctid);
-set @coid = (select CO.ID from MyCountry CO inner join  MyState S  on CO.ID = S.CountryId where S.ID = @said);
-exec MyUserInfo @FirstName,@LastName,@Email,@Password,@utid,@Address,@mobileNo,@ctid,@said,@coid;
+begin try
+insert into MyDiagnosis (DiagnosisDetails) values (@DName)
+declare @did int
+set @did = Scope_Identity()
+insert into MyMedicine (MedicineName,DiagosisId) values (@MName,@did);
+SELECT m.MedicineName,d.DiagnosisDetails FROM MyMedicine m inner join MyDiagnosis d on m.DiagosisId = d.ID where d.ID = @did
+end try
 
-declare @ptid int,@dtid int,@ntid int,@digid int,@preid int
-declare @id int, @patientName varchar(255)
-set @id = (select max(U.ID) FROM MyUser U)
-set @patientName = (SELECT U.FirstName FROM MyUser U WHERE U.ID = @id)
-set @ptid = (select U.ID from MyUserType UT inner join MyUser U on UT.ID = U.UserTypeId where U.FirstName = @Patientname);
-set @dtid = (select U.ID from MyUserType UT inner join MyUser U on UT.ID = U.UserTypeId where U.FirstName = @Doctorname);
-set @ntid = (select U.ID from MyUserType UT inner join MyUser U on UT.ID = U.UserTypeId where U.FirstName = @Nursename);
-set @digid = (select D.ID from MyDiagnosis D where D.DiagnosisDetails = @Diagnosisname);
-set @preid = (select M.ID from MyMedicine M inner join MyDiagnosis D on D.ID = M.DiagosisId where M.DiagosisId = @digid);
-exec MyTreatmentDetailsInfo @ptid,@dtid,@ntid,@digid,@preid,@TreatmentFee,@DOT,@Instructions
-
+begin catch
+print Error_message();
+end catch
 end
-exec allInfo 'Vivek1','Varde','vivek1@gmail.com','vivek123','Patient',null,'1234567890','Perth','Chirag','Vivek','Fever',500,'2022-12-12',null
- 
-select * from MyUser
-select * from MyTreatmentDetails
+
+exec ABC 'vomit113','ABC113'
+select * from MyMedicine
+select * from MyDiagnosis
