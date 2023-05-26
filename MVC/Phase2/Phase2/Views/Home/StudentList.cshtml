@@ -1,0 +1,34 @@
+﻿@model  List<Phase2.Models.StudentList>
+
+<h2 class="text-center mt-3 text-decoration-underline">StudentList</h2>
+
+<table class="table table-responsive table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count > 0 && Model.Count != 0)
+        {
+            foreach (var StudentLists in Model)
+            {
+                <tr>
+                    <td>@StudentLists.StudentId</td>
+                    <td>@StudentLists.StudentFirstName</td>
+                    <td>@StudentLists.StudentLastName</td>
+                    <td>@StudentLists.StudentAge</td>
+                    <td>@StudentLists.StudentAddress</td>
+                    <td>@Html.ActionLink("Edit", "Edit", new { id = StudentLists.StudentId }, new { @class = "btn btn-outline-success" })&nbsp;&nbsp;@Html.ActionLink("Delete", "Delete", new { id = StudentLists.StudentId }, new { @class = "btn btn-outline-danger" })</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<hr />
+@Html.Partial("Footer")

@@ -1,0 +1,32 @@
+﻿@model Phase2.Models.StudentList
+<h2 class="text-center mt-3 text-decoration-underline">Details</h2>
+
+@using (Html.BeginForm("Create", "Home", FormMethod.Post))
+{
+    <div class="container">
+        <div class="mb-3">
+            <label>Id :</label>
+            @Html.TextBoxFor(x => x.StudentId, new { @class = "form-control" })
+        </div>
+        <div class="mb-3">
+            <label>FirstName :</label>
+            @Html.TextBoxFor(x => x.StudentFirstName, new { @class = "form-control" })
+        </div>
+        <div class="mb-3">
+            <label>LastName :</label>
+            @Html.TextBoxFor(x => x.StudentLastName, new { @class = "form-control" })
+        </div>
+        <div class="mb-3">
+            <label>Age :</label>
+            @Html.TextBoxFor(x => x.StudentAge, new { @class = "form-control" })
+        </div>
+        <div class="mb-3">
+            <label>Address :</label>
+            @Html.TextBoxFor(x => x.StudentAddress, new { @class = "form-control" })
+        </div>
+        <div class="mb-3 text-center">
+            <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </div>
+    </div>
+}
+

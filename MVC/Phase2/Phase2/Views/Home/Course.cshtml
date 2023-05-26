@@ -1,0 +1,13 @@
+﻿
+<h2 class="mt-3 text-decoration-underline">CourseList</h2>
+
+<ol>
+    @{
+        foreach (var Courses in ViewData["Courses"] as List<string>)
+        {
+            <li>@Courses</li>
+        }
+    }
+</ol>
+<hr />
+@Html.Partial("Footer")
