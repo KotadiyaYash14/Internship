@@ -1,0 +1,33 @@
+﻿@model List<DataBasePractie.Models.Context.sp_get_city_Result>
+@{
+    ViewBag.Title = "AllCity";
+}
+
+<h2>AllCity</h2>
+
+<table class="table table-responsive table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th>CityId</th>
+            <td>CityName</td>
+            <td>StateName</td>
+            <td>CountryName</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count != 0 && Model.Count > 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.cityId</td>
+                    <td>@item.cityName</td>
+                    <td>@item.StateName</td>
+                    <td>@item.CountryName</td>
+                    <td><a href="/City/AddCity/@item.cityId" class="btn btn-success">Edit</a>&nbsp;&nbsp;<a href="/City/DeleteCity/@item.cityId" class="btn btn-danger">Delete</a>&nbsp;&nbsp;<a href="/City/CityDetails/@item.cityId" class="btn btn-primary">Details</a></td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

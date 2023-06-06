@@ -1,0 +1,15 @@
+﻿@model DbPractice.Models.CustomModel.CountryModel
+@{
+    ViewBag.Title = "About";
+}
+
+<form method="post">
+    <div>
+        @Html.TextBoxFor(x => x.CountryName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x=> x.CountryName, "",new {@class ="text-danger" })
+    </div>
+    <div>
+        <input type="submit"  value="Add" class="btn btn-success"/>
+    </div>
+
+</form>

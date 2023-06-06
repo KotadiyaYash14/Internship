@@ -1,0 +1,27 @@
+﻿@model DataBasePractie.Models.Context.country
+
+<h1>CountryDetalisById</h1>
+
+<div>
+    <h4>country</h4>
+    <hr />
+    <table class="table table-responsive table-bordered table-hover table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(x => x.CountryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.CountryName)
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(x => x.CountryId)
+            </td>
+            <td>
+                @Html.DisplayFor(x => x.CountryName)
+            </td>
+        </tr>
+    </table>
+</div>
+

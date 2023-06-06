@@ -1,0 +1,23 @@
+﻿@model SchoolManagement_340.Models.CustomModel.CustomState
+
+@using (Html.BeginForm("AddEditState", "State", FormMethod.Post))
+{
+    <div>
+        @Html.HiddenFor(x => x.StateId, new { @class = "form-control form-control-user" })
+    </div>
+    <div class="form-group">
+        @Html.DropDownListFor(x => x.CountryId, ViewBag.Country as SelectList, "--- Select Country ---", new { @class = "form-control form-control-user mt-4" })
+        @Html.ValidationMessageFor(x => x.CountryId, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.StateName, new { @class = "form-control form-control-user mt-4", placeholder = "--- State ---" })
+        @Html.ValidationMessageFor(x => x.StateName, "", new { @class = "text-danger" })
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-outline-primary btn-user w-25">Add</button>
+    </div>
+}
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>

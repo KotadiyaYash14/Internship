@@ -1,0 +1,17 @@
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\SchoolManagement_340.Repository.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\SchoolManagement_340.Repository.pdb
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\SchoolManagement_340.Models.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\EntityFramework.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\SchoolManagement_340.Models.pdb
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\SchoolManagement_340.Models.dll.config
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\EntityFramework.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\obj\Debug\SchoolManagement_340.Repository.csproj.AssemblyReference.cache
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\obj\Debug\SchoolManagement_340.Repository.csproj.CoreCompileInputs.cache
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\obj\Debug\SchoolManagement_340.Repository.csproj.CopyComplete
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\obj\Debug\SchoolManagement_340.Repository.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\obj\Debug\SchoolManagement_340.Repository.pdb
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\SchoolManagement_340.Helper.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\SchoolManagement_340.Helper.pdb
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\SchoolManagement_340.Repository.dll.config
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\EntityFramework.SqlServer.xml

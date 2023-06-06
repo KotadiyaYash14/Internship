@@ -1,0 +1,28 @@
+﻿@model List<SchoolManagement_340.Models.Context.sp_getStateCountryList_Result>
+
+<table class="table table-bordered table-hover table-striped mt-3">
+    <thead>
+        <tr>
+            <th>CityId</th>
+            <th>CityName</th>
+            <th>StateName</th>
+            <th>CountryName</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CityId</td>
+                <td>@item.CityName</td>
+                <td>@item.StateName</td>
+                <td>@item.CountryName</td>
+                <td><a href="/City/AddEditCity/@item.CityId" class="btn btn-outline-success">Edit</a>&nbsp;&nbsp;<a href="/City/DeleteCity/@item.CityId" class="btn btn-outline-danger">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

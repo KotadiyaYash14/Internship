@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="eaa145ef64974ec7a53068af1324c23e" Name="Diagram1">
+        <EntityTypeShape EntityType="yk327Model.myuser" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="yk327Model.role" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="yk327Model.FK__myuser__UserRole__5629CD9C" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="yk327Model.student" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="yk327Model.city" Width="1.5" PointX="3" PointY="9.375" />
+        <EntityTypeShape EntityType="yk327Model.country" Width="1.5" PointX="0.75" PointY="7.25" />
+        <EntityTypeShape EntityType="yk327Model.state" Width="1.5" PointX="0.75" PointY="10.125" />
+        <AssociationConnector Association="yk327Model.FK__city__CountryId__32E0915F" />
+        <AssociationConnector Association="yk327Model.FK__city__StateId__31EC6D26" />
+        <AssociationConnector Association="yk327Model.FK__student__student__70DDC3D8" />
+        <AssociationConnector Association="yk327Model.FK__state__CountryId__2F10007B" />
+        <AssociationConnector Association="yk327Model.FK__student__student__6EF57B66" />
+        <AssociationConnector Association="yk327Model.FK__student__stuents__6FE99F9F" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

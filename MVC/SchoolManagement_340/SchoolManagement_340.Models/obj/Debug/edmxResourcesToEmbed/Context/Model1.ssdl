@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SchoolManagement_yk_340Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="StateId" Type="int" />
+    <Property Name="CountryId" Type="int" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryName" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StateName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="CountryId" Type="int" />
+  </EntityType>
+  <EntityType Name="StudentData">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="StudentEmail" Type="varchar" MaxLength="255" />
+    <Property Name="StuentPhone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StudentDOB" Type="date" Nullable="false" />
+    <Property Name="StudentGender" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="StudentAddress" Type="varchar(max)" Nullable="false" />
+    <Property Name="StudentCountry" Type="int" />
+    <Property Name="StudentState" Type="int" />
+    <Property Name="StudentCity" Type="int" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserFirstName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UserLastName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="255" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UserRole" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__City__CountryId__2D27B809">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__City__StateId__2C3393D0">
+    <End Role="State" Type="Self.State" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__State__CountryId__29572725">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="State" Type="Self.State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StudentDa__Stude__30F848ED">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="StudentData" Type="Self.StudentData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="StudentData">
+        <PropertyRef Name="StudentCountry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StudentDa__Stude__31EC6D26">
+    <End Role="State" Type="Self.State" Multiplicity="0..1" />
+    <End Role="StudentData" Type="Self.StudentData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="StudentData">
+        <PropertyRef Name="StudentState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StudentDa__Stude__32E0915F">
+    <End Role="City" Type="Self.City" Multiplicity="0..1" />
+    <End Role="StudentData" Type="Self.StudentData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="StudentData">
+        <PropertyRef Name="StudentCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="sp_add_edit_city" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cityid" Type="int" Mode="In" />
+    <Parameter Name="cityname" Type="varchar" Mode="In" />
+    <Parameter Name="stateid" Type="int" Mode="In" />
+    <Parameter Name="countryid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_add_edit_country" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="countryId" Type="int" Mode="In" />
+    <Parameter Name="countryName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_add_edit_state" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stateid" Type="int" Mode="In" />
+    <Parameter Name="statename" Type="varchar" Mode="In" />
+    <Parameter Name="countryid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_add_edit_student" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="studentid" Type="int" Mode="In" />
+    <Parameter Name="studentname" Type="varchar" Mode="In" />
+    <Parameter Name="studentemail" Type="varchar" Mode="In" />
+    <Parameter Name="stdentphone" Type="varchar" Mode="In" />
+    <Parameter Name="studentdob" Type="date" Mode="In" />
+    <Parameter Name="studentgender" Type="varchar" Mode="In" />
+    <Parameter Name="studentaddress" Type="varchar(max)" Mode="In" />
+    <Parameter Name="studentcountry" Type="int" Mode="In" />
+    <Parameter Name="studentstate" Type="int" Mode="In" />
+    <Parameter Name="studentcity" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_delete_city" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cityid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_delete_country" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="countryid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_delete_state" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stateid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_delete_student" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="studentid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getStateCountryList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_getStateList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="SchoolManagement_yk_340ModelStoreContainer">
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentData" EntityType="Self.StudentData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__City__CountryId__2D27B809" Association="Self.FK__City__CountryId__2D27B809">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK__City__StateId__2C3393D0" Association="Self.FK__City__StateId__2C3393D0">
+      <End Role="State" EntitySet="State" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK__State__CountryId__29572725" Association="Self.FK__State__CountryId__29572725">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="State" EntitySet="State" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StudentDa__Stude__30F848ED" Association="Self.FK__StudentDa__Stude__30F848ED">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="StudentData" EntitySet="StudentData" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StudentDa__Stude__31EC6D26" Association="Self.FK__StudentDa__Stude__31EC6D26">
+      <End Role="State" EntitySet="State" />
+      <End Role="StudentData" EntitySet="StudentData" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StudentDa__Stude__32E0915F" Association="Self.FK__StudentDa__Stude__32E0915F">
+      <End Role="City" EntitySet="City" />
+      <End Role="StudentData" EntitySet="StudentData" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,46 @@
+﻿@model DataBasePractie.Models.CustomeModel.CityModel
+
+@{
+    ViewBag.Title = "AddCity";
+}
+
+@using (Html.BeginForm("AddCity", "City", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.cityId)
+    <label>Country :</label>
+    @Html.DropDownListFor(x => x.CountryId, ViewBag.countryList as SelectList, "--- Select Country ---", new { id = "Country" })
+    <br />
+    <label>State :</label>
+    @Html.DropDownListFor(x => x.StateId, ViewBag.stateList as SelectList, "--- Select State ---", new { id = "State" })
+    <br />
+    @Html.TextBoxFor(x => x.cityName, new { @class = "form-control", @placeholder = "CityName", id = "City" })
+    @Html.ValidationMessageFor(x => x.cityName, "", new { @class = "text-danger" })
+    <button type="submit" class="btn btn-primary">Add</button>
+}
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#Country").change(function () {
+            $("#State").html("");
+            $("#State").append(`<option value = "Select State"> --- Select State --- </option>`);
+            var CountryId = $("#Country").val();
+
+            $.ajax({
+                url: `/City/StateAsPerCountry/${CountryId}`,
+                method: "GET",
+                success: function (res) {
+                    res.forEach(ele => {
+                        $("#State").append(`<option value = ${ele.StateId}>${ele.StateName}</option>`);
+                    });
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        });
+    });
+</script>

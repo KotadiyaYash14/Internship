@@ -1,0 +1,18 @@
+﻿@model DataBasePractie.Models.CustomeModel.CountryModel
+@{
+    ViewBag.Title = "AddCountry";
+}
+<h2>AddCountry</h2>
+
+@using (Html.BeginForm("AddCountry", "Country", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.LabelFor(x => x.CountryName)
+    @Html.HiddenFor(x => x.CountryId)
+    @Html.TextBoxFor(x => x.CountryName, new { @class = "form-control", @placeholder = "CountryName" })
+    @Html.ValidationMessageFor(x => x.CountryName, "", new { @class = "text-danger" })
+    <button type="submit" class="btn btn-primary">Add</button>
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>

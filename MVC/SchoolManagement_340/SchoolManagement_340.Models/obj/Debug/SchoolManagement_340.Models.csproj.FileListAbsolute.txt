@@ -1,0 +1,12 @@
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Models\bin\Debug\SchoolManagement_340.Models.dll.config
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Models\bin\Debug\SchoolManagement_340.Models.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Models\bin\Debug\SchoolManagement_340.Models.pdb
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Models\bin\Debug\EntityFramework.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Models\bin\Debug\EntityFramework.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Models\obj\Debug\SchoolManagement_340.Models.csproj.CoreCompileInputs.cache
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Models\obj\Debug\SchoolManagement_340.Models.csproj.CopyComplete
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Models\obj\Debug\SchoolManagement_340.Models.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Models\obj\Debug\SchoolManagement_340.Models.pdb
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Models\obj\Debug\SchoolManagement_340.Models.csproj.AssemblyReference.cache

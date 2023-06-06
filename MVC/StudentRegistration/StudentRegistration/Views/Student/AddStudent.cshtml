@@ -1,0 +1,119 @@
+﻿@model StudentRegistration.Models.CustomeModel.CustomeStudent
+
+<h2 class="text-center">AddStudent</h2>
+
+@using (Html.BeginForm("AddStudent", "Student", FormMethod.Post))
+{
+    <div class="card-body">
+        <div class="form-group">
+            @Html.HiddenFor(x => x.studentid)
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Name</label>
+            @Html.TextBoxFor(x => x.studentname, new { @class = "form-control", placeholder = "Enter Name" })
+            @Html.ValidationMessageFor(x => x.studentname, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            @Html.TextBoxFor(x => x.studentemail, new { @class = "form-control", placeholder = "Enter Email" })
+            @Html.ValidationMessageFor(x => x.studentemail, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Phone Number</label>
+            @Html.TextBoxFor(x => x.studentphone, new { @class = "form-control", placeholder = "Enter Phone Number" })
+            @Html.ValidationMessageFor(x => x.studentphone, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">DOB</label>
+            @Html.TextBoxFor(x => x.studentdob, new { type = "date", @class = "form-control", placeholder = "Enter DOB" })
+            @Html.ValidationMessageFor(x => x.studentdob, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="form-check">
+                @Html.RadioButtonFor(x => x.studentgender, "Male", new { @class = "form-check-input", name = "gender" })
+                <label class="form-check-label">Male</label>
+            </div>
+            <div class="form-check">
+                @Html.RadioButtonFor(x => x.studentgender, "Female", new { @class = "form-check-input", name = "gender" })
+                <label class="form-check-label">Female</label>
+            </div>
+            <div class="form-check">
+                @Html.RadioButtonFor(x => x.studentgender, "Other", new { @class = "form-check-input", name = "gender" })
+                <label class="form-check-label">Other</label>
+            </div>
+            @Html.ValidationMessageFor(x => x.studentgender, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Address</label>
+            @Html.TextBoxFor(x => x.studentaddress, new { @class = "form-control", placeholder = "Address" })
+            @Html.ValidationMessageFor(x => x.studentaddress, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Country</label>
+            @Html.DropDownListFor(x => x.studentcountry, ViewBag.Country as SelectList, " --- Select Country --- ", new { @class = "form-control", id = "Country" })
+            @Html.ValidationMessageFor(x => x.studentcountry, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">State</label>
+            @Html.DropDownListFor(x => x.stuentstate, ViewBag.State as SelectList, " --- Select State --- ", new { @class = "form-control", id = "State" })
+            @Html.ValidationMessageFor(x => x.stuentstate, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">City</label>
+            @Html.DropDownListFor(x => x.studentcity, ViewBag.City as SelectList, " --- Select City --- ", new { @class = "form-control", id = "City" })
+            @Html.ValidationMessageFor(x => x.studentcity, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Phone Number</label>
+            @Html.TextBoxFor(x => x.studentpincode, new { @class = "form-control", placeholder = "Enter Postal Code" })
+            @Html.ValidationMessageFor(x => x.studentpincode, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#Country").change(function () {
+            $("#State").html("");
+            $("#State").append(`<option class = "form-control" value = "Select State"> --- Select State --- </option>`);
+            var CountryId = $("#Country").val();
+            $.ajax({
+                url: `/Student/StateAsPerCountry/${CountryId}`,
+                method: "GET",
+                success: function (res) {
+                    res.forEach(ele => {
+                        $("#State").append(`<option class = "form-control" value = ${ele.StateId}>${ele.StateName}</option>`);
+                    });
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        });
+        $("#State").change(function () {
+            $("#City").html("");
+            $("#City").append(`<option class = "form-control" value = "Select City"> --- Select City --- </option>`);
+            var StateId = $("#State").val();
+            $.ajax({
+                url: `/Student/CityAsPerState/${StateId}`,
+                method: "GET",
+                success: function (res) {
+                    res.forEach(ele => {
+                        $("#City").append(`<option class = "form-control" value = ${ele.cityId}>${ele.cityName}</option>`);
+                    });
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        });
+    });
+
+</script>

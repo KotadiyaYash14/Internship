@@ -1,0 +1,23 @@
+﻿@model DataBasePractie.Models.CustomeModel.StateModel
+@{
+    ViewBag.Title = "AddState";
+}
+
+<h2>AddState</h2>
+
+
+@using (Html.BeginForm("AddState", "State", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.StateId)
+    <label>Country :</label>
+    @Html.DropDownListFor(x => x.CountryId, ViewBag.countryList as SelectList, "--- Select Country ---")<br />
+    <label>State :</label>
+    @Html.TextBoxFor(x => x.StateName, new { @class = "form-control", @placeholder = "StateName" })
+    @Html.ValidationMessageFor(x => x.StateName, "", new { @class = "text-danger" })
+    <button type="submit" class="btn btn-primary">Add</button>
+}
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>

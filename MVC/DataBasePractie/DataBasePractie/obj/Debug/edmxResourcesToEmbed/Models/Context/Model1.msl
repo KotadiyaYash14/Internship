@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="yk327ModelStoreContainer" CdmEntityContainer="yk327Entities">
+    <EntitySetMapping Name="city">
+      <EntityTypeMapping TypeName="yk327Model.city">
+        <MappingFragment StoreEntitySet="city">
+          <ScalarProperty Name="cityId" ColumnName="cityId" />
+          <ScalarProperty Name="cityName" ColumnName="cityName" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="country">
+      <EntityTypeMapping TypeName="yk327Model.country">
+        <MappingFragment StoreEntitySet="country">
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="state">
+      <EntityTypeMapping TypeName="yk327Model.state">
+        <MappingFragment StoreEntitySet="state">
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_add_edit_country" FunctionName="yk327Model.Store.sp_add_edit_country" />
+    <FunctionImportMapping FunctionImportName="sp_delete_country" FunctionName="yk327Model.Store.sp_delete_country" />
+    <FunctionImportMapping FunctionImportName="sp_get_state" FunctionName="yk327Model.Store.sp_get_state">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="yk327Model.sp_get_state_Result">
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_add_edit_state" FunctionName="yk327Model.Store.sp_add_edit_state" />
+    <FunctionImportMapping FunctionImportName="sp_delete_state" FunctionName="yk327Model.Store.sp_delete_state" />
+    <FunctionImportMapping FunctionImportName="sp_get_city" FunctionName="yk327Model.Store.sp_get_city">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="yk327Model.sp_get_city_Result">
+          <ScalarProperty Name="cityId" ColumnName="cityId" />
+          <ScalarProperty Name="cityName" ColumnName="cityName" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_add_edit_city" FunctionName="yk327Model.Store.sp_add_edit_city" />
+    <FunctionImportMapping FunctionImportName="sp_delete_city" FunctionName="yk327Model.Store.sp_delete_city" />
+  </EntityContainerMapping>
+</Mapping>

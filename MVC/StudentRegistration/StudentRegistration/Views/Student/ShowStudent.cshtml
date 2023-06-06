@@ -1,0 +1,47 @@
+﻿@model List<StudentRegistration.Models.Context.student>
+
+@if (ViewBag.Error != null)
+{
+    @ViewBag.Error
+}
+
+<table class="table table-bordered table-hover table-striped mt-3">
+    <thead>
+        <tr>
+            <td>StudentId</td>
+            <td>StudentName</td>
+            <td>StudentEmail</td>
+            <td>StudentPhoneNumber</td>
+            <td>StudentDateOfBirth</td>
+            <td>StudentGender</td>
+            <td>StudentAddress</td>
+            <td>StudentCountry</td>
+            <td>StudentState</td>
+            <td>StudentCity</td>
+            <td>StudentpinCode</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count > 0 && Model.Count != 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.studentid</td>
+                    <td>@item.studentname</td>
+                    <td>@item.studentemail</td>
+                    <td>@item.studentphone</td>
+                    <td>@item.studentdob.ToShortDateString()</td>
+                    <td>@item.studentgender</td>
+                    <td>@item.studentaddress</td>
+                    <td>@item.country.CountryName</td>
+                    <td>@item.state.StateName</td>
+                    <td>@item.city.cityName</td>
+                    <td>@item.studentpincode</td>
+                    <td><a href="/Student/AddStudent/@item.studentid" class="btn btn-outline-success">Edit</a>&nbsp;&nbsp;<a href="/Student/DeleteStudent/@item.studentid" class="btn btn-outline-danger">Delete</a></td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

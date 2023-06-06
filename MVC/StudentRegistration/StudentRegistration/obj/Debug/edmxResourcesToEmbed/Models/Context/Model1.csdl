@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="yk327Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="myuser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserFirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserLastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserRole" Type="Int32" />
+    <NavigationProperty Name="role" Relationship="Self.FK__myuser__UserRole__5629CD9C" FromRole="myuser" ToRole="roles" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="roleid" />
+    </Key>
+    <Property Name="roleid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rolename" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="myusers" Relationship="Self.FK__myuser__UserRole__5629CD9C" FromRole="roles" ToRole="myuser" />
+  </EntityType>
+  <Association Name="FK__myuser__UserRole__5629CD9C">
+    <End Role="roles" Type="Self.role" Multiplicity="0..1" />
+    <End Role="myuser" Type="Self.myuser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roles">
+        <PropertyRef Name="roleid" />
+      </Principal>
+      <Dependent Role="myuser">
+        <PropertyRef Name="UserRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="yk327Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="myusers" EntityType="Self.myuser" />
+    <EntitySet Name="roles" EntityType="Self.role" />
+    <AssociationSet Name="FK__myuser__UserRole__5629CD9C" Association="Self.FK__myuser__UserRole__5629CD9C">
+      <End Role="roles" EntitySet="roles" />
+      <End Role="myuser" EntitySet="myusers" />
+    </AssociationSet>
+    <EntitySet Name="student" EntityType="yk327Model.student" />
+    <EntitySet Name="city" EntityType="yk327Model.city" />
+    <EntitySet Name="country" EntityType="yk327Model.country" />
+    <EntitySet Name="state" EntityType="yk327Model.state" />
+    <AssociationSet Name="FK__city__CountryId__32E0915F" Association="yk327Model.FK__city__CountryId__32E0915F">
+      <End Role="country" EntitySet="country" />
+      <End Role="city" EntitySet="city" />
+    </AssociationSet>
+    <AssociationSet Name="FK__city__StateId__31EC6D26" Association="yk327Model.FK__city__StateId__31EC6D26">
+      <End Role="state" EntitySet="state" />
+      <End Role="city" EntitySet="city" />
+    </AssociationSet>
+    <AssociationSet Name="FK__student__student__70DDC3D8" Association="yk327Model.FK__student__student__70DDC3D8">
+      <End Role="city" EntitySet="city" />
+      <End Role="student" EntitySet="student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__state__CountryId__2F10007B" Association="yk327Model.FK__state__CountryId__2F10007B">
+      <End Role="country" EntitySet="country" />
+      <End Role="state" EntitySet="state" />
+    </AssociationSet>
+    <AssociationSet Name="FK__student__student__6EF57B66" Association="yk327Model.FK__student__student__6EF57B66">
+      <End Role="country" EntitySet="country" />
+      <End Role="student" EntitySet="student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__student__stuents__6FE99F9F" Association="yk327Model.FK__student__stuents__6FE99F9F">
+      <End Role="state" EntitySet="state" />
+      <End Role="student" EntitySet="student" />
+    </AssociationSet>
+    <FunctionImport Name="sp_delete_student">
+      <Parameter Name="studentid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_add_edit_student">
+      <Parameter Name="studentid" Mode="In" Type="Int32" />
+      <Parameter Name="studentname" Mode="In" Type="String" />
+      <Parameter Name="studentemail" Mode="In" Type="String" />
+      <Parameter Name="studentphone" Mode="In" Type="String" />
+      <Parameter Name="studentdob" Mode="In" Type="DateTime" />
+      <Parameter Name="studentgender" Mode="In" Type="String" />
+      <Parameter Name="studentaddress" Mode="In" Type="String" />
+      <Parameter Name="studentcountry" Mode="In" Type="Int32" />
+      <Parameter Name="stuentstate" Mode="In" Type="Int32" />
+      <Parameter Name="studentcity" Mode="In" Type="Int32" />
+      <Parameter Name="studentpincode" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="studentid" />
+    </Key>
+    <Property Name="studentid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="studentname" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="studentemail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="studentphone" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="studentdob" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="studentgender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="studentaddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="studentcountry" Type="Int32" />
+    <Property Name="stuentstate" Type="Int32" />
+    <Property Name="studentcity" Type="Int32" />
+    <Property Name="studentpincode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="city" Relationship="yk327Model.FK__student__student__70DDC3D8" FromRole="student" ToRole="city" />
+    <NavigationProperty Name="country" Relationship="yk327Model.FK__student__student__6EF57B66" FromRole="student" ToRole="country" />
+    <NavigationProperty Name="state" Relationship="yk327Model.FK__student__stuents__6FE99F9F" FromRole="student" ToRole="state" />
+  </EntityType>
+  <EntityType Name="city">
+    <Key>
+      <PropertyRef Name="cityId" />
+    </Key>
+    <Property Name="cityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cityName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StateId" Type="Int32" />
+    <Property Name="CountryId" Type="Int32" />
+    <NavigationProperty Name="country" Relationship="yk327Model.FK__city__CountryId__32E0915F" FromRole="city" ToRole="country" />
+    <NavigationProperty Name="state" Relationship="yk327Model.FK__city__StateId__31EC6D26" FromRole="city" ToRole="state" />
+    <NavigationProperty Name="student" Relationship="yk327Model.FK__student__student__70DDC3D8" FromRole="city" ToRole="student" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="city" Relationship="yk327Model.FK__city__CountryId__32E0915F" FromRole="country" ToRole="city" />
+    <NavigationProperty Name="state" Relationship="yk327Model.FK__state__CountryId__2F10007B" FromRole="country" ToRole="state" />
+    <NavigationProperty Name="student" Relationship="yk327Model.FK__student__student__6EF57B66" FromRole="country" ToRole="student" />
+  </EntityType>
+  <EntityType Name="state">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CountryId" Type="Int32" />
+    <NavigationProperty Name="city" Relationship="yk327Model.FK__city__StateId__31EC6D26" FromRole="state" ToRole="city" />
+    <NavigationProperty Name="country" Relationship="yk327Model.FK__state__CountryId__2F10007B" FromRole="state" ToRole="country" />
+    <NavigationProperty Name="student" Relationship="yk327Model.FK__student__stuents__6FE99F9F" FromRole="state" ToRole="student" />
+  </EntityType>
+  <Association Name="FK__city__CountryId__32E0915F">
+    <End Type="yk327Model.country" Role="country" Multiplicity="0..1" />
+    <End Type="yk327Model.city" Role="city" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="city">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__city__StateId__31EC6D26">
+    <End Type="yk327Model.state" Role="state" Multiplicity="0..1" />
+    <End Type="yk327Model.city" Role="city" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="state">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="city">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__student__student__70DDC3D8">
+    <End Type="yk327Model.city" Role="city" Multiplicity="0..1" />
+    <End Type="yk327Model.student" Role="student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="city">
+        <PropertyRef Name="cityId" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="studentcity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__state__CountryId__2F10007B">
+    <End Type="yk327Model.country" Role="country" Multiplicity="0..1" />
+    <End Type="yk327Model.state" Role="state" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="state">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__student__student__6EF57B66">
+    <End Type="yk327Model.country" Role="country" Multiplicity="0..1" />
+    <End Type="yk327Model.student" Role="student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="studentcountry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__student__stuents__6FE99F9F">
+    <End Type="yk327Model.state" Role="state" Multiplicity="0..1" />
+    <End Type="yk327Model.student" Role="student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="state">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="stuentstate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

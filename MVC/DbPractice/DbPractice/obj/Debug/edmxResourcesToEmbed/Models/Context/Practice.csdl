@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="yk327Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="city">
+    <Key>
+      <PropertyRef Name="cityId" />
+    </Key>
+    <Property Name="cityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cityName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StateId" Type="Int32" />
+    <Property Name="CountryId" Type="Int32" />
+    <NavigationProperty Name="country" Relationship="Self.FK__city__CountryId__32E0915F" FromRole="city" ToRole="country" />
+    <NavigationProperty Name="state" Relationship="Self.FK__city__StateId__31EC6D26" FromRole="city" ToRole="state" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="city" Relationship="Self.FK__city__CountryId__32E0915F" FromRole="country" ToRole="city" />
+    <NavigationProperty Name="state" Relationship="Self.FK__state__CountryId__2F10007B" FromRole="country" ToRole="state" />
+  </EntityType>
+  <EntityType Name="state">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountryId" Type="Int32" />
+    <NavigationProperty Name="city" Relationship="Self.FK__city__StateId__31EC6D26" FromRole="state" ToRole="city" />
+    <NavigationProperty Name="country" Relationship="Self.FK__state__CountryId__2F10007B" FromRole="state" ToRole="country" />
+  </EntityType>
+  <Association Name="FK__city__CountryId__32E0915F">
+    <End Role="country" Type="Self.country" Multiplicity="0..1" />
+    <End Role="city" Type="Self.city" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="city">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__city__StateId__31EC6D26">
+    <End Role="state" Type="Self.state" Multiplicity="0..1" />
+    <End Role="city" Type="Self.city" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="state">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="city">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__state__CountryId__2F10007B">
+    <End Role="country" Type="Self.country" Multiplicity="0..1" />
+    <End Role="state" Type="Self.state" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="state">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="yk327Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="city" EntityType="Self.city" />
+    <EntitySet Name="country" EntityType="Self.country" />
+    <EntitySet Name="state" EntityType="Self.state" />
+    <AssociationSet Name="FK__city__CountryId__32E0915F" Association="Self.FK__city__CountryId__32E0915F">
+      <End Role="country" EntitySet="country" />
+      <End Role="city" EntitySet="city" />
+    </AssociationSet>
+    <AssociationSet Name="FK__city__StateId__31EC6D26" Association="Self.FK__city__StateId__31EC6D26">
+      <End Role="state" EntitySet="state" />
+      <End Role="city" EntitySet="city" />
+    </AssociationSet>
+    <AssociationSet Name="FK__state__CountryId__2F10007B" Association="Self.FK__state__CountryId__2F10007B">
+      <End Role="country" EntitySet="country" />
+      <End Role="state" EntitySet="state" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

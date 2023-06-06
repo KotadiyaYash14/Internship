@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="yk327ModelStoreContainer" CdmEntityContainer="yk327Entities1">
+    <EntitySetMapping Name="myusers">
+      <EntityTypeMapping TypeName="yk327Model.myuser">
+        <MappingFragment StoreEntitySet="myuser">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+          <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="yk327Model.role">
+        <MappingFragment StoreEntitySet="roles">
+          <ScalarProperty Name="roleid" ColumnName="roleid" />
+          <ScalarProperty Name="rolename" ColumnName="rolename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="student">
+      <EntityTypeMapping TypeName="yk327Model.student">
+        <MappingFragment StoreEntitySet="student">
+          <ScalarProperty Name="studentpincode" ColumnName="studentpincode" />
+          <ScalarProperty Name="studentcity" ColumnName="studentcity" />
+          <ScalarProperty Name="stuentstate" ColumnName="stuentstate" />
+          <ScalarProperty Name="studentcountry" ColumnName="studentcountry" />
+          <ScalarProperty Name="studentaddress" ColumnName="studentaddress" />
+          <ScalarProperty Name="studentgender" ColumnName="studentgender" />
+          <ScalarProperty Name="studentdob" ColumnName="studentdob" />
+          <ScalarProperty Name="studentphone" ColumnName="studentphone" />
+          <ScalarProperty Name="studentemail" ColumnName="studentemail" />
+          <ScalarProperty Name="studentname" ColumnName="studentname" />
+          <ScalarProperty Name="studentid" ColumnName="studentid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="city">
+      <EntityTypeMapping TypeName="yk327Model.city">
+        <MappingFragment StoreEntitySet="city">
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="cityName" ColumnName="cityName" />
+          <ScalarProperty Name="cityId" ColumnName="cityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="country">
+      <EntityTypeMapping TypeName="yk327Model.country">
+        <MappingFragment StoreEntitySet="country">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="state">
+      <EntityTypeMapping TypeName="yk327Model.state">
+        <MappingFragment StoreEntitySet="state">
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_delete_student" FunctionName="yk327Model.Store.sp_delete_student" />
+    <FunctionImportMapping FunctionImportName="sp_add_edit_student" FunctionName="yk327Model.Store.sp_add_edit_student" />
+  </EntityContainerMapping>
+</Mapping>

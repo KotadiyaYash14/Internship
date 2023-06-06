@@ -1,0 +1,35 @@
+﻿@model List<DataBasePractie.Models.Context.country>
+@{
+    ViewBag.Title = "AllCountry";
+}
+
+<h2>AllCountry</h2>
+
+@if (TempData["country"] != null)
+{
+    <p class="text-danger">@TempData["Country"]</p>
+}
+
+<table class="table table-responsive table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th>CountryId</th>
+            <th>CountryName</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count != 0 && Model.Count > 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.CountryId</td>
+                    <td>@item.CountryName</td>
+                    <td><a href="/Country/EditCountry/@item.CountryId" class="btn btn-success">Edit</a>&nbsp;&nbsp;<a href="/Country/DeleteCountry/@item.CountryId" class="btn btn-danger">Delete</a>&nbsp;&nbsp;<a href="/Country/CountryDetalisById/@item.CountryId" class="btn btn-primary">Details</a></td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+

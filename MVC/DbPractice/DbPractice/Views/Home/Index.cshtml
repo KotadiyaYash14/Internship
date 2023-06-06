@@ -1,0 +1,23 @@
+﻿@model List<DbPractice.Models.Context.country>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+<table class="table datatable">
+    <thead>
+        <tr>
+            <th>Country Id</th>
+            <th>Country Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CountryId</td>
+                <td>@item.CountryName</td>
+                <td>@Html.ActionLink("Edit","About",new { id = item.CountryId})</td>
+            </tr>
+        }
+    </tbody>
+</table>

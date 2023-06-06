@@ -1,0 +1,29 @@
+﻿@model DataBasePractie.Models.Context.city
+
+@{
+    ViewBag.Title = "CityDetails";
+}
+
+<h2>CityDetails</h2>
+
+<div>
+    <h4>city</h4>
+    <hr />
+
+    <table class="table table-responsive table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(x => x.cityName)</th>
+                <th>StateName</th>
+                <th>CountryName</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Html.DisplayFor(x => x.cityName)</td>
+                <td>@ViewBag.StateName</td>
+                <td>@ViewBag.CountryName</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

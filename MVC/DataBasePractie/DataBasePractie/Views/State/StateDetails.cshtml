@@ -1,0 +1,36 @@
+﻿@model DataBasePractie.Models.Context.state
+@{
+    ViewBag.Title = "StateDetails";
+}
+
+<h2>StateDetails</h2>
+
+<table class="table table-responsive table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(x => x.StateId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.StateName)
+            </th>
+            <th>
+                CountryName
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(x => x.StateId)
+            </td>
+            <td>
+                @Html.DisplayFor(x => x.StateName)
+            </td>
+            <td>
+                @ViewBag.CountryName
+            </td>
+        </tr>
+    </tbody>
+</table>
+
