@@ -57,7 +57,10 @@ namespace SchoolManagement_340.Controllers
 
         public ActionResult DeleteCity(int? id)
         {
-            CityServices.DeleteCity(id);
+            if (CityServices.DeleteCity(id) == 1)
+            {
+                TempData["Error"] = "City is in Use";
+            }
             return RedirectToAction("ShowCity", "City");
         }
         public JsonResult StateAsPerCountry(int id)

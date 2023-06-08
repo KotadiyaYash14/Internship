@@ -1,5 +1,10 @@
 ﻿@model List<SchoolManagement_340.Models.Context.sp_getStateCountryList_Result>
 
+@if (TempData["Error"] != null)
+{
+    <h4 class="text-danger mt-2">@TempData["Error"]</h4>
+}
+
 <table class="table table-bordered table-hover table-striped mt-3">
     <thead>
         <tr>

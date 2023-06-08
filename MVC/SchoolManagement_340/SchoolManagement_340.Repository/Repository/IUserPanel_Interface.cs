@@ -1,4 +1,5 @@
-﻿using SchoolManagement_340.Models.CustomModel;
+﻿using SchoolManagement_340.Models.Context;
+using SchoolManagement_340.Models.CustomModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,6 @@ namespace SchoolManagement_340.Repository.Repository
     {
         bool RegisterUser(CustomSignUp data);
         bool AlreadyRegister(CustomSignIn data);
+        User IsEmailExists (CustomSignUp data);
     }
 }

@@ -118,7 +118,7 @@ namespace SchoolManagement_340.Models.Context
                 new ObjectParameter("cityid", cityid) :
                 new ObjectParameter("cityid", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_delete_city", cityidParameter);
+                return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_delete_city", cityidParameter);
         }
     
         public virtual int sp_add_edit_student(Nullable<int> studentid, string studentname, string studentemail, string stdentphone, Nullable<System.DateTime> studentdob, string studentgender, string studentaddress, Nullable<int> studentcountry, Nullable<int> studentstate, Nullable<int> studentcity)

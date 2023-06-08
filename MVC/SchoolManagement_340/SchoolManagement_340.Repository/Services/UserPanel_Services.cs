@@ -46,5 +46,18 @@ namespace SchoolManagement_340.Repository.Services
                 return false;
             }
         }
+
+        public User IsEmailExists(CustomSignUp data)
+        {
+            User user = db.User.Where(x => x.UserEmail.ToLower() == data.UserEmail.ToLower()).FirstOrDefault();
+            if(user != null)
+            {
+                return user;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

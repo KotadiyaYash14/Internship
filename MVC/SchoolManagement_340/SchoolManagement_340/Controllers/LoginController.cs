@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using System.Web.Security;
 
@@ -23,7 +24,7 @@ namespace SchoolManagement_340.Controllers
         [HttpPost]
         public ActionResult SignIn(CustomSignIn data)
         {
-            if(userPanel.AlreadyRegister(data) == true)
+            if (userPanel.AlreadyRegister(data) == true)
             {
                 FormsAuthentication.SetAuthCookie(data.UserEmail, false);
                 return RedirectToAction("Index", "Home");
@@ -58,11 +59,27 @@ namespace SchoolManagement_340.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult Forgot(CustomSignUp data)
+        {
+            var Result = userPanel.IsEmailExists(data);
+            if (Result != null)
+            {
+                WebMail.Send(Result.UserEmail, "Forgot Id Password", "<h3>Id Password For Login in School Management System<h3><br><br><h4>Email Address : " +
+                    Result.UserEmail + "</h4><br><h4>Password : " +
+                    Result.UserPassword + "</h4>", null, null, null, true, null, null, null, null, null, null);
+                return RedirectToAction("SignIn", "Login");
+            }
+            else
+            {
+                TempData["Error"] = "Email Does not Register";
+                return View();
+            }
+        }
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("SignIn");
         }
-
     }
 }

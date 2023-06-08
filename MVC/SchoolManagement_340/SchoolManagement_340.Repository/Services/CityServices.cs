@@ -14,14 +14,14 @@ namespace SchoolManagement_340.Repository.Services
 
         public int DeleteCity(int? id)
         {
-            if (db.City.Any(x => x.CityId == id))
+            if (db.StudentData.Any(x => x.StudentCity == id))
             {
-                db.sp_delete_city(id);
                 return 1;
             }
             else
             {
-               return 0;
+                db.sp_delete_city(id);
+                return 0;
             }
         }
 
