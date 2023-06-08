@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SchoolManagement_yk_340Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserFirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserLastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserRole" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SchoolManagement_yk_340Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="User" EntityType="Self.User" />
+    <EntitySet Name="City" EntityType="SchoolManagement_yk_340Model.City" />
+    <EntitySet Name="Country" EntityType="SchoolManagement_yk_340Model.Country" />
+    <EntitySet Name="State" EntityType="SchoolManagement_yk_340Model.State" />
+    <EntitySet Name="StudentData" EntityType="SchoolManagement_yk_340Model.StudentData" />
+    <AssociationSet Name="FK__City__CountryId__2D27B809" Association="SchoolManagement_yk_340Model.FK__City__CountryId__2D27B809">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK__City__StateId__2C3393D0" Association="SchoolManagement_yk_340Model.FK__City__StateId__2C3393D0">
+      <End Role="State" EntitySet="State" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StudentDa__Stude__32E0915F" Association="SchoolManagement_yk_340Model.FK__StudentDa__Stude__32E0915F">
+      <End Role="City" EntitySet="City" />
+      <End Role="StudentData" EntitySet="StudentData" />
+    </AssociationSet>
+    <AssociationSet Name="FK__State__CountryId__29572725" Association="SchoolManagement_yk_340Model.FK__State__CountryId__29572725">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="State" EntitySet="State" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StudentDa__Stude__30F848ED" Association="SchoolManagement_yk_340Model.FK__StudentDa__Stude__30F848ED">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="StudentData" EntitySet="StudentData" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StudentDa__Stude__31EC6D26" Association="SchoolManagement_yk_340Model.FK__StudentDa__Stude__31EC6D26">
+      <End Role="State" EntitySet="State" />
+      <End Role="StudentData" EntitySet="StudentData" />
+    </AssociationSet>
+    <FunctionImport Name="sp_add_edit_country">
+      <Parameter Name="countryId" Mode="In" Type="Int32" />
+      <Parameter Name="countryName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_delete_country">
+      <Parameter Name="countryid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_add_edit_state">
+      <Parameter Name="stateid" Mode="In" Type="Int32" />
+      <Parameter Name="statename" Mode="In" Type="String" />
+      <Parameter Name="countryid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getStateList" ReturnType="Collection(SchoolManagement_yk_340Model.sp_getStateList_Result)" />
+    <FunctionImport Name="sp_delete_state">
+      <Parameter Name="stateid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_add_edit_city">
+      <Parameter Name="cityid" Mode="In" Type="Int32" />
+      <Parameter Name="cityname" Mode="In" Type="String" />
+      <Parameter Name="stateid" Mode="In" Type="Int32" />
+      <Parameter Name="countryid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getStateCountryList" ReturnType="Collection(SchoolManagement_yk_340Model.sp_getStateCountryList_Result)" />
+    <FunctionImport Name="sp_delete_city">
+      <Parameter Name="cityid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_add_edit_student">
+      <Parameter Name="studentid" Mode="In" Type="Int32" />
+      <Parameter Name="studentname" Mode="In" Type="String" />
+      <Parameter Name="studentemail" Mode="In" Type="String" />
+      <Parameter Name="stdentphone" Mode="In" Type="String" />
+      <Parameter Name="studentdob" Mode="In" Type="DateTime" />
+      <Parameter Name="studentgender" Mode="In" Type="String" />
+      <Parameter Name="studentaddress" Mode="In" Type="String" />
+      <Parameter Name="studentcountry" Mode="In" Type="Int32" />
+      <Parameter Name="studentstate" Mode="In" Type="Int32" />
+      <Parameter Name="studentcity" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_delete_student">
+      <Parameter Name="studentid" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StateId" Type="Int32" />
+    <Property Name="CountryId" Type="Int32" />
+    <NavigationProperty Name="Country" Relationship="SchoolManagement_yk_340Model.FK__City__CountryId__2D27B809" FromRole="City" ToRole="Country" />
+    <NavigationProperty Name="State" Relationship="SchoolManagement_yk_340Model.FK__City__StateId__2C3393D0" FromRole="City" ToRole="State" />
+    <NavigationProperty Name="StudentData" Relationship="SchoolManagement_yk_340Model.FK__StudentDa__Stude__32E0915F" FromRole="City" ToRole="StudentData" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="City" Relationship="SchoolManagement_yk_340Model.FK__City__CountryId__2D27B809" FromRole="Country" ToRole="City" />
+    <NavigationProperty Name="State" Relationship="SchoolManagement_yk_340Model.FK__State__CountryId__29572725" FromRole="Country" ToRole="State" />
+    <NavigationProperty Name="StudentData" Relationship="SchoolManagement_yk_340Model.FK__StudentDa__Stude__30F848ED" FromRole="Country" ToRole="StudentData" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CountryId" Type="Int32" />
+    <NavigationProperty Name="City" Relationship="SchoolManagement_yk_340Model.FK__City__StateId__2C3393D0" FromRole="State" ToRole="City" />
+    <NavigationProperty Name="Country" Relationship="SchoolManagement_yk_340Model.FK__State__CountryId__29572725" FromRole="State" ToRole="Country" />
+    <NavigationProperty Name="StudentData" Relationship="SchoolManagement_yk_340Model.FK__StudentDa__Stude__31EC6D26" FromRole="State" ToRole="StudentData" />
+  </EntityType>
+  <EntityType Name="StudentData">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StudentEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StuentPhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StudentDOB" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="StudentGender" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="StudentAddress" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudentCountry" Type="Int32" />
+    <Property Name="StudentState" Type="Int32" />
+    <Property Name="StudentCity" Type="Int32" />
+    <NavigationProperty Name="City" Relationship="SchoolManagement_yk_340Model.FK__StudentDa__Stude__32E0915F" FromRole="StudentData" ToRole="City" />
+    <NavigationProperty Name="Country" Relationship="SchoolManagement_yk_340Model.FK__StudentDa__Stude__30F848ED" FromRole="StudentData" ToRole="Country" />
+    <NavigationProperty Name="State" Relationship="SchoolManagement_yk_340Model.FK__StudentDa__Stude__31EC6D26" FromRole="StudentData" ToRole="State" />
+  </EntityType>
+  <Association Name="FK__City__CountryId__2D27B809">
+    <End Type="SchoolManagement_yk_340Model.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="SchoolManagement_yk_340Model.City" Role="City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__City__StateId__2C3393D0">
+    <End Type="SchoolManagement_yk_340Model.State" Role="State" Multiplicity="0..1" />
+    <End Type="SchoolManagement_yk_340Model.City" Role="City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StudentDa__Stude__32E0915F">
+    <End Type="SchoolManagement_yk_340Model.City" Role="City" Multiplicity="0..1" />
+    <End Type="SchoolManagement_yk_340Model.StudentData" Role="StudentData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="StudentData">
+        <PropertyRef Name="StudentCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__State__CountryId__29572725">
+    <End Type="SchoolManagement_yk_340Model.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="SchoolManagement_yk_340Model.State" Role="State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StudentDa__Stude__30F848ED">
+    <End Type="SchoolManagement_yk_340Model.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="SchoolManagement_yk_340Model.StudentData" Role="StudentData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="StudentData">
+        <PropertyRef Name="StudentCountry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StudentDa__Stude__31EC6D26">
+    <End Type="SchoolManagement_yk_340Model.State" Role="State" Multiplicity="0..1" />
+    <End Type="SchoolManagement_yk_340Model.StudentData" Role="StudentData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="StudentData">
+        <PropertyRef Name="StudentState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_getStateList_Result">
+    <Property Type="Int32" Name="StateId" Nullable="false" />
+    <Property Type="String" Name="StateName" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="sp_getStateCountryList_Result">
+    <Property Type="Int32" Name="CityId" Nullable="false" />
+    <Property Type="String" Name="CityName" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="StateName" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="255" />
+  </ComplexType>
+</Schema>

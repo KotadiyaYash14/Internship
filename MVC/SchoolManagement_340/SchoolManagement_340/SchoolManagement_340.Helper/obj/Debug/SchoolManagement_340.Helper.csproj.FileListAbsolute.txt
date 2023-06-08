@@ -1,0 +1,12 @@
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\SchoolManagement_340.Helper.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\SchoolManagement_340.Helper.pdb
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\obj\Debug\SchoolManagement_340.Helper.csproj.AssemblyReference.cache
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\obj\Debug\SchoolManagement_340.Helper.csproj.CoreCompileInputs.cache
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\obj\Debug\SchoolManagement_340.Helper.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\obj\Debug\SchoolManagement_340.Helper.pdb
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\SchoolManagement_340.Models.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\EntityFramework.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\SchoolManagement_340.Models.pdb
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\SchoolManagement_340.Models.dll.config
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\EntityFramework.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\obj\Debug\SchoolManagement_340.Helper.csproj.CopyComplete

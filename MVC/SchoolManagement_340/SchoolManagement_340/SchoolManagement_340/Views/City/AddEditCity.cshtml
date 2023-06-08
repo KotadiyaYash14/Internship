@@ -1,0 +1,51 @@
+﻿@model SchoolManagement_340.Models.CustomModel.CustomCity
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+@using (Html.BeginForm("AddEditCity", "City", FormMethod.Post))
+{
+    <div>
+        @Html.HiddenFor(x => x.CityId, new { @class = "form-control form-control-user" })
+    </div>
+    <div class="form-group">
+        @Html.DropDownListFor(x => x.CountryId, ViewBag.Country as SelectList, "--- Select Country ---", new { @class = "form-control form-control-user mt-4", id = "Country" })
+        @Html.ValidationMessageFor(x => x.CountryId, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.DropDownListFor(x => x.StateId, new SelectList(""), "--- Select State ---", new { @class = "form-control form-control-user mt-4", id = "State" })
+        @Html.ValidationMessageFor(x => x.StateId, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.CityName, new { @class = "form-control form-control-user mt-4", placeholder = "--- City ---" })
+        @Html.ValidationMessageFor(x => x.CityName, "", new { @class = "text-danger" })
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-outline-primary btn-user w-25">Add</button>
+    </div>
+}
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#Country").change(function () {
+            $("#State").html("");
+            $("#State").append(`<option value=""> --- Select State --- </option>`);
+            var CountryId = $("#Country").val();
+
+            $.ajax({
+                url: `/City/StateAsPerCountry/${CountryId}`,
+                method: "GET",
+                success: function (res) {
+                    console.log(res);
+                    var data = JSON.parse(res);
+                    console.log(data);
+                    data.forEach(e => {
+                        $("#State").append(`<option value=${e.StateId}>${e.StateName}</option>`);
+                    })
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        });
+    });
+</script>

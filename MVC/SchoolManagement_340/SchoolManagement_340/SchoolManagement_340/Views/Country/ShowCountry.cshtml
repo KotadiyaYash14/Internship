@@ -1,0 +1,27 @@
+﻿@model List<SchoolManagement_340.Models.Context.Country>
+
+
+@if (TempData["Error"] != null)
+{
+    <h4 class="text-danger mt-2">@TempData["Error"]</h4>
+}
+<table class="table table-bordered table-hover table-striped mt-3">
+    <thead>
+        <tr>
+            <th>CountryId</th>
+            <th>CountryName</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CountryId</td>
+                <td>@item.CountryName</td>
+                <td><a href="/Country/AddEditCountry/@item.CountryId" class="btn btn-outline-success">Edit</a>&nbsp;&nbsp;<a href="/Country/DeleteCountry/@item.CountryId" class="btn btn-outline-danger">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,117 @@
+﻿@model SchoolManagement_340.Models.CustomModel.CustomStudent
+
+@using (Html.BeginForm("AddEditStudent", "Student", FormMethod.Post))
+{
+<div class="card-body">
+    <div class="form-group">
+        @Html.HiddenFor(x => x.StudentId, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <lable>Name</lable>
+        @Html.TextBoxFor(x => x.StudentName, new { @class = "form-control", placeholder = "Name" })
+        @Html.ValidationMessageFor(x => x.StudentName, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <lable>Email</lable>
+        @Html.TextBoxFor(x => x.StudentEmail, new { @class = "form-control", placeholder = "Email" })
+        @Html.ValidationMessageFor(x => x.StudentEmail, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <lable>Phone Number</lable>
+        @Html.TextBoxFor(x => x.StuentPhone, new { @class = "form-control", placeholder = "Phone" })
+        @Html.ValidationMessageFor(x => x.StuentPhone, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <lable>Date Of Birth</lable>
+        <input type="date" value="@ViewBag.Date" name="StudentDOB" class="form-control" placeholder = "Date Of Birth"/>
+        @*@Html.TextBoxFor(x => x.StudentDOB, ViewBag.Date , new { type = "date", @class = "form-control", placeholder = "Date Of Birth" })*@
+        @Html.ValidationMessageFor(x => x.StudentDOB, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <lable>Gender</lable>
+        <div class="form-check">
+            @Html.RadioButtonFor(x => x.StudentGender,"Male", new { @class = "form-check-input", name = "StudentGender" })
+            <label class="form-check-label">Male</label>
+        </div>
+        <div class="form-check">
+            @Html.RadioButtonFor(x => x.StudentGender,"Female", new { @class = "form-check-input", name = "StudentGender" })
+            <label class="form-check-label">Female</label>
+        </div>
+        <div class="form-check">
+            @Html.RadioButtonFor(x => x.StudentGender,"Other", new { @class = "form-check-input", name = "StudentGender" })
+            <label class="form-check-label">Other</label>
+        </div>
+        @Html.ValidationMessageFor(x => x.StudentGender, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <lable>Address</lable>
+        @Html.TextBoxFor(x => x.StudentAddress, new { @class = "form-control", placeholder = "Address" })
+        @Html.ValidationMessageFor(x => x.StudentAddress, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <lable>Country</lable>
+        @Html.DropDownListFor(x => x.StudentCountry, ViewBag.Country as SelectList, "--- Select Country ---", new { @class = "form-control", id = "Country" })
+        @Html.ValidationMessageFor(x => x.StudentCountry, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <lable>State</lable>
+        @Html.DropDownListFor(x => x.StudentState, ViewBag.State as SelectList, "--- Select State ---", new { @class = "form-control", id = "State" })
+        @Html.ValidationMessageFor(x => x.StudentState, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <lable>City</lable>
+        @Html.DropDownListFor(x => x.StudentCity, ViewBag.City as SelectList, "--- Select City ---", new { @class = "form-control", id = "City" })
+        @Html.ValidationMessageFor(x => x.StudentCity, "", new { @class = "text-danger" })
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#Country").change(function () {
+            $("#State").html("");
+            $("#State").append(`<option value=""> --- Select State --- </option>`);
+            var CountryId = $("#Country").val();
+
+            $.ajax({
+                url: `/Student/StateAsPerCountry/${CountryId}`,
+                method: "GET",
+                success: function (res) {
+                    console.log(res);
+                    var data = JSON.parse(res);
+                    console.log(data);
+                    data.forEach(e => {
+                        $("#State").append(`<option value=${e.StateId}>${e.StateName}</option>`);
+                    })
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        });
+        $("#State").change(function () {
+            $("#City").html("");
+            $("#City").append(`<option value=""> --- Select City --- </option>`);
+            var StateId = $("#State").val();
+
+            $.ajax({
+                url: `/Student/CityAsPerState/${StateId}`,
+                method: "GET",
+                success: function (res) {
+                    console.log(res);
+                    var data = JSON.parse(res);
+                    console.log(data);
+                    data.forEach(e => {
+                        $("#City").append(`<option value=${e.CityId}>${e.CityName}</option>`);
+                    })
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        });
+    });
+</script>

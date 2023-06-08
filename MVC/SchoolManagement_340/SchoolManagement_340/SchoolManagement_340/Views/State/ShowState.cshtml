@@ -1,0 +1,28 @@
+﻿@model List<SchoolManagement_340.Models.Context.sp_getStateList_Result>
+
+@if (TempData["Error"] != null)
+{
+    <h4 class="text-danger mt-2">@TempData["Error"]</h4>
+}
+<table class="table table-bordered table-hover table-striped mt-3">
+    <thead>
+        <tr>
+            <th>StateId</th>
+            <th>StateName</th>
+            <th>CountryName</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.StateId</td>
+                <td>@item.StateName</td>
+                <td>@item.CountryName</td>
+                <td><a href="/State/AddEditState/@item.StateId" class="btn btn-outline-success">Edit</a>&nbsp;&nbsp;<a href="/State/DeleteState/@item.StateId" class="btn btn-outline-danger">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

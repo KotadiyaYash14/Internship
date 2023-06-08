@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ed89ecea24b74c10a01d1f0f5920de15" Name="Diagram1">
+        <EntityTypeShape EntityType="SchoolManagement_yk_340Model.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagement_yk_340Model.City" Width="1.5" PointX="7.875" PointY="4.75" />
+        <EntityTypeShape EntityType="SchoolManagement_yk_340Model.Country" Width="1.5" PointX="3.375" PointY="3.375" />
+        <EntityTypeShape EntityType="SchoolManagement_yk_340Model.State" Width="1.5" PointX="5.625" PointY="6.375" />
+        <EntityTypeShape EntityType="SchoolManagement_yk_340Model.StudentData" Width="1.5" PointX="10.125" PointY="4.25" />
+        <AssociationConnector Association="SchoolManagement_yk_340Model.FK__City__CountryId__2D27B809" />
+        <AssociationConnector Association="SchoolManagement_yk_340Model.FK__City__StateId__2C3393D0" />
+        <AssociationConnector Association="SchoolManagement_yk_340Model.FK__StudentDa__Stude__32E0915F" />
+        <AssociationConnector Association="SchoolManagement_yk_340Model.FK__State__CountryId__29572725" />
+        <AssociationConnector Association="SchoolManagement_yk_340Model.FK__StudentDa__Stude__30F848ED" />
+        <AssociationConnector Association="SchoolManagement_yk_340Model.FK__StudentDa__Stude__31EC6D26" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SchoolManagement_yk_340ModelStoreContainer" CdmEntityContainer="SchoolManagement_yk_340Entities">
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="SchoolManagement_yk_340Model.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+          <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="City">
+      <EntityTypeMapping TypeName="SchoolManagement_yk_340Model.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country">
+      <EntityTypeMapping TypeName="SchoolManagement_yk_340Model.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="State">
+      <EntityTypeMapping TypeName="SchoolManagement_yk_340Model.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentData">
+      <EntityTypeMapping TypeName="SchoolManagement_yk_340Model.StudentData">
+        <MappingFragment StoreEntitySet="StudentData">
+          <ScalarProperty Name="StudentCity" ColumnName="StudentCity" />
+          <ScalarProperty Name="StudentState" ColumnName="StudentState" />
+          <ScalarProperty Name="StudentCountry" ColumnName="StudentCountry" />
+          <ScalarProperty Name="StudentAddress" ColumnName="StudentAddress" />
+          <ScalarProperty Name="StudentGender" ColumnName="StudentGender" />
+          <ScalarProperty Name="StudentDOB" ColumnName="StudentDOB" />
+          <ScalarProperty Name="StuentPhone" ColumnName="StuentPhone" />
+          <ScalarProperty Name="StudentEmail" ColumnName="StudentEmail" />
+          <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_add_edit_country" FunctionName="SchoolManagement_yk_340Model.Store.sp_add_edit_country" />
+    <FunctionImportMapping FunctionImportName="sp_delete_country" FunctionName="SchoolManagement_yk_340Model.Store.sp_delete_country" />
+    <FunctionImportMapping FunctionImportName="sp_add_edit_state" FunctionName="SchoolManagement_yk_340Model.Store.sp_add_edit_state" />
+    <FunctionImportMapping FunctionImportName="sp_getStateList" FunctionName="SchoolManagement_yk_340Model.Store.sp_getStateList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SchoolManagement_yk_340Model.sp_getStateList_Result">
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_delete_state" FunctionName="SchoolManagement_yk_340Model.Store.sp_delete_state" />
+    <FunctionImportMapping FunctionImportName="sp_add_edit_city" FunctionName="SchoolManagement_yk_340Model.Store.sp_add_edit_city" />
+    <FunctionImportMapping FunctionImportName="sp_getStateCountryList" FunctionName="SchoolManagement_yk_340Model.Store.sp_getStateCountryList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SchoolManagement_yk_340Model.sp_getStateCountryList_Result">
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_delete_city" FunctionName="SchoolManagement_yk_340Model.Store.sp_delete_city" />
+    <FunctionImportMapping FunctionImportName="sp_add_edit_student" FunctionName="SchoolManagement_yk_340Model.Store.sp_add_edit_student" />
+    <FunctionImportMapping FunctionImportName="sp_delete_student" FunctionName="SchoolManagement_yk_340Model.Store.sp_delete_student" />
+  </EntityContainerMapping>
+</Mapping>

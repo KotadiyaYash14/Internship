@@ -1,0 +1,38 @@
+﻿@model List<SchoolManagement_340.Models.Context.StudentData>
+
+<table class="table table-striped table-hover table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>StudentId</th>
+            <th>StudentName</th>
+            <th>StudentEmail</th>
+            <th>StudentPhone</th>
+            <th>StudentDOB</th>
+            <th>StudentGender</th>
+            <th>StudentAddress</th>
+            <th>StudentCountry</th>
+            <th>StudentState</th>
+            <th>StudentCity</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.StudentId</td>
+                <td>@item.StudentName</td>
+                <td>@item.StudentEmail</td>
+                <td>@item.StuentPhone</td>
+                <td>@item.StudentDOB.ToShortDateString()</td>
+                <td>@item.StudentGender</td>
+                <td>@item.StudentAddress</td>
+                <td>@item.Country.CountryName</td>
+                <td>@item.State.StateName</td>
+                <td>@item.City.CityName</td>
+                <td><a href="/Student/AddEditStudent/@item.StudentId" class="btn btn-outline-success">Edit</a>&nbsp;&nbsp;<a href="/Student/DeleteStudent/@item.StudentId" class="btn btn-outline-danger">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
