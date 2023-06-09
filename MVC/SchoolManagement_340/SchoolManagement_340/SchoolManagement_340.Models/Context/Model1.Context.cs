@@ -32,6 +32,7 @@ namespace SchoolManagement_340.Models.Context
         public virtual DbSet<Country> Country { get; set; }
         public virtual DbSet<State> State { get; set; }
         public virtual DbSet<StudentData> StudentData { get; set; }
+        public virtual DbSet<ImageTable> ImageTable { get; set; }
     
         public virtual int sp_add_edit_country(Nullable<int> countryId, string countryName)
         {
@@ -86,25 +87,25 @@ namespace SchoolManagement_340.Models.Context
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_delete_state", stateidParameter);
         }
     
-        public virtual int sp_add_edit_city(Nullable<int> cityid, string cityname, Nullable<int> stateid, Nullable<int> countryid)
+        public virtual int sp_add_edit_city(Nullable<int> cityId, string cityName, Nullable<int> stateId, Nullable<int> countryId)
         {
-            var cityidParameter = cityid.HasValue ?
-                new ObjectParameter("cityid", cityid) :
-                new ObjectParameter("cityid", typeof(int));
+            var cityIdParameter = cityId.HasValue ?
+                new ObjectParameter("cityId", cityId) :
+                new ObjectParameter("cityId", typeof(int));
     
-            var citynameParameter = cityname != null ?
-                new ObjectParameter("cityname", cityname) :
-                new ObjectParameter("cityname", typeof(string));
+            var cityNameParameter = cityName != null ?
+                new ObjectParameter("cityName", cityName) :
+                new ObjectParameter("cityName", typeof(string));
     
-            var stateidParameter = stateid.HasValue ?
-                new ObjectParameter("stateid", stateid) :
-                new ObjectParameter("stateid", typeof(int));
+            var stateIdParameter = stateId.HasValue ?
+                new ObjectParameter("stateId", stateId) :
+                new ObjectParameter("stateId", typeof(int));
     
-            var countryidParameter = countryid.HasValue ?
-                new ObjectParameter("countryid", countryid) :
-                new ObjectParameter("countryid", typeof(int));
+            var countryIdParameter = countryId.HasValue ?
+                new ObjectParameter("countryId", countryId) :
+                new ObjectParameter("countryId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_add_edit_city", cityidParameter, citynameParameter, stateidParameter, countryidParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_add_edit_city", cityIdParameter, cityNameParameter, stateIdParameter, countryIdParameter);
         }
     
         public virtual ObjectResult<sp_getStateCountryList_Result> sp_getStateCountryList()
@@ -118,7 +119,7 @@ namespace SchoolManagement_340.Models.Context
                 new ObjectParameter("cityid", cityid) :
                 new ObjectParameter("cityid", typeof(int));
     
-                return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_delete_city", cityidParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_delete_city", cityidParameter);
         }
     
         public virtual int sp_add_edit_student(Nullable<int> studentid, string studentname, string studentemail, string stdentphone, Nullable<System.DateTime> studentdob, string studentgender, string studentaddress, Nullable<int> studentcountry, Nullable<int> studentstate, Nullable<int> studentcity)

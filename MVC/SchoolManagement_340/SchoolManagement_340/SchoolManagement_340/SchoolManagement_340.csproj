@@ -4448,9 +4448,13 @@
     <Content Include="Views\City\AddEditCity.cshtml" />
     <Content Include="Views\Student\AddEditStudent.cshtml" />
     <Content Include="Views\Student\ShowStudent.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\Home\UserProfile.cshtml" />
+    <Content Include="Views\Home\EditProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

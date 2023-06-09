@@ -10,6 +10,7 @@
     <Property Name="UserEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="UserPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="UserRole" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ImageTable" Relationship="SchoolManagement_yk_340Model.FK__ImageTabl__UserI__5812160E" FromRole="User" ToRole="ImageTable" />
   </EntityType>
   <EntityContainer Name="SchoolManagement_yk_340Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="User" EntityType="Self.User" />
@@ -58,10 +59,10 @@
       <Parameter Name="stateid" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="sp_add_edit_city">
-      <Parameter Name="cityid" Mode="In" Type="Int32" />
-      <Parameter Name="cityname" Mode="In" Type="String" />
-      <Parameter Name="stateid" Mode="In" Type="Int32" />
-      <Parameter Name="countryid" Mode="In" Type="Int32" />
+      <Parameter Name="cityId" Mode="In" Type="Int32" />
+      <Parameter Name="cityName" Mode="In" Type="String" />
+      <Parameter Name="stateId" Mode="In" Type="Int32" />
+      <Parameter Name="countryId" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="sp_getStateCountryList" ReturnType="Collection(SchoolManagement_yk_340Model.sp_getStateCountryList_Result)" />
     <FunctionImport Name="sp_delete_city">
@@ -82,6 +83,11 @@
     <FunctionImport Name="sp_delete_student">
       <Parameter Name="studentid" Mode="In" Type="Int32" />
     </FunctionImport>
+    <EntitySet Name="ImageTable" EntityType="SchoolManagement_yk_340Model.ImageTable" />
+    <AssociationSet Name="FK__ImageTabl__UserI__5812160E" Association="SchoolManagement_yk_340Model.FK__ImageTabl__UserI__5812160E">
+      <End Role="User" EntitySet="User" />
+      <End Role="ImageTable" EntitySet="ImageTable" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="City">
     <Key>
@@ -217,4 +223,26 @@
     <Property Type="String" Name="StateName" Nullable="false" MaxLength="255" />
     <Property Type="String" Name="CountryName" Nullable="false" MaxLength="255" />
   </ComplexType>
+  <EntityType Name="ImageTable">
+    <Key>
+      <PropertyRef Name="IamgeId" />
+    </Key>
+    <Property Name="IamgeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ImageTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="Int32" />
+    <NavigationProperty Name="User" Relationship="SchoolManagement_yk_340Model.FK__ImageTabl__UserI__5812160E" FromRole="ImageTable" ToRole="User" />
+  </EntityType>
+  <Association Name="FK__ImageTabl__UserI__5812160E">
+    <End Type="SchoolManagement_yk_340Model.User" Role="User" Multiplicity="0..1" />
+    <End Type="SchoolManagement_yk_340Model.ImageTable" Role="ImageTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="ImageTable">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

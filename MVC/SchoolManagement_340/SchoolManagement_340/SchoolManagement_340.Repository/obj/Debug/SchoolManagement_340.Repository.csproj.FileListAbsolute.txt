@@ -15,3 +15,14 @@ C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repositor
 C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\SchoolManagement_340.Repository.dll.config
 C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\System.Web.Mvc.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\System.Web.WebPages.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\System.Web.Razor.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\System.Web.Mvc.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\System.Web.WebPages.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\System.Web.Razor.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Repository\bin\Debug\System.Web.WebPages.Deployment.xml

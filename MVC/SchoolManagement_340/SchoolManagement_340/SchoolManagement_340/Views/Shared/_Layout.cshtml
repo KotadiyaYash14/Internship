@@ -39,6 +39,21 @@
                 <section class="content">
                     <div class="container-fluid">
                         @RenderBody()
+                        @*<div class="modal fade" id="MyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Login Successgul.....
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
                     </div>
                 </section>
             </div>
@@ -79,9 +94,23 @@
     <!-- AdminLTE App -->
     <script src="~/Content/Theme/dist/js/adminlte.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="~/Content/Theme/dist/js/demo.js"></script>
+    @*<script src="~/Content/Theme/dist/js/demo.js"></script>*@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="~/Content/Theme/dist/js/pages/dashboard.js"></script>
+    @*<script>
+        if (`@(TempData["Success"])` != null) {
+            alert("fgbdfg")
+            window.onload = () => {
+                const MyModal = new bootstrap.Modal('#MyModal');
+                MyModal.show();
+            }
+        }
+
+        setTimeout(function () {
+            $("#MyModal").modal('hide')
+        }, 5000);
+
+    </script>*@
 </body>
 </html>
 

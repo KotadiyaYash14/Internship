@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SchoolManagement_340.Helper.SessionHelper;
 using SchoolManagement_340.Models.CustomModel;
 using SchoolManagement_340.Repository.Repository;
 using System;
@@ -9,6 +10,8 @@ using System.Web.Mvc;
 
 namespace SchoolManagement_340.Controllers
 {
+    //[Authorize]
+    [Validate]
     public class CityController : Controller
     {
         public ICityInterface CityServices;
@@ -22,52 +25,87 @@ namespace SchoolManagement_340.Controllers
         }
         public ActionResult AddEditCity(int? id)
         {
-            if (id == null)
+            try
             {
-                ViewBag.State = new SelectList(StateServices.GetStates(), "StateId", "StateName");
-                ViewBag.Country = new SelectList(CountryServices.GetCountries(), "CountryId", "CountryName");
-                return View();
+                if (id == null)
+                {
+                    ViewBag.State = new SelectList(StateServices.GetStates(), "StateId", "StateName");
+                    ViewBag.Country = new SelectList(CountryServices.GetCountries(), "CountryId", "CountryName");
+                    return View();
+                }
+                else
+                {
+                    ViewBag.State = new SelectList(StateServices.GetStates(), "StateId", "StateName");
+                    ViewBag.Country = new SelectList(CountryServices.GetCountries(), "CountryId", "CountryName");
+                    CustomCity City = CityServices.GetCityById(id);
+                    return View(City);
+                }
             }
-            else
+            catch
             {
-                ViewBag.State = new SelectList(StateServices.GetStates(), "StateId", "StateName");
-                ViewBag.Country = new SelectList(CountryServices.GetCountries(), "CountryId", "CountryName");
-                CustomCity City = CityServices.GetCityById(id);
-                return View(City);
+                return View();
             }
         }
         [HttpPost]
         public ActionResult AddEditCity(CustomCity data, int? id)
         {
-            if (id == 0)
+            try
             {
-                CityServices.RegisterCity(data, 0);
-                return RedirectToAction("ShowCity", "City");
+                if (id == 0)
+                {
+                    CityServices.RegisterCity(data, 0);
+                    return RedirectToAction("ShowCity", "City");
+                }
+                else
+                {
+                    CityServices.RegisterCity(data, id);
+                    return RedirectToAction("ShowCity", "City");
+                }
             }
-            else
+            catch
             {
-                CityServices.RegisterCity(data, id);
-                return RedirectToAction("ShowCity", "City");
+                return View();
             }
         }
         public ActionResult ShowCity()
         {
-            return View(CityServices.GetStateAndCountry());
+            try
+            {
+                return View(CityServices.GetStateAndCountry());
+            }
+            catch
+            {
+                return View();
+            }
         }
 
         public ActionResult DeleteCity(int? id)
         {
-            if (CityServices.DeleteCity(id) == 1)
+            try
             {
-                TempData["Error"] = "City is in Use";
+                if (CityServices.DeleteCity(id) == 1)
+                {
+                    TempData["Error"] = "City is in Use";
+                }
+                return RedirectToAction("ShowCity", "City");
             }
-            return RedirectToAction("ShowCity", "City");
+            catch
+            {
+                return View();
+            }
         }
         public JsonResult StateAsPerCountry(int id)
         {
-            var success = StateServices.GetStateByCountry(id);
-            var JsonString = JsonConvert.SerializeObject(success);
-            return Json(JsonString,JsonRequestBehavior.AllowGet);
+            try
+            {
+                var success = StateServices.GetStateByCountry(id);
+                var JsonString = JsonConvert.SerializeObject(success);
+                return Json(JsonString, JsonRequestBehavior.AllowGet);
+            }
+            catch(Exception Exce)
+            {
+                return Json(Exce,JsonRequestBehavior.AllowGet);
+            }
         }
     }
 }

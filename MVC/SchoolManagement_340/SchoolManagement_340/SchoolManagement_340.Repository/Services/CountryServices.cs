@@ -47,8 +47,15 @@ namespace SchoolManagement_340.Repository.Services
                 {
                     if (id == 0)
                     {
-                        db.sp_add_edit_country(0, data.CountryName);
-                        return true;
+                        if (db.Country.Any(x => x.CountryName.ToLower() == data.CountryName.ToLower()) == false)
+                        {
+                            db.sp_add_edit_country(0, data.CountryName);
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
                     }
                     else
                     {

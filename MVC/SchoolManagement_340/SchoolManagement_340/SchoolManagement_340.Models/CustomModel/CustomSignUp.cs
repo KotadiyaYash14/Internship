@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using SchoolManagement_340.Models.GlobalEnum;
 
 namespace SchoolManagement_340.Models.CustomModel
@@ -30,5 +31,9 @@ namespace SchoolManagement_340.Models.CustomModel
         public string ConfirmPassword { get; set; }
         [Required]
         public RoleType Role { get; set; }
+        public int IamgeId { get; set; }
+        public string Image { get; set; }
+        //public string ImageTitle { get; set; }
+        public HttpPostedFileBase ImagePath { get; set; }
     }
 }

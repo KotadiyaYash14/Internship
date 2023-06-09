@@ -23,6 +23,19 @@ namespace SchoolManagement_340.Helper.SignUpHelper
             };
             return user;
         }
+        public CustomSignUp ConvertSignUpToCustomSignUp(User data)
+        {
+            CustomSignUp user = new CustomSignUp()
+            {
+                UserId = data.UserId,
+                UserFirstName = data.UserFirstName,
+                UserLastName = data.UserLastName,
+                UserEmail = data.UserEmail,
+                UserPassword = data.UserPassword,
+                Role = (Models.GlobalEnum.RoleType)data.UserRole
+            };
+            return user;
+        }
 
         public User ConvertCustomSignInToSignIn(CustomSignIn data)
         {

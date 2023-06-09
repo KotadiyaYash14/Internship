@@ -83,5 +83,15 @@
     <FunctionImportMapping FunctionImportName="sp_delete_city" FunctionName="SchoolManagement_yk_340Model.Store.sp_delete_city" />
     <FunctionImportMapping FunctionImportName="sp_add_edit_student" FunctionName="SchoolManagement_yk_340Model.Store.sp_add_edit_student" />
     <FunctionImportMapping FunctionImportName="sp_delete_student" FunctionName="SchoolManagement_yk_340Model.Store.sp_delete_student" />
+    <EntitySetMapping Name="ImageTable">
+      <EntityTypeMapping TypeName="SchoolManagement_yk_340Model.ImageTable">
+        <MappingFragment StoreEntitySet="ImageTable">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="ImageTitle" ColumnName="ImageTitle" />
+          <ScalarProperty Name="IamgeId" ColumnName="IamgeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

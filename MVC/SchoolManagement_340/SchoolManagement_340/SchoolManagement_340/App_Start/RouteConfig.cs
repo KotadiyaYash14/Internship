@@ -16,7 +16,7 @@ namespace SchoolManagement_340
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Login", action = "SignUp", id = UrlParameter.Optional }
+                defaults: new { controller = "Login", action = "SignIn", id = UrlParameter.Optional }
             );
         }
     }

@@ -35,15 +35,23 @@ namespace SchoolManagement_340.Repository.Services
                 throw Exce;
             }
         }
-        public bool AlreadyRegister(CustomSignIn data)
+        public int AlreadyRegister(CustomSignIn data)
         {
             if (db.User.Any(x => x.UserEmail == data.UserEmail && x.UserPassword == data.UserPassword))
             {
-                return true;
+                return 0;
             }
+            //else if (db.User.Any(x => x.UserEmail == data.UserEmail && x.UserPassword != data.UserPassword))
+            //{
+            //    return 1;
+            //}
+            //else if (db.User.Any(x => x.UserEmail != data.UserEmail && x.UserPassword == data.UserPassword))
+            //{
+            //    return 2;
+            //}
             else
             {
-                return false;
+                return 1;
             }
         }
 
@@ -58,6 +66,12 @@ namespace SchoolManagement_340.Repository.Services
             {
                 return null;
             }
+        }
+
+        public User GetUserNameFromEmailForSession(string email)
+        {
+            User user = db.User.Where(x => x.UserEmail.ToLower() == email.ToLower()).FirstOrDefault();
+            return user;
         }
     }
 }
