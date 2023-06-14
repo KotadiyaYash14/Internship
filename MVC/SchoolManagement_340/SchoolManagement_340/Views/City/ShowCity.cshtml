@@ -1,9 +1,12 @@
-﻿@model List<SchoolManagement_340.Models.Context.sp_getStateCountryList_Result>
+﻿@model PagedList.IPagedList<SchoolManagement_340.Models.Context.sp_getStateCountryList_Result>
+@using PagedList.Mvc
 
 @if (TempData["Error"] != null)
 {
     <h4 class="text-danger mt-2">@TempData["Error"]</h4>
 }
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 <table class="table table-bordered table-hover table-striped mt-3">
     <thead>
@@ -28,6 +31,7 @@
         }
     </tbody>
 </table>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount @Html.PagedListPager(Model, page => @Url.Action("ShowCity", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
 
 
 

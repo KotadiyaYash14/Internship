@@ -1,1 +1,23 @@
-﻿
+﻿@model IEnumerable<SchoolManagement_340.Models.Context.Country>
+
+<a href="/Home/AddEditCountry/0" class="btn btn-outline-success mt-2">Add</a>
+
+<table class="table table-striped table-hover table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CountryId</td>
+                <td>@item.CountryName</td>
+                <td><a href="/Home/AddEditCountry/@item.CountryId" class="btn btn-outline-success">Edit</a>&nbsp;&nbsp;<a href="/Home/DeleteCountry/@item.CountryId" class="btn btn-outline-danger">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

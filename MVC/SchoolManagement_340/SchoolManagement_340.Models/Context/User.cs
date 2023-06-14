@@ -14,11 +14,20 @@ namespace SchoolManagement_340.Models.Context
     
     public partial class User
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public User()
+        {
+            this.ImageTable = new HashSet<ImageTable>();
+        }
+    
         public int UserId { get; set; }
         public string UserFirstName { get; set; }
         public string UserLastName { get; set; }
         public string UserEmail { get; set; }
         public string UserPassword { get; set; }
         public int UserRole { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ImageTable> ImageTable { get; set; }
     }
 }

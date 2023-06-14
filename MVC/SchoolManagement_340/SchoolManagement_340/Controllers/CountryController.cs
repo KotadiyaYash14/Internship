@@ -1,4 +1,5 @@
-﻿using SchoolManagement_340.Models.Context;
+﻿using SchoolManagement_340.Helper.SessionHelper;
+using SchoolManagement_340.Models.Context;
 using SchoolManagement_340.Models.CustomModel;
 using SchoolManagement_340.Repository.Repository;
 using System;
@@ -9,6 +10,8 @@ using System.Web.Mvc;
 
 namespace SchoolManagement_340.Controllers
 {
+    //[Authorize]
+    [Validate]
     public class CountryController : Controller
     {
         public ICountryInterface CountryServices;
@@ -18,41 +21,69 @@ namespace SchoolManagement_340.Controllers
         }
         public ActionResult AddEditCountry(int? id)
         {
-            if(id == null)
+            try
             {
-               return View();
+                if (id == null)
+                {
+                    return View();
+                }
+                else
+                {
+                    CustomCountry country = CountryServices.GetCountryById(id);
+                    return View(country);
+                }
             }
-            else
+            catch
             {
-                CustomCountry country = CountryServices.GetCountryById(id);
-                return View(country);
-            } 
+                return View();
+            }
         }
         [HttpPost]
         public ActionResult AddEditCountry(CustomCountry data, int? id)
         {
-            if(id == 0)
+            try
             {
-                CountryServices.RegisterCountry(data, 0);
-                return RedirectToAction("ShowCountry", "Country");
+                if (id == 0)
+                {
+                    CountryServices.RegisterCountry(data, 0);
+                    return RedirectToAction("ShowCountry", "Country");
+                }
+                else
+                {
+                    CountryServices.RegisterCountry(data, id);
+                    return RedirectToAction("ShowCountry", "Country");
+                }
             }
-            else
+            catch
             {
-                CountryServices.RegisterCountry(data, id);
-                return RedirectToAction("ShowCountry", "Country");
+                return View();
             }
         }
         public ActionResult DeleteCountry(int ? id)
         {
-            if(CountryServices.DeleteCountry(id) == 0)
+            try
             {
-                TempData["Error"] = "Country is in Use";
+                if (CountryServices.DeleteCountry(id) == 0)
+                {
+                    TempData["Error"] = "Country is in Use";
+                }
+                return RedirectToAction("ShowCountry", "Country");
             }
-            return RedirectToAction("ShowCountry", "Country");
+            catch
+            {
+                return View();
+            }
         }
         public ActionResult ShowCountry()
         {
-            return View(CountryServices.GetCountries());
+            try
+            {
+                return View(CountryServices.GetCountries());
+            }
+            catch
+            {
+                return View();
+            }
         }
     }
 }

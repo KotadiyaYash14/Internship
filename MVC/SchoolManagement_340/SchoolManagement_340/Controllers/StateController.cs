@@ -1,4 +1,5 @@
-﻿using SchoolManagement_340.Models.CustomModel;
+﻿using SchoolManagement_340.Helper.SessionHelper;
+using SchoolManagement_340.Models.CustomModel;
 using SchoolManagement_340.Repository.Repository;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,8 @@ using System.Web.Mvc;
 
 namespace SchoolManagement_340.Controllers
 {
+    //[Authorize]
+    [Validate]
     public class StateController : Controller
     {
         public IStateInterface StateServices;
@@ -19,44 +22,72 @@ namespace SchoolManagement_340.Controllers
         }
         public ActionResult AddEditState(int? id)
         {
-            if (id == null)
+            try
             {
-                ViewBag.Country = new SelectList(CountryServices.GetCountries(), "CountryId", "CountryName");
-                return View();
+                if (id == null)
+                {
+                    ViewBag.Country = new SelectList(CountryServices.GetCountries(), "CountryId", "CountryName");
+                    return View();
+                }
+                else
+                {
+                    ViewBag.Country = new SelectList(CountryServices.GetCountries(), "CountryId", "CountryName");
+                    CustomState state = StateServices.GetStateById(id);
+                    return View(state);
+                }
             }
-            else
+            catch
             {
-                ViewBag.Country = new SelectList(CountryServices.GetCountries(), "CountryId", "CountryName");
-                CustomState state = StateServices.GetStateById(id);  
-                return View(state);
+                return View();
             }
         }
         [HttpPost]
         public ActionResult AddEditState(CustomState data, int? id)
         {
-            if (id == null)
+            try
             {
-                StateServices.RegisterState(data, 0);
-                return RedirectToAction("ShowState", "State");
+                if (id == null)
+                {
+                    StateServices.RegisterState(data, 0);
+                    return RedirectToAction("ShowState", "State");
+                }
+                else
+                {
+                    StateServices.RegisterState(data, id);
+                    return RedirectToAction("ShowState", "State");
+                }
             }
-            else
+            catch
             {
-                StateServices.RegisterState(data, id);
-                return RedirectToAction("ShowState", "State");
+                return View();
             }
         }
         public ActionResult ShowState()
         {
-            return View(StateServices.GetStates());
+            try
+            {
+                return View(StateServices.GetStates());
+            }
+            catch
+            {
+                return View();
+            }
         }
 
         public ActionResult DeleteState(int? id)
         {
-            if(StateServices.DeleteState(id) == 0)
+            try
             {
-                TempData["Error"] = "State is in Use";
+                if (StateServices.DeleteState(id) == 0)
+                {
+                    TempData["Error"] = "State is in Use";
+                }
+                return RedirectToAction("ShowState", "State");
             }
-            return RedirectToAction("ShowState", "State");
+            catch
+            {
+                return View();
+            }
         }
     }
 }

@@ -3,6 +3,13 @@
     ViewBag.Title = "Signin";
     Layout = "~/Views/Shared/_Login.cshtml";
 }
+<style>
+    .bg-login-image {
+        background: url("https://images.unsplash.com/photo-1684498815677-1deb80040c49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDk0fEpwZzZLaWRsLUhrfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60");
+        background-position: center;
+        background-size: cover
+    }
+</style>
 <div class="row justify-content-center">
     <div class="col-xl-10 col-lg-12 col-md-9">
         <div class="card o-hidden border-0 shadow-lg my-5">
@@ -16,20 +23,20 @@
                                 <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                             </div>
                             @using (Html.BeginForm("SignIn", "Login", FormMethod.Post))
-                            {
+                             {
                                 <div class="form-group">
                                     @Html.TextBoxFor(x => x.UserEmail, new { @class = "form-control form-control-user", placeholder = "Email" })
                                     @Html.ValidationMessageFor(x => x.UserEmail, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="form-group">
-                                    @Html.TextBoxFor(x => x.UserPassword, new {type = "password", @class = "form-control form-control-user", placeholder = "Password" })
+                                    @Html.TextBoxFor(x => x.UserPassword, new { type = "password", @class = "form-control form-control-user", placeholder = "Password" })
                                     @Html.ValidationMessageFor(x => x.UserPassword, "", new { @class = "text-danger" })
                                 </div>
                                 if (@TempData["Error"] != null)
                                 {
-                                    <h5 class="text-danger text-center">@TempData["Error"]</h5>
+                                    <h5 class="text-danger text-center error1">@TempData["Error"]</h5>
                                 }
-                                <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
+                                <button type="submit" class="btn btn-primary btn-user btn-block sub">Login</button>
                                 <hr>
                                 <a href="index.html" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Login with Google
@@ -37,7 +44,7 @@
                                 <a href="index.html" class="btn btn-facebook btn-user btn-block">
                                     <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
                                 </a>
-                            }
+                             }
                             <hr>
                             <div class="text-center">
                                 <a class="small" href="/Login/Forgot">Forgot Password?</a>
@@ -54,4 +61,13 @@
     </div>
 </div>
 
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.error1').show();
+        $('.sub').click(function () {
+            $('.error1').hide();
+        });
+    });
+</script>
 

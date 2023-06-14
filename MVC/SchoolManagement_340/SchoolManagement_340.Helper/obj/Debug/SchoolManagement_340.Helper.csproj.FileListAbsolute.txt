@@ -10,3 +10,16 @@ C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bi
 C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\SchoolManagement_340.Models.dll.config
 C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\EntityFramework.xml
 C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\obj\Debug\SchoolManagement_340.Helper.csproj.CopyComplete
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\System.Web.Helpers.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\System.Web.Mvc.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\System.Web.Razor.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\System.Web.WebPages.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\System.Web.Helpers.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\System.Web.Mvc.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\System.Web.Razor.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\System.Web.WebPages.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340.Helper\bin\Debug\System.Web.WebPages.Razor.xml

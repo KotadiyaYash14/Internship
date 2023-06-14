@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SchoolManagement_340.Helper.SessionHelper;
 using SchoolManagement_340.Models.CustomModel;
 using SchoolManagement_340.Repository.Repository;
 using System;
@@ -10,6 +11,7 @@ using System.Web.Mvc;
 namespace SchoolManagement_340.Controllers
 {
     //[Authorize]
+    [Validate]
     public class StudentController : Controller
     {
         public ICityInterface CityServices;
@@ -25,57 +27,99 @@ namespace SchoolManagement_340.Controllers
         }
         public ActionResult AddEditStudent(int? id)
         {
-            if (id == null)
+            try
             {
-                ViewBag.Country = new SelectList(CountryServices.GetCountries(), "CountryId", "CountryName");
-                ViewBag.State = new SelectList("");
-                ViewBag.City = new SelectList("");
-                return View();
+                if (id == null)
+                {
+                    ViewBag.Country = new SelectList(CountryServices.GetCountries(), "CountryId", "CountryName");
+                    ViewBag.State = new SelectList("");
+                    ViewBag.City = new SelectList("");
+                    return View();
+                }
+                else
+                {
+                    ViewBag.Country = new SelectList(CountryServices.GetCountries(), "CountryId", "CountryName");
+                    CustomStudent sc = StudentServices.GetStudentById(id);
+                    ViewBag.Date = sc.StudentDOB.ToString("yyyy-MM-dd");
+                    ViewBag.State = new SelectList(StateServices.GetStateByCountry(sc.StudentCountry), "StateId", "StateName");
+                    ViewBag.City = new SelectList(CityServices.GetCityByState(sc.StudentState), "CityId", "CityName");
+                    return View(sc);
+                }
             }
-            else
+            catch
             {
-                ViewBag.Country = new SelectList(CountryServices.GetCountries(), "CountryId", "CountryName");
-                CustomStudent sc = StudentServices.GetStudentById(id);
-                ViewBag.Date = sc.StudentDOB.ToString("yyyy-MM-dd");
-                ViewBag.State = new SelectList(StateServices.GetStateByCountry(sc.StudentCountry), "StateId", "StateName");
-                ViewBag.City = new SelectList(CityServices.GetCityByState(sc.StudentState),"CityId", "CityName");
-                return View(sc);
+                return View();
             }
         }
         [HttpPost]
-        public ActionResult AddEditStudent(CustomStudent data, int ? id)
+        public ActionResult AddEditStudent(CustomStudent data, int? id)
         {
-            if(id == 0)
+            try
             {
-                StudentServices.RegisterStudent(data, 0);
-                return RedirectToAction("ShowStudent", "Student");
+                if (id == 0)
+                {
+                    StudentServices.RegisterStudent(data, 0);
+                    return RedirectToAction("ShowStudent", "Student");
+                }
+                else
+                {
+                    StudentServices.RegisterStudent(data, id);
+                    return RedirectToAction("ShowStudent", "Student");
+                }
             }
-            else
+            catch
             {
-                StudentServices.RegisterStudent(data, id);
-                return RedirectToAction("ShowStudent", "Student");
+                return View();
             }
         }
         public ActionResult ShowStudent()
         {
-            return View(StudentServices.GetAllStudent());
+            try
+            {
+                return View(StudentServices.GetAllStudent());
+            }
+            catch
+            {
+                return View();
+            }
         }
-        public ActionResult DeleteStudent(int ? id)
+        public ActionResult DeleteStudent(int? id)
         {
-            StudentServices.DeleteStudent(id);
-            return RedirectToAction("ShowStudent", "Student");
+            try
+            {
+                StudentServices.DeleteStudent(id);
+                return RedirectToAction("ShowStudent", "Student");
+            }
+            catch
+            {
+                return View();
+            }
         }
         public JsonResult StateAsPerCountry(int id)
         {
-            var success = StateServices.GetStateByCountry(id);
-            var JsonString = JsonConvert.SerializeObject(success);
-            return Json(JsonString, JsonRequestBehavior.AllowGet);
+            try
+            {
+                var success = StateServices.GetStateByCountry(id);
+                var JsonString = JsonConvert.SerializeObject(success);
+                return Json(JsonString, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception Exce)
+            {
+                return Json(Exce, JsonRequestBehavior.AllowGet);
+            }
         }
         public JsonResult CityAsPerState(int id)
         {
-            var success = CityServices.GetCityByState(id);
-            var JsonString = JsonConvert.SerializeObject(success);
-            return Json(JsonString, JsonRequestBehavior.AllowGet);
+            try
+            {
+                var success = CityServices.GetCityByState(id);
+                var JsonString = JsonConvert.SerializeObject(success);
+                return Json(JsonString, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception Exce)
+            {
+                return Json(Exce, JsonRequestBehavior.AllowGet);
+            }
         }
     }
 }

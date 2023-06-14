@@ -31,7 +31,7 @@ namespace SchoolManagement_340.Repository.Services
         public List<StudentData> GetAllStudent()
         {
            var success = db.StudentData.ToList();
-            return success;
+           return success;
         }
 
         public CustomStudent GetStudentById(int? id)

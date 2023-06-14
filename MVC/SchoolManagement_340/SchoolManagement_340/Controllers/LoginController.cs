@@ -1,4 +1,7 @@
-﻿using SchoolManagement_340.Models.CustomModel;
+﻿using SchoolManagement_340.Helper.SessionHelper;
+using SchoolManagement_340.Models.Context;
+using SchoolManagement_340.Models.CustomModel;
+using SchoolManagement_340.Models.GlobalEnum;
 using SchoolManagement_340.Repository.Repository;
 using System;
 using System.Collections.Generic;
@@ -19,25 +22,71 @@ namespace SchoolManagement_340.Controllers
         }
         public ActionResult SignIn()
         {
-            return View();
+            try
+            {
+                return View();
+            }
+            catch
+            {
+                return View();
+            }
         }
         [HttpPost]
         public ActionResult SignIn(CustomSignIn data)
         {
-            if (userPanel.AlreadyRegister(data) == true)
+            try
             {
-                FormsAuthentication.SetAuthCookie(data.UserEmail, false);
-                return RedirectToAction("Index", "Home");
+                if (userPanel.AlreadyRegister(data) == 0)
+                {
+                    User user = userPanel.GetUserNameFromEmailForSession(data.UserEmail);
+                    FormsAuthentication.SetAuthCookie(data.UserEmail, false);
+
+                    Session["UserFirstName"] = user.UserFirstName;
+                    SessionData.UserFirstName = user.UserFirstName;
+
+                    Session["UserLastName"] = user.UserLastName;
+                    SessionData.UserLastName = user.UserLastName;
+
+                    Session["UserEmail"] = user.UserEmail;
+                    SessionData.UserEmail = user.UserEmail;
+
+                    Session["UserRole"] = user.UserRole;
+                    SessionData.UserRole = Enum.Parse(typeof(RoleType), user.UserRole.ToString()).ToString();
+
+                    TempData["Success"] = "Login Successful";
+                    return RedirectToAction("Index", "Home");
+                }
+                //else if (userPanel.AlreadyRegister(data) == 1)
+                //{
+                //    TempData["Error"] = "Invalid Password";
+                //    return RedirectToAction("SignIn", "Login");
+                //}
+                //else if (userPanel.AlreadyRegister(data) == 2)
+                //{
+                //    TempData["Error"] = "Invalid Email";
+                //    return RedirectToAction("SignIn", "Login");
+                //}
+                else
+                {
+                    TempData["Error"] = "Invalid Email/Password";
+                    return RedirectToAction("SignIn", "Login");
+                }
             }
-            else
+            catch
             {
-                TempData["Error"] = "Invalid Email/Password";
-                return RedirectToAction("SignIn", "Login");
+                return View();
             }
         }
         public ActionResult SignUp()
         {
-            return View();
+            try
+            {
+                return View();
+            }
+            catch
+            {
+                return View();
+            }
         }
         [HttpPost]
         public ActionResult SignUp(CustomSignUp data)
@@ -50,36 +99,59 @@ namespace SchoolManagement_340.Controllers
                 }
                 return View();
             }
-            catch (Exception)
+            catch
             {
-                throw;
+                return View();
             }
         }
         public ActionResult Forgot()
         {
-            return View();
+            try
+            {
+                return View();
+            }
+            catch
+            {
+                return View();
+            }
         }
         [HttpPost]
         public ActionResult Forgot(CustomSignUp data)
         {
-            var Result = userPanel.IsEmailExists(data);
-            if (Result != null)
+            try
             {
-                WebMail.Send(Result.UserEmail, "Forgot Id Password", "<h3>Id Password For Login in School Management System<h3><br><br><h4>Email Address : " +
-                    Result.UserEmail + "</h4><br><h4>Password : " +
-                    Result.UserPassword + "</h4>", null, null, null, true, null, null, null, null, null, null);
-                return RedirectToAction("SignIn", "Login");
+                var Result = userPanel.IsEmailExists(data);
+                if (Result != null)
+                {
+                    WebMail.Send(Result.UserEmail, "Forgot Id Password", "<h3>Id Password For Login in School Management System<h3><br><br><h4>Email Address : " +
+                        Result.UserEmail + "</h4><br><h4>Password : " +
+                        Result.UserPassword + "</h4>", null, null, null, true, null, null, null, null, null, null);
+                    return RedirectToAction("SignIn", "Login");
+                }
+                else
+                {
+                    TempData["Error"] = "Email Does not Register";
+                    return View();
+                }
             }
-            else
+            catch
             {
-                TempData["Error"] = "Email Does not Register";
                 return View();
             }
         }
         public ActionResult LogOut()
         {
-            FormsAuthentication.SignOut();
-            return RedirectToAction("SignIn");
+            try
+            {
+                FormsAuthentication.SignOut();
+                Session.Clear();
+                return RedirectToAction("SignIn");
+            }
+            catch
+            {
+                return View();
+            }
         }
+
     }
 }

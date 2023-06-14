@@ -16,6 +16,15 @@
     <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CountryName" Type="varchar" MaxLength="255" Nullable="false" />
   </EntityType>
+  <EntityType Name="ImageTable">
+    <Key>
+      <PropertyRef Name="IamgeId" />
+    </Key>
+    <Property Name="IamgeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ImageTitle" Type="varchar(max)" />
+    <Property Name="Image" Type="nvarchar(max)" />
+    <Property Name="UserId" Type="int" />
+  </EntityType>
   <EntityType Name="State">
     <Key>
       <PropertyRef Name="StateId" />
@@ -74,6 +83,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__ImageTabl__UserI__5812160E">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="ImageTable" Type="Self.ImageTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="ImageTable">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__State__CountryId__29572725">
     <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
     <End Role="State" Type="Self.State" Multiplicity="*" />
@@ -123,10 +144,10 @@
     </ReferentialConstraint>
   </Association>
   <Function Name="sp_add_edit_city" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="cityid" Type="int" Mode="In" />
-    <Parameter Name="cityname" Type="varchar" Mode="In" />
-    <Parameter Name="stateid" Type="int" Mode="In" />
-    <Parameter Name="countryid" Type="int" Mode="In" />
+    <Parameter Name="cityId" Type="int" Mode="In" />
+    <Parameter Name="cityName" Type="varchar" Mode="In" />
+    <Parameter Name="stateId" Type="int" Mode="In" />
+    <Parameter Name="countryId" Type="int" Mode="In" />
   </Function>
   <Function Name="sp_add_edit_country" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="countryId" Type="int" Mode="In" />
@@ -166,6 +187,7 @@
   <EntityContainer Name="SchoolManagement_yk_340ModelStoreContainer">
     <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ImageTable" EntityType="Self.ImageTable" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StudentData" EntityType="Self.StudentData" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
@@ -176,6 +198,10 @@
     <AssociationSet Name="FK__City__StateId__2C3393D0" Association="Self.FK__City__StateId__2C3393D0">
       <End Role="State" EntitySet="State" />
       <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ImageTabl__UserI__5812160E" Association="Self.FK__ImageTabl__UserI__5812160E">
+      <End Role="User" EntitySet="User" />
+      <End Role="ImageTable" EntitySet="ImageTable" />
     </AssociationSet>
     <AssociationSet Name="FK__State__CountryId__29572725" Association="Self.FK__State__CountryId__29572725">
       <End Role="Country" EntitySet="Country" />

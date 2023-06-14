@@ -53,9 +53,18 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
@@ -1839,6 +1848,7 @@
     <Content Include="Content\LoginTheme\vendor\jquery\jquery.min.js" />
     <Content Include="Content\LoginTheme\vendor\jquery\jquery.slim.js" />
     <Content Include="Content\LoginTheme\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Content\Theme\build\config\postcss.config.js" />
     <Content Include="Content\Theme\build\config\rollup.config.js" />
     <Content Include="Content\Theme\build\js\AdminLTE.js" />
@@ -4408,6 +4418,7 @@
     <Content Include="Content\Theme\plugins\summernote\summernote.js.map" />
     <Content Include="Content\Theme\plugins\summernote\summernote.min.js.map" />
     <Content Include="Content\Theme\plugins\toastr\toastr.js.map" />
+    <Content Include="libman.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -4448,9 +4459,14 @@
     <Content Include="Views\City\AddEditCity.cshtml" />
     <Content Include="Views\Student\AddEditStudent.cshtml" />
     <Content Include="Views\Student\ShowStudent.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\Home\UserProfile.cshtml" />
+    <Content Include="Views\Home\EditProfile.cshtml" />
+    <Content Include="Views\Home\AddEditCountry.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

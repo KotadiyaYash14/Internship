@@ -1,6 +1,7 @@
 ﻿@model SchoolManagement_340.Models.CustomModel.CustomCity
 
 <script src="~/Scripts/jquery-3.4.1.js"></script>
+
 @using (Html.BeginForm("AddEditCity", "City", FormMethod.Post))
 {
     <div>
@@ -11,7 +12,7 @@
         @Html.ValidationMessageFor(x => x.CountryId, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
-        @Html.DropDownListFor(x => x.StateId, new SelectList(""), "--- Select State ---", new { @class = "form-control form-control-user mt-4", id = "State" })
+        @Html.DropDownListFor(x => x.StateId, ViewBag.State as SelectList, "--- Select State ---", new { @class = "form-control form-control-user mt-4", id = "State" })
         @Html.ValidationMessageFor(x => x.StateId, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
@@ -22,8 +23,10 @@
         <button type="submit" class="btn btn-outline-primary btn-user w-25">Add</button>
     </div>
 }
+
 <script src="~/Scripts/jquery.validate.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
 <script>
     $(document).ready(function () {
         $("#Country").change(function () {
@@ -35,9 +38,7 @@
                 url: `/City/StateAsPerCountry/${CountryId}`,
                 method: "GET",
                 success: function (res) {
-                    console.log(res);
                     var data = JSON.parse(res);
-                    console.log(data);
                     data.forEach(e => {
                         $("#State").append(`<option value=${e.StateId}>${e.StateName}</option>`);
                     })

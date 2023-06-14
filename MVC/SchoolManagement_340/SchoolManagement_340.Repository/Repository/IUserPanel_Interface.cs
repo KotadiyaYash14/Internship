@@ -11,7 +11,8 @@ namespace SchoolManagement_340.Repository.Repository
     public interface IUserPanel_Interface
     {
         bool RegisterUser(CustomSignUp data);
-        bool AlreadyRegister(CustomSignIn data);
+        int AlreadyRegister(CustomSignIn data);
         User IsEmailExists (CustomSignUp data);
+        User GetUserNameFromEmailForSession(string email);
     }
 }

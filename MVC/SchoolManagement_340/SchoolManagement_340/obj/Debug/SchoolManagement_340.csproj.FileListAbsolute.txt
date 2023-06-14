@@ -97,3 +97,9 @@ C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340\bin\Unity
 C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340\bin\Unity.Container.pdb
 C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340\bin\EntityFramework.SqlServer.dll
 C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340\bin\EntityFramework.SqlServer.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340\bin\System.Net.Http.Formatting.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340\bin\System.Net.Http.Formatting.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340\bin\PagedList.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340\bin\PagedList.Mvc.dll
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340\bin\PagedList.xml
+C:\Users\sit335\source\repos\SchoolManagement_340\SchoolManagement_340\bin\PagedList.Mvc.xml
