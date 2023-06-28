@@ -1,0 +1,78 @@
+﻿@model CoreDemoApp.Model.ViewModel.City.CityData
+@{
+    ViewData["Title"] = "AddEditCity";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2 class="text-center text-decoration-underline">Add City</h2>
+    @using (Html.BeginForm("AddEditCity", "City", FormMethod.Post))
+    {
+        @Html.HiddenFor(x => x.CityId)
+        <div>
+            @Html.LabelFor(x => x.CountryName)
+            @Html.DropDownListFor(x => x.CountryId,ViewBag.Country as SelectList,"-- Select Country ---", new { @class= "form-control", id  ="Country" })
+            @Html.ValidationMessageFor(x => x.CountryId,"",new { @class = "text-danger"})
+        </div>
+        <div>
+            @Html.LabelFor(x => x.StateName)
+            @Html.DropDownListFor(x => x.StateId,ViewBag.State as SelectList,"-- Select State ---", new { @class= "form-control", id = "State" })
+            @Html.ValidationMessageFor(x => x.StateId,"",new { @class = "text-danger"})
+        </div>
+        <div>
+            @Html.LabelFor(x => x.CityName)
+            @Html.TextBoxFor(x => x.CityName, new { @class= "form-control", placeholder = "Enter City"})
+            @Html.ValidationMessageFor(x => x.CityName,"",new { @class = "text-danger"})
+        </div>
+
+        <div class="mt-3">
+            @if (@ViewBag.ID == 0)
+            {
+                <button type="submit" class="btn btn-outline-primary">Add</button>
+            }
+            @if (@ViewBag.ID != 0)
+            {
+                <button type="submit" class="btn btn-outline-primary">Save</button>
+            }
+        </div>
+    }
+</div>
+@if (TempData["Available"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'City Already Exists..',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
+        })
+    </script>
+}
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#Country").change(function () {
+            $("#State").html("");
+            $("#State").append(`<option value=""> --- Select State --- </option>`);
+            var CountryId = $("#Country").val();
+
+            $.ajax({
+                url: `/City/GetStatesByCountyId/${CountryId}`,
+                method: "GET",
+                success: function (res) {
+                    var data = JSON.parse(res);
+                    data.forEach(e => {
+                        $("#State").append(`<option value=${e.StateId}>${e.StateName}</option>`);
+                    })
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        });
+    });
+</script>
+

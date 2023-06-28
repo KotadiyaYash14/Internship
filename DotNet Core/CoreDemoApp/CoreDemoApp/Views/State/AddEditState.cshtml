@@ -1,0 +1,49 @@
+﻿@model CoreDemoApp.Model.ViewModel.State.StateData
+@{
+    ViewData["Title"] = "AddEditState";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2 class="text-center text-decoration-underline">Add State</h2>
+    @using (Html.BeginForm("AddEditState", "State", FormMethod.Post))
+    {
+        @Html.HiddenFor(x => x.StateId)
+        <div>
+            @Html.LabelFor(x => x.CountryName)
+            @Html.DropDownListFor(x => x.CountryId,ViewBag.Country as SelectList,"-- Select Country ---", new { @class= "form-control" })
+            @Html.ValidationMessageFor(x => x.CountryId,"",new { @class = "text-danger"})
+        </div>
+        <div>
+            @Html.LabelFor(x => x.StateName)
+            @Html.TextBoxFor(x => x.StateName, new { @class= "form-control", placeholder = "Enter State"})
+            @Html.ValidationMessageFor(x => x.StateName,"",new { @class = "text-danger"})
+        </div>
+
+        <div class="mt-3">
+            @if (@ViewBag.ID == 0)
+            {
+                <button type="submit" class="btn btn-outline-primary">Add</button>
+            }
+            @if (@ViewBag.ID != 0)
+            {
+                <button type="submit" class="btn btn-outline-primary">Save</button>
+            }
+        </div>
+    }
+</div>
+@if (TempData["Available"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'State Already Exists..',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
+        })
+    </script>
+}
+

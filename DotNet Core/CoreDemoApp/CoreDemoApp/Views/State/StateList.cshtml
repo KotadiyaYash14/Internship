@@ -1,0 +1,103 @@
+﻿@model IEnumerable<CoreDemoApp.Model.ViewModel.State.StateData>
+@{
+    ViewData["Title"] = "StateList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 class="text-center text-decoration-underline mt-2">State List</h2>
+<div class="container mt-3">
+    <table class="table table-striped table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>StateName</th>
+                <th>CountryName</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.StateName</td>
+                    <td>@item.CountryName</td>
+                    <td>
+                        <a href="/State/AddEditState/@item.StateId" class="btn btn-outline-success">Edit</a>
+                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#delete@(item.StateId)">
+                            Delete
+                        </button>
+                        <div class="modal fade" id="delete@(item.StateId)" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Are you sure want to delete record ?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                                        <a href="/State/DeleteState/@item.StateId" type="button" class="btn btn-outline-primary">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@if (TempData["Delete"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'State Deleted Successfully..',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
+        })
+    </script>
+}
+@if (TempData["Error"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'State is in Use..',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
+        })
+    </script>
+}
+@if (TempData["Register"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'State added Successfully..',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
+        })
+    </script>
+}
+@if (TempData["Update"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'State updated Successfully..',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
+        })
+    </script>
+}
+

@@ -1,0 +1,15 @@
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\bin\Debug\net7.0\CoreDemoApp.Common.deps.json
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\bin\Debug\net7.0\CoreDemoApp.Common.dll
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\bin\Debug\net7.0\CoreDemoApp.Common.pdb
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\bin\Debug\net7.0\CoreDemoApp.Model.dll
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\bin\Debug\net7.0\CoreDemoApp.Model.pdb
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\obj\Debug\net7.0\CoreDemoApp.Common.csproj.AssemblyReference.cache
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\obj\Debug\net7.0\CoreDemoApp.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\obj\Debug\net7.0\CoreDemoApp.Common.AssemblyInfoInputs.cache
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\obj\Debug\net7.0\CoreDemoApp.Common.AssemblyInfo.cs
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\obj\Debug\net7.0\CoreDemoApp.Common.csproj.CoreCompileInputs.cache
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\obj\Debug\net7.0\CoreDemoApp.Common.csproj.CopyComplete
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\obj\Debug\net7.0\CoreDemoApp.Common.dll
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\obj\Debug\net7.0\refint\CoreDemoApp.Common.dll
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\obj\Debug\net7.0\CoreDemoApp.Common.pdb
+C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Common\obj\Debug\net7.0\ref\CoreDemoApp.Common.dll

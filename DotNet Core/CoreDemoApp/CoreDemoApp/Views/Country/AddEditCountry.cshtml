@@ -1,0 +1,42 @@
+﻿@model CoreDemoApp.Model.ViewModel.Country.CountryData
+@{
+    ViewData["Title"] = "AddEditCountry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2 class="text-center text-decoration-underline">Add Country</h2>
+    @using (Html.BeginForm("AddEditCountry", "Country", FormMethod.Post))
+    {
+        @Html.HiddenFor(x => x.CountryId)
+        <div>
+            @Html.LabelFor(x => x.CountryName)
+            @Html.TextBoxFor(x => x.CountryName, new { @class= "form-control", placeholder = "Enter Country"})
+            @Html.ValidationMessageFor(x => x.CountryName,"",new { @class = "text-danger"})
+        </div>
+
+        <div class="mt-3">
+            @if (@ViewBag.ID == 0)
+            {
+                <button type="submit" class="btn btn-outline-primary">Add</button>
+            }
+            @if(@ViewBag.ID != 0)
+            {
+            <button type="submit" class="btn btn-outline-primary">Save</button>
+            }
+        </div>
+    }
+</div>
+@if (TempData["Available"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'Country Already Exists..',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
+        })
+    </script>
+}
