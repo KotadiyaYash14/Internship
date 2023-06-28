@@ -1,0 +1,212 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Data\\CoreDemoApp.Data.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Common\\CoreDemoApp.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Common\\CoreDemoApp.Common.csproj",
+        "projectName": "CoreDemoApp.Common",
+        "projectPath": "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Common\\CoreDemoApp.Common.csproj",
+        "packagesPath": "C:\\Users\\sit335\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sit335\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Model\\CoreDemoApp.Model.csproj": {
+                "projectPath": "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Model\\CoreDemoApp.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Data\\CoreDemoApp.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Data\\CoreDemoApp.Data.csproj",
+        "projectName": "CoreDemoApp.Data",
+        "projectPath": "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Data\\CoreDemoApp.Data.csproj",
+        "packagesPath": "C:\\Users\\sit335\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sit335\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Common\\CoreDemoApp.Common.csproj": {
+                "projectPath": "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Common\\CoreDemoApp.Common.csproj"
+              },
+              "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Model\\CoreDemoApp.Model.csproj": {
+                "projectPath": "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Model\\CoreDemoApp.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.138, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Model\\CoreDemoApp.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Model\\CoreDemoApp.Model.csproj",
+        "projectName": "CoreDemoApp.Model",
+        "projectPath": "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Model\\CoreDemoApp.Model.csproj",
+        "packagesPath": "C:\\Users\\sit335\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sit335\\source\\repos\\CoreDemoApp\\CoreDemoApp.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sit335\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

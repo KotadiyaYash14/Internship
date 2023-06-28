@@ -1,0 +1,108 @@
+
+--------------------------------- 28/06/2023 05:23:02 PM ----------------------------------
+Requested URL: /Home/DashBoard
+Error Message: Unexpected character encountered while parsing value: y. Path '', line 0, position 0.
+InnerException: 
+StackTrace:    at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at CoreDemoApp.Services.JWTAuthentication.JWTAuthenticationServices.GetUserTokenData(String jwtToken) in C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Services\JWTAuthentication\JWTAuthenticationServices.cs:line 89
+   at CoreDemoApp.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp\Middleware\CustomMiddleware.cs:line 78
+Request Params: 
+
+--------------------------------- 28/06/2023 05:23:30 PM ----------------------------------
+Requested URL: /
+Error Message: Unexpected character encountered while parsing value: y. Path '', line 0, position 0.
+InnerException: 
+StackTrace:    at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at CoreDemoApp.Services.JWTAuthentication.JWTAuthenticationServices.GetUserTokenData(String jwtToken) in C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Services\JWTAuthentication\JWTAuthenticationServices.cs:line 89
+   at CoreDemoApp.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp\Middleware\CustomMiddleware.cs:line 78
+Request Params: 
+
+--------------------------------- 28/06/2023 05:23:35 PM ----------------------------------
+Requested URL: /
+Error Message: Unexpected character encountered while parsing value: y. Path '', line 0, position 0.
+InnerException: 
+StackTrace:    at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at CoreDemoApp.Services.JWTAuthentication.JWTAuthenticationServices.GetUserTokenData(String jwtToken) in C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Services\JWTAuthentication\JWTAuthenticationServices.cs:line 89
+   at CoreDemoApp.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp\Middleware\CustomMiddleware.cs:line 78
+Request Params: 
+
+--------------------------------- 28/06/2023 05:23:39 PM ----------------------------------
+Requested URL: /
+Error Message: Unexpected character encountered while parsing value: y. Path '', line 0, position 0.
+InnerException: 
+StackTrace:    at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at CoreDemoApp.Services.JWTAuthentication.JWTAuthenticationServices.GetUserTokenData(String jwtToken) in C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Services\JWTAuthentication\JWTAuthenticationServices.cs:line 89
+   at CoreDemoApp.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp\Middleware\CustomMiddleware.cs:line 78
+Request Params: 
+
+--------------------------------- 28/06/2023 05:24:21 PM ----------------------------------
+Requested URL: /Home/DashBoard
+Error Message: Unexpected character encountered while parsing value: y. Path '', line 0, position 0.
+InnerException: 
+StackTrace:    at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at CoreDemoApp.Services.JWTAuthentication.JWTAuthenticationServices.GetUserTokenData(String jwtToken) in C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Services\JWTAuthentication\JWTAuthenticationServices.cs:line 89
+   at CoreDemoApp.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp\Middleware\CustomMiddleware.cs:line 78
+Request Params: 
+
+--------------------------------- 28/06/2023 05:29:19 PM ----------------------------------
+Requested URL: /Home/DashBoard
+Error Message: Unexpected character encountered while parsing value: y. Path '', line 0, position 0.
+InnerException: 
+StackTrace:    at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at CoreDemoApp.Services.JWTAuthentication.JWTAuthenticationServices.GetUserTokenData(String jwtToken) in C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp.Services\JWTAuthentication\JWTAuthenticationServices.cs:line 89
+   at CoreDemoApp.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\CoreDemoApp\CoreDemoApp\Middleware\CustomMiddleware.cs:line 78
+Request Params: 

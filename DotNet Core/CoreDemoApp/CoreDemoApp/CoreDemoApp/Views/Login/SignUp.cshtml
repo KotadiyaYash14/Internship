@@ -1,0 +1,50 @@
+﻿@model CoreDemoApp.Model.ViewModel.UserPanel.UserData
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SMS</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CoreDemoApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <h2 class="text-center text-decoration-underline mt-2">Sign Up</h2>
+    <div class="container">
+        @using (Html.BeginForm("SignUp", "Login", FormMethod.Post))
+        {
+            @*<div>
+                @Html.HiddenFor(x => x.UserId, new { @class = "form-control"})
+            </div>*@
+            <div>
+                @Html.LabelFor(x => x.UserName)
+                @Html.TextBoxFor(x => x.UserName, new { @class = "form-control",  placeholder = "Enter Name" })
+                @Html.ValidationMessageFor(x => x.UserName,"", new { @class = "text-danger"})
+            </div>
+            <div class="mt-2">
+                @Html.LabelFor(x => x.UserEmail)
+                @Html.TextBoxFor(x => x.UserEmail, new { @class = "form-control",  placeholder = "Enter Email" })
+                @Html.ValidationMessageFor(x => x.UserEmail,"", new { @class = "text-danger"})
+            </div>
+            <div class="mt-2">
+                @Html.LabelFor(x => x.Password)
+                @Html.TextBoxFor(x => x.Password, new {type= "password", @class = "form-control",  placeholder = "Enter Password" })
+                @Html.ValidationMessageFor(x => x.Password,"", new { @class = "text-danger"})
+            </div>
+            @if (TempData["Error"] != null)
+            {
+                <h4 class="text-danger">@TempData["Error"]</h4>
+            }
+            <div class="mt-2"><a href="/Login/SignIn" class="text-decoration-none">Already Have an Account!! Please SignIn</a></div>
+            <div class="text-center mt-2">
+                <button type="submit" class="btn btn-outline-primary">Submit</button>
+            </div>  
+        }
+    </div>
+</body>
+</html>
