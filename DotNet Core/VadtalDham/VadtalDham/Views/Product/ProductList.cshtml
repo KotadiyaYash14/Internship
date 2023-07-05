@@ -1,0 +1,353 @@
+﻿@model VadtalDham.Model.ViewModel.Product.ProductData
+@{
+    ViewData["Title"] = "ProductList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VadtalDham</title>
+
+    <style>
+        .AddProductBtn {
+            background-color: #6b0000;
+            color: white;
+        }
+
+            .AddProductBtn:hover {
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <button type="submit" class="btn btn-block float-end AddProductBtn mb-3" data-bs-target="#AddProduct" data-bs-toggle="modal">+ Add Product</button>
+        <table class="table table-striped table-hover" id="DataTable">
+            <thead>
+                <tr>
+                    <th>Sr.</th>
+                    <th>productName</th>
+                    <th>productAmount</th>
+                    <th>productStock</th>
+                    <th>staus</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="ProductList">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal For Add Product -->
+
+    <div class="modal fade AddModal" id="AddProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add New Product</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body AddModalBody">
+                    @using (Html.BeginForm("AddProduct", "Product", FormMethod.Post))
+                    {
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.ProductName, new{ @class = "form-label"})
+                            @Html.TextBoxFor(x => x.ProductName, new{ @class = "form-control", placeholder = "Enter Product"})
+                            @Html.ValidationMessageFor(x => x.ProductName, "", new { @class = "text-danger"})
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.ProductAmount, new{ @class = "form-label"})
+                            @Html.TextBoxFor(x => x.ProductAmount, new{ @class = "form-control", placeholder = "Enter Product Price"})
+                            @Html.ValidationMessageFor(x => x.ProductAmount, "", new { @class = "text-danger"})
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.ProductStock, new{ @class = "form-label"})
+                            @Html.TextBoxFor(x => x.ProductStock, new{ @class = "form-control", placeholder = "Enter Product Stock"})
+                            @Html.ValidationMessageFor(x => x.ProductStock, "", new { @class = "text-danger"})
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-outline-primary w-25" id="Add">Add</button>
+                            <button type="button" class="btn btn-outline-secondary w-25" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal For Edit Product -->
+
+    <div class="modal fade " id="EditProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Product</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="/Product/EditProduct">
+                        <input asp-for="ProductId" type="hidden" />
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.ProductName, new{ @class = "form-label "})
+                            @Html.TextBoxFor(x => x.ProductName, new{ @class = "form-control ProductName", placeholder = "Enter Product"})
+                            @Html.ValidationMessageFor(x => x.ProductName, "", new { @class = "text-danger"})
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.ProductAmount, new{ @class = "form-label"})
+                            @Html.TextBoxFor(x => x.ProductAmount, new{ @class = "form-control ProductAmount", placeholder = "Enter Product Price"})
+                            @Html.ValidationMessageFor(x => x.ProductAmount, "", new { @class = "text-danger"})
+                        </div>
+                        Product Stock : <b><span class="ProductStock"></span></b>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-outline-primary w-25">Update</button>
+                            <button type="button" class="btn btn-outline-secondary w-25" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal For Update Product Product -->
+
+    <div class="modal fade " id="UpdateProuct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add New Stock</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="/Product/UpdateProductStock">
+
+                        Product Name : <b><span class="ProductName"></span></b><br />
+                        Product Amount : <b><span class="ProductAmount"></span></b><br />
+                        Product CurrnetStock : <b><span class="ProductCurrentStock"></span></b>
+                        <hr />
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.ProductStock, new{ @class = "form-label "})
+                            @Html.TextBoxFor(x => x.ProductStock, new{ @class = "form-control ProductStock", placeholder = "Enter Product Stock"})
+                            @Html.ValidationMessageFor(x => x.ProductStock, "", new { @class = "text-danger"})
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-outline-primary w-25">Add Stock</button>
+                            <button type="button" class="btn btn-outline-secondary w-25" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
+    <script>
+        var Table = $("#DataTable").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "ajax": {
+                url: "/Product/DataTableProductList", type: "post"
+            },
+            "columns": [
+                { data: "productId" },
+                { data: "productName" },
+                { data: "productAmount" },
+                { data: "productStock" },
+                { data: "staus",
+                    render: function (data) 
+                    {
+                        if (data == false ) {
+
+                            return '<p class="text-danger">InActive</p>';
+
+                        } else  {
+
+                            return '<p class="text-success">Active</p>';
+
+                        }
+                    }
+                },
+                {
+                    data: "productId",
+                    render: function (data) 
+                    {
+                        return `<button type="button" id=${data} class="btn btn-outline-success edit" data-bs-target="#EditProduct" data-bs-toggle="modal">Edit</button>&nbsp;&nbsp;
+                                 <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#delete${data}">
+                                     Delete
+                                 </button>
+
+                                   <div class="modal fade" id="delete${data}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                     <div class="modal-dialog">
+                                         <div class="modal-content">
+                                             <div class="modal-header">
+                                                 <h5 class="modal-title" id="exampleModalLabel">Are you sure <br />Do you really want to delete this item ?</b></h5>
+                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                             </div>
+                                             <div class="modal-footer">
+                                                 <a href="/Product/DeleteProduct/${data}" type="button" class="btn btn-outline-primary w-25">Delete</a>
+                                                 <button type="button" class="btn btn-outline-secondary w-25" data-bs-dismiss="modal">Close</button>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     </div>&nbsp;&nbsp;
+                                     <button type="button" id=${data} class="btn btn-outline-info StockBtn" data-bs-toggle="modal" data-bs-target="#UpdateProuct">+ Add Stock</button>`;
+                    }
+                }
+            ]
+        });
+        
+        //$.ajax({
+        //    method: "GET",
+        //    url: "/Product/GetListOfProduct",
+        //    success: function (response) {
+        //        var data = JSON.parse(response);
+        //        data.forEach(ele => {
+        //            var Status;
+        //            var active = ele.Staus;
+        //            if (active == false) {
+        //                Status = "InActive";
+        //            }
+        //            else {
+        //                Status = "Active";
+        //            }
+        //            Table.row.add([ele.ProductId, ele.ProductName, ele.ProductAmount, ele.ProductStock,Status, `<button type="button" id=${ele.ProductId} class="btn btn-outline-success edit" data-bs-target="#EditProduct" data-bs-toggle="modal">Edit</button>&nbsp;&nbsp;
+        //                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#delete${ele.ProductId}">
+        //                    Delete
+        //                </button>
+
+        //                  <div class="modal fade" id="delete${ele.ProductId}" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
+        //                    <div class="modal-dialog">
+        //                        <div class="modal-content">
+        //                            <div class="modal-header">
+        //                                <h5 class="modal-title" id="exampleModalLabel">Are you sure <br />Do you really want to delete this item <b>${ele.ProductName} ?</b></h5>
+        //                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        //                            </div>
+        //                            <div class="modal-footer">
+        //                                <a href="/Product/DeleteProduct/${ele.ProductId}" type="button" class="btn btn-outline-primary w-25">Delete</a>
+        //                                <button type="button" class="btn btn-outline-secondary w-25" data-bs-dismiss="modal">Close</button>
+        //                            </div>
+        //                        </div>
+        //                    </div>
+        //                   </div>&nbsp;&nbsp;
+        //                   <button type="button" id=${ele.ProductId} class="btn btn-outline-info StockBtn" data-bs-toggle="modal" data-bs-target="#UpdateProuct">+ Add Stock</button>`
+        //            ]).draw();
+        //        });
+        //    }
+        //});
+
+        $(document).on("click", ".edit", function () {
+            var ProductId = $(this).attr("id");
+            $.ajax({
+                method: "GET",
+                url: "/Product/GetProductById?id=" + ProductId,
+                success: function (response) {
+                    var data = JSON.parse(response);
+                    console.log(data)
+                    $("#ProductId").val(data.ProductId);
+                    $(".ProductName").val(data.ProductName);
+                    $(".ProductAmount").val(data.ProductAmount);
+                    $(".ProductStock").html(data.ProductStock)
+                }
+            });
+        });
+
+        $(document).on("click", ".StockBtn", function () {
+            var ProductId = $(this).attr("id");
+            $.ajax({
+                method: "GET",
+                url: "/Product/GetProductById?id=" + ProductId,
+                success: function (response) {
+                    var data = JSON.parse(response);
+                    $("#ProductId").val(data.ProductId);
+                    $(".ProductName").html(data.ProductName);
+                    $(".ProductAmount").html(data.ProductAmount);
+                    $(".ProductCurrentStock").html(data.ProductStock);
+                    $(".ProductCurrentStock").val(data.ProductStock);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+@if (TempData["Delete"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'Product Deleted Successfully..',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            },
+            allowOutsideClick: false
+        })
+    </script>
+}
+@if (TempData["Update"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'Product Updated Successfully..',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            },
+            allowOutsideClick: false
+        })
+    </script>
+}
+@if (TempData["UpdateStock"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'Product Stock Updated Successfully..',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            },
+            allowOutsideClick: false
+        })
+    </script>
+}
+@if (TempData["Register"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'Product Added Successfully..',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            },
+            allowOutsideClick: false
+        })
+    </script>
+}
+@if (TempData["Available"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'Product Already Exists You Cannot Add It',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            },
+            allowOutsideClick: false
+        })
+    </script>
+}

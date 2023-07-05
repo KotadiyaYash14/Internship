@@ -1,0 +1,822 @@
+
+--------------------------------- 05/07/2023 02:39:41 PM ----------------------------------
+Requested URL: /Product/PrdtList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.PrdtList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 267
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"1"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 02:39:49 PM ----------------------------------
+Requested URL: /Product/PrdtList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.PrdtList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 267
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"2"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 02:39:49 PM ----------------------------------
+Requested URL: /Product/PrdtList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.PrdtList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 267
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"3"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 02:39:50 PM ----------------------------------
+Requested URL: /Product/PrdtList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.PrdtList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 267
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"4"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 02:39:54 PM ----------------------------------
+Requested URL: /Product/PrdtList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.PrdtList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 267
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"5"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 02:45:03 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 267
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"1"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 02:45:07 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 267
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"2"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 02:45:44 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 267
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"3"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 02:45:45 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 267
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"4"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 02:47:26 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 267
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"1"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 02:48:20 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 269
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"1"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 03:01:43 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 269
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"1"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 03:01:49 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 269
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"2"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 03:01:50 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 269
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"3"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 03:01:51 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 269
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"4"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 03:01:51 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 269
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"5"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 03:01:52 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 269
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"6"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 03:01:53 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 269
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"7"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 03:01:54 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 269
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"8"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 03:03:49 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 269
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"1"},{"Key":"columns[0][data]","Value":"ProductId"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"ProductName"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"ProductAmount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"ProductStock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"Staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 03:05:19 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 269
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"1"},{"Key":"columns[0][data]","Value":"productid"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"productname"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"productamount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"productstock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 03:05:25 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 269
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"2"},{"Key":"columns[0][data]","Value":"productid"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"productname"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"productamount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"productstock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 03:05:56 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Could not find stored procedure 'spDataInDataTable'.
+InnerException: 
+StackTrace:    at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at VadtalDham.Data.BaseRepository.QueryAsync[T](String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\BaseRepository.cs:line 58
+   at VadtalDham.Data.DbRepository.Product.ProductRepository.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Data\DbRepository\Product\ProductRepository.cs:line 147
+   at VadtalDham.Services.Product.ProductServices.GetProcuctDataTable(String sortColumn, String sortDirection, Int32 OffsetValue, Int32 PagingSize, String searchby) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham.Services\Product\ProductServices.cs:line 81
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 269
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"3"},{"Key":"columns[0][data]","Value":"productid"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"productname"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"productamount"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"productstock"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"staus"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 03:13:43 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: The process cannot access the file 'C:\Users\sit335\source\repos\VadtalDham\VadtalDham\wwwroot\ReqResLogs\ReqResLog_05_07_2023.txt' because it is being used by another process.
+InnerException: 
+StackTrace:    at VadtalDham.Middleware.CustomMiddleware.AddReqResLogsToLoggerFile(HttpContext context) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 178
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 93
+Request Params: [{"Key":"draw","Value":"5"},{"Key":"columns[0][data]","Value":"0"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"1"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"2"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"3"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"4"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"columns[5][data]","Value":"5"},{"Key":"columns[5][name]","Value":""},{"Key":"columns[5][searchable]","Value":"true"},{"Key":"columns[5][orderable]","Value":"true"},{"Key":"columns[5][search][value]","Value":""},{"Key":"columns[5][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]
+
+--------------------------------- 05/07/2023 05:25:17 PM ----------------------------------
+Requested URL: /logintheme/js/bootstrap.min.js.map
+Error Message: The process cannot access the file 'C:\Users\sit335\source\repos\VadtalDham\VadtalDham\wwwroot\ReqResLogs\ReqResLog_05_07_2023.txt' because it is being used by another process.
+InnerException: 
+StackTrace:    at VadtalDham.Middleware.CustomMiddleware.AddReqResLogsToLoggerFile(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService)
+Request Params: 
+
+--------------------------------- 05/07/2023 05:41:57 PM ----------------------------------
+Requested URL: /Product/DataTableProductList
+Error Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+InnerException: 
+StackTrace:    at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at VadtalDham.Controllers.ProductController.DataTableProductList() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\ProductController.cs:line 265
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"draw","Value":"1"},{"Key":"columns[0][data]","Value":"productName"},{"Key":"columns[0][name]","Value":""},{"Key":"columns[0][searchable]","Value":"true"},{"Key":"columns[0][orderable]","Value":"true"},{"Key":"columns[0][search][value]","Value":""},{"Key":"columns[0][search][regex]","Value":"false"},{"Key":"columns[1][data]","Value":"productAmount"},{"Key":"columns[1][name]","Value":""},{"Key":"columns[1][searchable]","Value":"true"},{"Key":"columns[1][orderable]","Value":"true"},{"Key":"columns[1][search][value]","Value":""},{"Key":"columns[1][search][regex]","Value":"false"},{"Key":"columns[2][data]","Value":"productStock"},{"Key":"columns[2][name]","Value":""},{"Key":"columns[2][searchable]","Value":"true"},{"Key":"columns[2][orderable]","Value":"true"},{"Key":"columns[2][search][value]","Value":""},{"Key":"columns[2][search][regex]","Value":"false"},{"Key":"columns[3][data]","Value":"staus"},{"Key":"columns[3][name]","Value":""},{"Key":"columns[3][searchable]","Value":"true"},{"Key":"columns[3][orderable]","Value":"true"},{"Key":"columns[3][search][value]","Value":""},{"Key":"columns[3][search][regex]","Value":"false"},{"Key":"columns[4][data]","Value":"productId"},{"Key":"columns[4][name]","Value":""},{"Key":"columns[4][searchable]","Value":"true"},{"Key":"columns[4][orderable]","Value":"true"},{"Key":"columns[4][search][value]","Value":""},{"Key":"columns[4][search][regex]","Value":"false"},{"Key":"order[0][column]","Value":"0"},{"Key":"order[0][dir]","Value":"asc"},{"Key":"start","Value":"0"},{"Key":"length","Value":"10"},{"Key":"search[value]","Value":""}]

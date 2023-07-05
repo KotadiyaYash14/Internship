@@ -1,0 +1,985 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\VadtalDham.bundle.scp.css",
+      "PackagePath": "staticwebassets\\VadtalDham.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\fonts\\.gitkeep",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\fonts\\.gitkeep"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\img\\avatars\\avatar-2.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\img\\avatars\\avatar-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\img\\avatars\\avatar-3.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\img\\avatars\\avatar-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\img\\avatars\\avatar-4.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\img\\avatars\\avatar-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\img\\avatars\\avatar-5.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\img\\avatars\\avatar-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\img\\avatars\\avatar.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\img\\avatars\\avatar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\img\\icons\\icon-48x48.png",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\img\\icons\\icon-48x48.png"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\img\\photos\\unsplash-1.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\img\\photos\\unsplash-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\img\\photos\\unsplash-2.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\img\\photos\\unsplash-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\img\\photos\\unsplash-3.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\img\\photos\\unsplash-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\js\\app.js",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\js\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\js\\modules\\bootstrap.js",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\js\\modules\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\js\\modules\\chartjs.js",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\js\\modules\\chartjs.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\js\\modules\\feather.js",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\js\\modules\\feather.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\js\\modules\\flatpickr.js",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\js\\modules\\flatpickr.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\js\\modules\\sidebar.js",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\js\\modules\\sidebar.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\js\\modules\\theme.js",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\js\\modules\\theme.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\js\\modules\\vector-maps.js",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\js\\modules\\vector-maps.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\1-variables\\_app.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\1-variables\\_app.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\2-mixins\\_button.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\2-mixins\\_button.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_avatar.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_avatar.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_buttons.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_card.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_chart.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_chart.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_content.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_content.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_feather.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_feather.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_footer.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_hamburger.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_hamburger.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_list-group.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_main.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_main.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_navbar.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_reboot.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_sidebar.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_sidebar.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_sizing.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_sizing.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_stat.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_stat.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_tables.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_type.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\3-components\\_wrapper.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\3-components\\_wrapper.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\4-utilities\\_cursors.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\4-utilities\\_cursors.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\5-vendor\\_flatpickr.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\5-vendor\\_flatpickr.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\5-vendor\\_simplebar.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\5-vendor\\_simplebar.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\src\\scss\\app.scss",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\src\\scss\\app.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\css\\app.css",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\css\\app.css.map",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\css\\app.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\fonts\\.gitkeep",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\fonts\\.gitkeep"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\img\\avatars\\avatar-2.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\img\\avatars\\avatar-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\img\\avatars\\avatar-3.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\img\\avatars\\avatar-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\img\\avatars\\avatar-4.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\img\\avatars\\avatar-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\img\\avatars\\avatar-5.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\img\\avatars\\avatar-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\img\\avatars\\avatar.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\img\\avatars\\avatar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\img\\icons\\icon-48x48.png",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\img\\icons\\icon-48x48.png"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\img\\photos\\unsplash-1.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\img\\photos\\unsplash-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\img\\photos\\unsplash-2.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\img\\photos\\unsplash-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\img\\photos\\unsplash-3.jpg",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\img\\photos\\unsplash-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\index.html",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\js\\app.js",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\js\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\js\\app.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\js\\app.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\DashBoardTheme\\static\\js\\app.js.map",
+      "PackagePath": "staticwebassets\\DashBoardTheme\\static\\js\\app.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\ExceptionLogs\\Exception_03_07_2023.txt",
+      "PackagePath": "staticwebassets\\ExceptionLogs\\Exception_03_07_2023.txt"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\ExceptionLogs\\Exception_05_07_2023.txt",
+      "PackagePath": "staticwebassets\\ExceptionLogs\\Exception_05_07_2023.txt"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\ExceptionLogs\\Exception_30_06_2023.txt",
+      "PackagePath": "staticwebassets\\ExceptionLogs\\Exception_30_06_2023.txt"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\css\\.DS_Store",
+      "PackagePath": "staticwebassets\\LoginTheme\\css\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\LoginTheme\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\LoginTheme\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\LoginTheme\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\css\\style.css",
+      "PackagePath": "staticwebassets\\LoginTheme\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\fonts\\.DS_Store",
+      "PackagePath": "staticwebassets\\LoginTheme\\fonts\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\fonts\\icomoon\\Read Me.txt",
+      "PackagePath": "staticwebassets\\LoginTheme\\fonts\\icomoon\\Read Me.txt"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\fonts\\icomoon\\demo-files\\demo.css",
+      "PackagePath": "staticwebassets\\LoginTheme\\fonts\\icomoon\\demo-files\\demo.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\fonts\\icomoon\\demo-files\\demo.js",
+      "PackagePath": "staticwebassets\\LoginTheme\\fonts\\icomoon\\demo-files\\demo.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\fonts\\icomoon\\demo.html",
+      "PackagePath": "staticwebassets\\LoginTheme\\fonts\\icomoon\\demo.html"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\fonts\\icomoon\\fonts\\icomoon.eot",
+      "PackagePath": "staticwebassets\\LoginTheme\\fonts\\icomoon\\fonts\\icomoon.eot"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\fonts\\icomoon\\fonts\\icomoon.svg",
+      "PackagePath": "staticwebassets\\LoginTheme\\fonts\\icomoon\\fonts\\icomoon.svg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\fonts\\icomoon\\fonts\\icomoon.ttf",
+      "PackagePath": "staticwebassets\\LoginTheme\\fonts\\icomoon\\fonts\\icomoon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\fonts\\icomoon\\fonts\\icomoon.woff",
+      "PackagePath": "staticwebassets\\LoginTheme\\fonts\\icomoon\\fonts\\icomoon.woff"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\fonts\\icomoon\\selection.json",
+      "PackagePath": "staticwebassets\\LoginTheme\\fonts\\icomoon\\selection.json"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\fonts\\icomoon\\style.css",
+      "PackagePath": "staticwebassets\\LoginTheme\\fonts\\icomoon\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\images\\.DS_Store",
+      "PackagePath": "staticwebassets\\LoginTheme\\images\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\images\\bg_1.jpg",
+      "PackagePath": "staticwebassets\\LoginTheme\\images\\bg_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\LoginTheme\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\LoginTheme\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\js\\main.js",
+      "PackagePath": "staticwebassets\\LoginTheme\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\LoginTheme\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\LoginTheme\\js\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\.DS_Store",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_alert.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_badge.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_button-group.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_buttons.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_card.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_carousel.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_close.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_code.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_code.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_custom-forms.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_custom-forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_forms.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_functions.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_grid.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_images.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_input-group.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_jumbotron.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_jumbotron.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_list-group.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_media.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_media.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_mixins.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_modal.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_nav.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_navbar.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_pagination.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_popover.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_print.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_print.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_progress.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_reboot.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_root.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_spinners.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_tables.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_toasts.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_transitions.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_type.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_utilities.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\_variables.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_background-variant.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_background-variant.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_badge.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_float.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_float.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_grid-framework.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_grid-framework.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_hover.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_hover.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_nav-divider.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_nav-divider.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_screen-reader.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_size.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_size.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_table-row.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_table-row.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_text-emphasis.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_text-emphasis.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_text-hide.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_text-hide.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\mixins\\_visibility.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\mixins\\_visibility.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_align.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_align.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_background.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_background.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_borders.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_borders.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_display.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_display.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_embed.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_embed.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_flex.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_flex.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_float.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_float.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_overflow.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_overflow.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_position.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_screenreaders.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_screenreaders.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_shadows.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_shadows.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_sizing.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_sizing.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_spacing.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_spacing.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_text.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_text.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\utilities\\_visibility.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\utilities\\_visibility.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\bootstrap\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\bootstrap\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\LoginTheme\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\LoginTheme\\scss\\style.scss"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\ReqResLogs\\ReqResLog_03_07_2023.txt",
+      "PackagePath": "staticwebassets\\ReqResLogs\\ReqResLog_03_07_2023.txt"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\ReqResLogs\\ReqResLog_04_07_2023.txt",
+      "PackagePath": "staticwebassets\\ReqResLogs\\ReqResLog_04_07_2023.txt"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\ReqResLogs\\ReqResLog_05_07_2023.txt",
+      "PackagePath": "staticwebassets\\ReqResLogs\\ReqResLog_05_07_2023.txt"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\ReqResLogs\\ReqResLog_30_06_2023.txt",
+      "PackagePath": "staticwebassets\\ReqResLogs\\ReqResLog_30_06_2023.txt"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.VadtalDham.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.VadtalDham.props",
+      "PackagePath": "build\\VadtalDham.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.VadtalDham.props",
+      "PackagePath": "buildMultiTargeting\\VadtalDham.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.VadtalDham.props",
+      "PackagePath": "buildTransitive\\VadtalDham.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="AdminKit">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/VadtalDham.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="canonical" href="https://demo-basic.adminkit.io/" />
+    <title>VadtalDham</title>
+    <link href="~/dashboardtheme/static/css/app.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+
+    @*Googel font CDN*@
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <script src="~/dashboardtheme/static/js/app.js"></script>
+
+    @*Sweet Alert CDN*@
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css" rel="stylesheet">
+
+    @*Sweet Alert Animation CDN*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    @*Jquery*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <style>
+        .Image {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="index.html">
+                    <span class="align-middle title">VadtalDham</span>
+                </a>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-item active">
+                        <a class="sidebar-link" href="index.html">
+                            <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" asp-area="" asp-controller="Product" asp-action="ProductList">
+                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">ProductList</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="pages-sign-in.html">
+                            <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">OrderList</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" asp-area="" asp-controller="Login" asp-action="LogOut">
+                            <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">LogOut</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main">
+            <nav class="navbar navbar-expand navbar-light navbar-bg">
+                <a class="sidebar-toggle js-sidebar-toggle">
+                    <i class="hamburger align-self-center"></i>
+                </a>
+
+                <div class="navbar-collapse collapse mt-2">
+                    <ul class="navbar-nav navbar-align">
+                        <li class="nav-item dropdown">
+                            <p class="d-none d-sm-inline-block">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3l3aQ84xZhnt3S_MqGS5XRb104czgX6NtxA&usqp=CAU" alt="Images" class="Image"> <span class="text-dark">Jay Swaminarayan</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="content">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#DataTable").DataTable();
+        });
+    </script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false);
+</body>
+
+</html>

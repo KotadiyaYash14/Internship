@@ -1,0 +1,292 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Services\\VadtalDham.Services.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Common\\VadtalDham.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Common\\VadtalDham.Common.csproj",
+        "projectName": "VadtalDham.Common",
+        "projectPath": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Common\\VadtalDham.Common.csproj",
+        "packagesPath": "C:\\Users\\sit335\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sit335\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Model\\VadtalDham.Model.csproj": {
+                "projectPath": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Model\\VadtalDham.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Data\\VadtalDham.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Data\\VadtalDham.Data.csproj",
+        "projectName": "VadtalDham.Data",
+        "projectPath": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Data\\VadtalDham.Data.csproj",
+        "packagesPath": "C:\\Users\\sit335\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sit335\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Common\\VadtalDham.Common.csproj": {
+                "projectPath": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Common\\VadtalDham.Common.csproj"
+              },
+              "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Model\\VadtalDham.Model.csproj": {
+                "projectPath": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Model\\VadtalDham.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.143, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Model\\VadtalDham.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Model\\VadtalDham.Model.csproj",
+        "projectName": "VadtalDham.Model",
+        "projectPath": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Model\\VadtalDham.Model.csproj",
+        "packagesPath": "C:\\Users\\sit335\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sit335\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Services\\VadtalDham.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Services\\VadtalDham.Services.csproj",
+        "projectName": "VadtalDham.Services",
+        "projectPath": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Services\\VadtalDham.Services.csproj",
+        "packagesPath": "C:\\Users\\sit335\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sit335\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Data\\VadtalDham.Data.csproj": {
+                "projectPath": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Data\\VadtalDham.Data.csproj"
+              },
+              "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Model\\VadtalDham.Model.csproj": {
+                "projectPath": "C:\\Users\\sit335\\source\\repos\\VadtalDham\\VadtalDham.Model\\VadtalDham.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.31.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.31.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+﻿
+@if (TempData["Success"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'Login Successfull..',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            },
+            allowOutsideClick: false
+        })
+    </script>
+}

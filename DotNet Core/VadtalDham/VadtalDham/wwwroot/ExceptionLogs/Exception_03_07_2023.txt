@@ -1,0 +1,193 @@
+
+--------------------------------- 03/07/2023 11:40:06 AM ----------------------------------
+Requested URL: /Product/ProductList
+Error Message: The partial view '_AddProduct' was not found. The following locations were searched:
+/Views/Product/_AddProduct.cshtml
+/Views/Shared/_AddProduct.cshtml
+/Pages/Shared/_AddProduct.cshtml
+InnerException: 
+StackTrace:    at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.RenderPartialCoreAsync(String partialViewName, Object model, ViewDataDictionary viewData, TextWriter writer)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.PartialAsync(String partialViewName, Object model, ViewDataDictionary viewData)
+   at Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperPartialExtensions.Partial(IHtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   at AspNetCoreGeneratedDocument.Views_Product_ProductList.ExecuteAsync() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Views\Product\ProductList.cshtml:line 6
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: 
+
+--------------------------------- 03/07/2023 11:40:11 AM ----------------------------------
+Requested URL: /Product/ProductList
+Error Message: The partial view '_AddProduct' was not found. The following locations were searched:
+/Views/Product/_AddProduct.cshtml
+/Views/Shared/_AddProduct.cshtml
+/Pages/Shared/_AddProduct.cshtml
+InnerException: 
+StackTrace:    at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.RenderPartialCoreAsync(String partialViewName, Object model, ViewDataDictionary viewData, TextWriter writer)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.PartialAsync(String partialViewName, Object model, ViewDataDictionary viewData)
+   at Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperPartialExtensions.Partial(IHtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   at AspNetCoreGeneratedDocument.Views_Product_ProductList.ExecuteAsync() in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Views\Product\ProductList.cshtml:line 6
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: 
+
+--------------------------------- 03/07/2023 03:39:31 PM ----------------------------------
+Requested URL: /logintheme/js/bootstrap.min.js.map
+Error Message: The process cannot access the file 'C:\Users\sit335\source\repos\VadtalDham\VadtalDham\wwwroot\ReqResLogs\ReqResLog_03_07_2023.txt' because it is being used by another process.
+InnerException: 
+StackTrace:    at VadtalDham.Middleware.CustomMiddleware.AddReqResLogsToLoggerFile(HttpContext context) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 178
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 93
+Request Params: 
+
+--------------------------------- 03/07/2023 03:46:46 PM ----------------------------------
+Requested URL: /Login/ForgotPassword
+Error Message: An error occurred while attempting to establish an SSL or TLS connection.
+
+This usually means that the SSL certificate presented by the server is not trusted by the system for one or more of
+the following reasons:
+
+1. The server is using a self-signed certificate which cannot be verified.
+2. The local system is missing a Root or Intermediate certificate needed to verify the server's certificate.
+3. A Certificate Authority CRL server for one or more of the certificates in the chain is temporarily unavailable.
+4. The certificate presented by the server is expired or invalid.
+5. The set of SSL/TLS protocols supported by the client and server do not match.
+
+See https://github.com/jstedfast/MailKit/blob/master/FAQ.md#ssl-handshake-exception for possible solutions.
+
+InnerException: System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.AuthenticateAsClient(SslClientAuthenticationOptions sslClientAuthenticationOptions)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+StackTrace:    at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at VadtalDham.Controllers.LoginController.ForgotPassword(Forgot user) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Controllers\LoginController.cs:line 140
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 95
+Request Params: [{"Key":"UserEmail","Value":"yashkotadiya222@gmail.com"}]
+Exception: 
+
+--------------------------------- 03/07/2023 03:48:27 PM ----------------------------------
+Requested URL: /logintheme/js/bootstrap.min.js.map
+Error Message: The process cannot access the file 'C:\Users\sit335\source\repos\VadtalDham\VadtalDham\wwwroot\ReqResLogs\ReqResLog_03_07_2023.txt' because it is being used by another process.
+InnerException: 
+StackTrace:    at VadtalDham.Middleware.CustomMiddleware.AddReqResLogsToLoggerFile(HttpContext context) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 178
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 93
+Request Params: 
+
+--------------------------------- 03/07/2023 03:50:10 PM ----------------------------------
+Requested URL: /logintheme/js/bootstrap.min.js.map
+Error Message: The process cannot access the file 'C:\Users\sit335\source\repos\VadtalDham\VadtalDham\wwwroot\ReqResLogs\ReqResLog_03_07_2023.txt' because it is being used by another process.
+InnerException: 
+StackTrace:    at VadtalDham.Middleware.CustomMiddleware.AddReqResLogsToLoggerFile(HttpContext context) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 178
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 93
+Request Params: 
+
+--------------------------------- 03/07/2023 03:55:06 PM ----------------------------------
+Requested URL: /logintheme/js/bootstrap.min.js.map
+Error Message: The process cannot access the file 'C:\Users\sit335\source\repos\VadtalDham\VadtalDham\wwwroot\ReqResLogs\ReqResLog_03_07_2023.txt' because it is being used by another process.
+InnerException: 
+StackTrace:    at VadtalDham.Middleware.CustomMiddleware.AddReqResLogsToLoggerFile(HttpContext context) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 178
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 93
+Request Params: 
+
+--------------------------------- 03/07/2023 03:59:18 PM ----------------------------------
+Requested URL: /logintheme/js/popper.min.js.map
+Error Message: The process cannot access the file 'C:\Users\sit335\source\repos\VadtalDham\VadtalDham\wwwroot\ReqResLogs\ReqResLog_03_07_2023.txt' because it is being used by another process.
+InnerException: 
+StackTrace:    at VadtalDham.Middleware.CustomMiddleware.AddReqResLogsToLoggerFile(HttpContext context) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 178
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService) in C:\Users\sit335\source\repos\VadtalDham\VadtalDham\Middleware\CustomMiddleware.cs:line 93
+Request Params: 
+
+--------------------------------- 03/07/2023 05:50:06 PM ----------------------------------
+Requested URL: /logintheme/js/bootstrap.min.js.map
+Error Message: The process cannot access the file 'C:\Users\sit335\source\repos\VadtalDham\VadtalDham\wwwroot\ReqResLogs\ReqResLog_03_07_2023.txt' because it is being used by another process.
+InnerException: 
+StackTrace:    at VadtalDham.Middleware.CustomMiddleware.AddReqResLogsToLoggerFile(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService)
+Request Params: 
+
+--------------------------------- 03/07/2023 05:53:17 PM ----------------------------------
+Requested URL: /logintheme/js/popper.min.js.map
+Error Message: The process cannot access the file 'C:\Users\sit335\source\repos\VadtalDham\VadtalDham\wwwroot\ReqResLogs\ReqResLog_03_07_2023.txt' because it is being used by another process.
+InnerException: 
+StackTrace:    at VadtalDham.Middleware.CustomMiddleware.AddReqResLogsToLoggerFile(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService)
+Request Params: 
+
+--------------------------------- 03/07/2023 05:53:45 PM ----------------------------------
+Requested URL: /logintheme/js/popper.min.js.map
+Error Message: The process cannot access the file 'C:\Users\sit335\source\repos\VadtalDham\VadtalDham\wwwroot\ReqResLogs\ReqResLog_03_07_2023.txt' because it is being used by another process.
+InnerException: 
+StackTrace:    at VadtalDham.Middleware.CustomMiddleware.AddReqResLogsToLoggerFile(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService)
+Request Params: 
+
+--------------------------------- 03/07/2023 05:53:56 PM ----------------------------------
+Requested URL: /logintheme/js/bootstrap.min.js.map
+Error Message: The process cannot access the file 'C:\Users\sit335\source\repos\VadtalDham\VadtalDham\wwwroot\ReqResLogs\ReqResLog_03_07_2023.txt' because it is being used by another process.
+InnerException: 
+StackTrace:    at VadtalDham.Middleware.CustomMiddleware.AddReqResLogsToLoggerFile(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService)
+Request Params: 
+
+--------------------------------- 03/07/2023 05:54:05 PM ----------------------------------
+Requested URL: /logintheme/js/popper.min.js.map
+Error Message: The process cannot access the file 'C:\Users\sit335\source\repos\VadtalDham\VadtalDham\wwwroot\ReqResLogs\ReqResLog_03_07_2023.txt' because it is being used by another process.
+InnerException: 
+StackTrace:    at VadtalDham.Middleware.CustomMiddleware.AddReqResLogsToLoggerFile(HttpContext context)
+   at VadtalDham.Middleware.CustomMiddleware.Invoke(HttpContext context, IUserPanelServices _accountService)
+Request Params: 
