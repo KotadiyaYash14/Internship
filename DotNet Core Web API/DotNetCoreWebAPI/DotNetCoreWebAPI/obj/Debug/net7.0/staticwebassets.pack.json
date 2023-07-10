@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\DotNetCoreWebAPI\\DotNetCoreWebAPI\\wwwroot\\ExceptionLogs\\Exception_10_07_2023.txt",
+      "PackagePath": "staticwebassets\\ExceptionLogs\\Exception_10_07_2023.txt"
+    },
+    {
+      "Id": "C:\\Users\\sit335\\source\\repos\\DotNetCoreWebAPI\\DotNetCoreWebAPI\\wwwroot\\ReqResLogs\\ReqResLog_10_07_2023.txt",
+      "PackagePath": "staticwebassets\\ReqResLogs\\ReqResLog_10_07_2023.txt"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.DotNetCoreWebAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.DotNetCoreWebAPI.props",
+      "PackagePath": "build\\DotNetCoreWebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.DotNetCoreWebAPI.props",
+      "PackagePath": "buildMultiTargeting\\DotNetCoreWebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.DotNetCoreWebAPI.props",
+      "PackagePath": "buildTransitive\\DotNetCoreWebAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

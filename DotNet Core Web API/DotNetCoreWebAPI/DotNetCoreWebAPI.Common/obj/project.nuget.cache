@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "DL75RWMLLiAgJuFvCb3QoKFryG7Nz33C8gim8m8TaN5LKQ4HcOIXatuw5qyexJS9k5o0WBiiq8L5QHjVuMpkvA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sit335\\source\\repos\\DotNetCoreWebAPI\\DotNetCoreWebAPI.Common\\DotNetCoreWebAPI.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sit335\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\sit335\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\sit335\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\sit335\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\sit335\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\sit335\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\sit335\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

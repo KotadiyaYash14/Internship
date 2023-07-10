@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "xGYYCXhN5ffN7OlciKIM6LdW0dpuyuf4LkDBDjcQFXI=",
+  "Source": "DotNetCoreWebAPI",
+  "BasePath": "_content/DotNetCoreWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "DotNetCoreWebAPI\\wwwroot",
+      "Source": "DotNetCoreWebAPI",
+      "ContentRoot": "C:\\Users\\sit335\\source\\repos\\DotNetCoreWebAPI\\DotNetCoreWebAPI\\wwwroot\\",
+      "BasePath": "_content/DotNetCoreWebAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\sit335\\source\\repos\\DotNetCoreWebAPI\\DotNetCoreWebAPI\\wwwroot\\ExceptionLogs\\Exception_10_07_2023.txt",
+      "SourceId": "DotNetCoreWebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sit335\\source\\repos\\DotNetCoreWebAPI\\DotNetCoreWebAPI\\wwwroot\\",
+      "BasePath": "_content/DotNetCoreWebAPI",
+      "RelativePath": "ExceptionLogs/Exception_10_07_2023.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ExceptionLogs\\Exception_10_07_2023.txt"
+    },
+    {
+      "Identity": "C:\\Users\\sit335\\source\\repos\\DotNetCoreWebAPI\\DotNetCoreWebAPI\\wwwroot\\ReqResLogs\\ReqResLog_10_07_2023.txt",
+      "SourceId": "DotNetCoreWebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sit335\\source\\repos\\DotNetCoreWebAPI\\DotNetCoreWebAPI\\wwwroot\\",
+      "BasePath": "_content/DotNetCoreWebAPI",
+      "RelativePath": "ReqResLogs/ReqResLog_10_07_2023.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ReqResLogs\\ReqResLog_10_07_2023.txt"
+    }
+  ]
+}

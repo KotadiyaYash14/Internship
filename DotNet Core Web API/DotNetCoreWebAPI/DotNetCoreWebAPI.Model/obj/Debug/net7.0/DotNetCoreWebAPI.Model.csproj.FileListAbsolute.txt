@@ -1,0 +1,12 @@
+C:\Users\sit335\source\repos\DotNetCoreWebAPI\DotNetCoreWebAPI.Model\bin\Debug\net7.0\DotNetCoreWebAPI.Model.deps.json
+C:\Users\sit335\source\repos\DotNetCoreWebAPI\DotNetCoreWebAPI.Model\bin\Debug\net7.0\DotNetCoreWebAPI.Model.dll
+C:\Users\sit335\source\repos\DotNetCoreWebAPI\DotNetCoreWebAPI.Model\bin\Debug\net7.0\DotNetCoreWebAPI.Model.pdb
+C:\Users\sit335\source\repos\DotNetCoreWebAPI\DotNetCoreWebAPI.Model\obj\Debug\net7.0\DotNetCoreWebAPI.Model.csproj.AssemblyReference.cache
+C:\Users\sit335\source\repos\DotNetCoreWebAPI\DotNetCoreWebAPI.Model\obj\Debug\net7.0\DotNetCoreWebAPI.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sit335\source\repos\DotNetCoreWebAPI\DotNetCoreWebAPI.Model\obj\Debug\net7.0\DotNetCoreWebAPI.Model.AssemblyInfoInputs.cache
+C:\Users\sit335\source\repos\DotNetCoreWebAPI\DotNetCoreWebAPI.Model\obj\Debug\net7.0\DotNetCoreWebAPI.Model.AssemblyInfo.cs
+C:\Users\sit335\source\repos\DotNetCoreWebAPI\DotNetCoreWebAPI.Model\obj\Debug\net7.0\DotNetCoreWebAPI.Model.csproj.CoreCompileInputs.cache
+C:\Users\sit335\source\repos\DotNetCoreWebAPI\DotNetCoreWebAPI.Model\obj\Debug\net7.0\DotNetCoreWebAPI.Model.dll
+C:\Users\sit335\source\repos\DotNetCoreWebAPI\DotNetCoreWebAPI.Model\obj\Debug\net7.0\refint\DotNetCoreWebAPI.Model.dll
+C:\Users\sit335\source\repos\DotNetCoreWebAPI\DotNetCoreWebAPI.Model\obj\Debug\net7.0\DotNetCoreWebAPI.Model.pdb
+C:\Users\sit335\source\repos\DotNetCoreWebAPI\DotNetCoreWebAPI.Model\obj\Debug\net7.0\ref\DotNetCoreWebAPI.Model.dll
